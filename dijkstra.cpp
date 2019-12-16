@@ -46,7 +46,7 @@ int main() {
   rep(i, m) {
     int a, b, c;
     cin >> a >> b >> c;
-    a--; b--; c;
+    a--; b--;
     G1[a].push_back(pii(b, c));
     G2[b].push_back(pii(a, c));
   }

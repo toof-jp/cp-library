@@ -1,15 +1,14 @@
 // verified https://onlinejudge.u-aizu.ac.jp/solutions/problem/NTL_1_B/review/3692017/toof/C++14
-
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-typedef pair<int, int> pii;
-typedef vector<int> vi;
-typedef vector<ll> vl;
+using ll = long long;
+using pii = pair<int, int>;
+using vi = vector<int>;
+using vl = vector<ll>;
 #define rep(i, n) for(ll i = 0;i < n;i++)
 #define all(i) i.begin(), i.end()
-template<class T, class U> void cmax(T& a, U b) { if (a<b) a = b; }
-template<class T, class U> void cmin(T& a, U b) { if (a>b) a = b; }
+template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
+template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
 ll modpow(ll a, ll n, ll p) {
   ll res = 1;
