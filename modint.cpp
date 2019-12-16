@@ -17,29 +17,17 @@ struct modint {
   u64 n;
 
   modint(const u64 x = 0) : n(x % Mod) {}
-  modint operator+(const modint r) const {
-    return modint(*this) += r;
-  }
-  modint operator-(const modint r) const {
-    return modint(*this) -= r;
-  }
-  modint operator*(const modint r) const {
-    return modint(*this) *= r;
-  }
-  modint operator/(const modint r) const {
-    return modint(*this) /= r;
-  }
+  modint operator+(const modint r) const { return modint(*this) += r; }
+  modint operator-(const modint r) const { return modint(*this) -= r; }
+  modint operator*(const modint r) const { return modint(*this) *= r; }
+  modint operator/(const modint r) const { return modint(*this) /= r; }
   modint &operator+=(const modint r) {
     n += r.n;
-    if (n >= Mod) {
-      n -= Mod;
-    }
+    if (n >= Mod) n -= Mod;
     return *this;
   }
   modint &operator-=(const modint r) {
-    if (n < r.n) {
-      n += Mod;
-    }
+    if (n < r.n) n += Mod;
     n -= r.n;
     return *this;
   }
