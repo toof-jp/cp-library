@@ -36,17 +36,20 @@ struct modint {
     return *this;
   }
   modint &operator/=(modint r) {
-    n = n * r.pow(Mod-2);
+    n = n * inv();
     return *this;
   }
-  modint pow(u64 x) {
-    modint<Mod> ret = 1;
+  modint pow(u64 x) const {
+    modint<Mod> ret(1), tmp(*this);
     while (x) {
-      if (x&1) ret *= *this;
-      *this *= *this;
+      if (x&1) ret *= tmp;
+      tmp *= tmp;
       x >>= 1;
     }
-    return *this = ret;
+    return ret;
+  }
+  modint inv() const {
+    return pow(Mod-2);
   }
 };
 
