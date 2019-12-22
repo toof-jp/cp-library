@@ -49,6 +49,7 @@ struct modint {
     return *this = ret;
   }
 };
+using mint = modint<1'000'000'007>;
 
 int main() {
   cin.tie(0); ios::sync_with_stdio(false);
