@@ -10,7 +10,7 @@ template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;}
 template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
 // http://noshi91.hatenablog.com/entry/2019/03/31/174006
-template <uint_fast64_t Mod = 1'000'000'007>
+template <uint_fast64_t Mod>
 struct modint {
   using u64 = uint_fast64_t;
 
@@ -35,7 +35,7 @@ struct modint {
     n = n * r.n % Mod;
     return *this;
   }
-  modint &operator/=(modint r) {
+  modint &operator/=(const modint r) {
     *this *= r.inv();
     return *this;
   }
@@ -52,7 +52,8 @@ struct modint {
     return pow(Mod-2);
   }
 };
-using mint = modint<1'000'000'007>;
+constexpr ll mod = 1000000007;
+using mint = modint<mod>;
 
 int main() {
   cin.tie(0); ios::sync_with_stdio(false);
