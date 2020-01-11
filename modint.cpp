@@ -37,7 +37,7 @@ struct modint {
   }
   modint &operator/=(const modint r) {
     *this *= r.inv();
-    return *this;
+    return *this *= r.inv();
   }
   modint pow(u64 x) const {
     modint<Mod> ret(1), tmp(*this);

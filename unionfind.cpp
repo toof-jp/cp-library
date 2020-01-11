@@ -1,25 +1,28 @@
 // https://atcoder.jp/contests/aising2019/tasks/aising2019_c
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-typedef pair<int, int> pii;
+using ll = long long;
+using pii = pair<int, int>;
+using vi = vector<int>;
+using vl = vector<ll>;
 #define rep(i, n) for(ll i = 0;i < n;i++)
-int dx[8] = {1, -1, 0, 0, 1, 1, -1, -1};
-int dy[8] = {0, 0, 1, -1, 1, -1, 1, -1};
+#define all(i) i.begin(), i.end()
+template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
+template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
 class UnionFind {
 private:
-  vector<int> parent;
-  vector<int> rank;
+  vector<ll> parent;
+  vector<ll> rank;
 
 public:
-  UnionFind(int size) : parent(size), rank(size, 0) {
-    for (int i = 0; i < size; i++) {
+  UnionFind(ll size) : parent(size), rank(size, 0) {
+    for (ll i = 0; i < size; i++) {
       parent[i] = i;
     }
   }
 
-  int find(int x) {
+  ll find(ll x) {
     if (parent[x] == x) {
       return x;
     } else {
@@ -27,7 +30,7 @@ public:
     }
   }
 
-  void unite(int x, int y) {
+  void unite(ll x, ll y) {
     x = find(x);
     y = find(y);
     if (x == y) return;
@@ -40,7 +43,7 @@ public:
     }
   }
 
-  bool same(int x, int y) {
+  bool same(ll x, ll y) {
     return find(x) == find(y);
   }
 };
@@ -53,6 +56,8 @@ int main() {
   vector<string> s(h);
   rep(i, h) cin >> s[i];
 
+  vi dx = {0, 0, 1, -1};
+  vi dy = {1, -1, 0, 0};
   UnionFind uf(h*w);
   rep(i, h) rep(j, w) rep(k, 4) {
     int ni = i+dx[k];

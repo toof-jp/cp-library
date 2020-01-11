@@ -13,7 +13,7 @@ int INF = 1<<30;
 const int maxn = 1e5+10;
 int n;
 
-// gurahu ha rinsetu gyouretu de watase
+// グラフは隣接行列で渡す
 vector<int> dijkstra(int s, vector<vector<pii>> G) {
   priority_queue<pii, vector<pii>, greater<pii>> que;
   vector<int> d(n, INF);
