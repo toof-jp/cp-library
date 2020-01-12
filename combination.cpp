@@ -25,7 +25,7 @@ struct Combination {
   }
 
   T C(ll n, ll k) const {
-    return fact[n] * inv_fact[n-k] * inf_fact[k];
+    return fact[n] * inv_fact[n-k] * inv_fact[k];
   }
 
   T H(ll n, ll k) const {
