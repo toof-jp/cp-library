@@ -9,12 +9,11 @@ using vl = vector<ll>;
 template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
 template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
-template <uint_fast64_t Mod>
+template <ll Mod>
 struct modint {
-  using u64 = uint_fast64_t;
-  u64 n;
+  ll n;
 
-  modint(const u64 x = 0) : n(x % Mod) {}
+  modint(const ll x = 0) : n(x % Mod) {}
   modint operator+(const modint r) const { return modint(*this) += r; }
   modint operator-(const modint r) const { return modint(*this) -= r; }
   modint operator*(const modint r) const { return modint(*this) *= r; }
@@ -34,7 +33,7 @@ struct modint {
     return *this;
   }
   modint &operator/=(const modint r) { return *this *= r.inv(); }
-  modint pow(u64 x) const {
+  modint pow(ll x) const {
     modint<Mod> ret(1), tmp(*this);
     while (x) {
       if (x&1) ret *= tmp;
