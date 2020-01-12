@@ -9,11 +9,9 @@ using vl = vector<ll>;
 template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
 template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
-// http://noshi91.hatenablog.com/entry/2019/03/31/174006
 template <uint_fast64_t Mod>
 struct modint {
   using u64 = uint_fast64_t;
-
   u64 n;
 
   modint(const u64 x = 0) : n(x % Mod) {}
@@ -35,10 +33,7 @@ struct modint {
     n = n * r.n % Mod;
     return *this;
   }
-  modint &operator/=(const modint r) {
-    *this *= r.inv();
-    return *this *= r.inv();
-  }
+  modint &operator/=(const modint r) { return *this *= r.inv(); }
   modint pow(u64 x) const {
     modint<Mod> ret(1), tmp(*this);
     while (x) {
@@ -48,9 +43,9 @@ struct modint {
     }
     return ret;
   }
-  modint inv() const {
-    return pow(Mod-2);
-  }
+  modint inv() const { return pow(Mod-2); }
+  friend ostream& operator<<(ostream& os, const modint& obj) { return os << obj.n; }
+  friend istream& operator>>(istream& is, modint& obj) { return is >> obj.n; }
 };
 constexpr ll mod = 1000000007;
 using mint = modint<mod>;
@@ -58,8 +53,7 @@ using mint = modint<mod>;
 int main() {
   cin.tie(0); ios::sync_with_stdio(false);
 
-  constexpr ll mod = 1e9+7;
-  modint<mod> m, n;
-  cin >> m.n >> n.n;
-  cout << (m/n).n << endl;
+  mint m, n;
+  cin >> m >> n;
+  cout << m/n << endl;
 }
