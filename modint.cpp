@@ -13,7 +13,7 @@ template <ll Mod>
 struct modint {
   ll n;
 
-  modint(const ll x = 0) : n(x % Mod) {}
+  modint(const ll x = 0) : n(x) { while (n < 0) n += Mod; n %= Mod; }
   modint operator+(const modint r) const { return modint(*this) += r; }
   modint operator-(const modint r) const { return modint(*this) -= r; }
   modint operator*(const modint r) const { return modint(*this) *= r; }
@@ -28,10 +28,7 @@ struct modint {
     n -= r.n;
     return *this;
   }
-  modint &operator*=(const modint r) {
-    n = n * r.n % Mod;
-    return *this;
-  }
+  modint &operator*=(const modint r) { n = n * r.n % Mod; return *this; }
   modint &operator/=(const modint r) { return *this *= r.inv(); }
   modint pow(ll x) const {
     modint<Mod> ret(1), tmp(*this);
@@ -44,7 +41,7 @@ struct modint {
   }
   modint inv() const { return pow(Mod-2); }
   friend ostream& operator<<(ostream& os, const modint& obj) { return os << obj.n; }
-  friend istream& operator>>(istream& is, modint& obj) { return is >> obj.n; }
+  friend istream& operator>>(istream& is, modint& obj) { ll t; is >> t; obj = modint(t); return is; }
 };
 constexpr ll mod = 1000000007;
 using mint = modint<mod>;
