@@ -1,3 +1,5 @@
+// 壊れてる
+// 未完成
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
