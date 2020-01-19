@@ -21,14 +21,18 @@ struct Combination {
   }
 
   T P(ll n, ll k) const {
+    if (n < k or k < 0) return T(0);
     return fact[n] * inv_fact[n-k];
   }
 
   T C(ll n, ll k) const {
+    if (n < k or k < 0) return T(0);
     return fact[n] * inv_fact[n-k] * inv_fact[k];
   }
 
   T H(ll n, ll k) const {
+    if (n < 0 or k < 0) return T(0);
+    if (n == 0 and k == 0) return T(1);
     return C(n+k-1, n-1);
   }
 };
