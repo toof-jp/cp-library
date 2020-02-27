@@ -57,9 +57,8 @@ int main() {
 
   ll n, q;
   cin >> n >> q;
-  auto update = [](ll l, ll r) { return r; };
   auto mini = [](ll l, ll r) { return min(l, r); };
-  SegmentTree<ll> st(n, (1LL<<31)-1, mini, update);
+  SegmentTree<ll> st(n, (1LL<<31)-1, mini);
 
   rep(i, q) {
     ll c, x, y;
