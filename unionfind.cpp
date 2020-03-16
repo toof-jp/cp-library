@@ -10,24 +10,25 @@ using vl = vector<ll>;
 template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
 template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
-class UnionFind {
-private:
-  vector<ll> parent;
-  vector<ll> rank;
+struct UnionFind {
+  struct Node {
+    ll parent;
+    ll size;
+  };
+  vector<Node> tree;
 
-public:
-  UnionFind(ll size) : parent(size), rank(size, 0) {
+  UnionFind(ll size) : tree(size) {
     for (ll i = 0; i < size; i++) {
-      parent[i] = i;
+      tree[i].parent = i;
+      tree[i].size = 1;
     }
   }
 
   ll find(ll x) {
-    if (parent[x] == x) {
+    if (tree[x].parent == x)
       return x;
-    } else {
-      return parent[x] = find(parent[x]);
-    }
+    else
+      return tree[x].parent = find(tree[x].parent);
   }
 
   void unite(ll x, ll y) {
@@ -35,12 +36,9 @@ public:
     y = find(y);
     if (x == y) return;
 
-    if (rank[x] < rank[y]) {
-      parent[x] = y;
-    } else {
-      parent[y] = x;
-      if (rank[x] == rank[y]) rank[x]++;
-    }
+    if (tree[x].size < tree[y].size) swap(x, y);
+    tree[y].parent = x;
+    tree[x].size += tree[y].size;
   }
 
   bool same(ll x, ll y) {
