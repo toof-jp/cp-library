@@ -25,10 +25,12 @@ struct UnionFind {
   }
 
   ll find(ll x) {
-    if (tree[x].parent == x)
-      return x;
-    else
-      return tree[x].parent = find(tree[x].parent);
+    while (tree[x].parent != x) {
+      ll p = tree[x].parent;
+      tree[x].parent = tree[p].parent;
+      x = p;
+    }
+    return x;
   }
 
   void unite(ll x, ll y) {
