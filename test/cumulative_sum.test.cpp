@@ -1,4 +1,4 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/solutions/problem/0022/review/4031365/toof/C++14"
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/0022"
 
 #include <bits/stdc++.h>
 using namespace std;
