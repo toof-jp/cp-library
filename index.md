@@ -41,9 +41,9 @@ layout: default
 * :warning: <a href="library/bfs.cpp.html">bfs.cpp</a>
 * :heavy_check_mark: <a href="library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
 * :warning: <a href="library/combination.cpp.html">combination.cpp</a>
-* :warning: <a href="library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
+* :heavy_check_mark: <a href="library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
 * :warning: <a href="library/dfs.cpp.html">dfs.cpp</a>
-* :warning: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
+* :x: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
 * :warning: <a href="library/modint.cpp.html">modint.cpp</a>
 * :heavy_check_mark: <a href="library/powmod.cpp.html">powmod.cpp</a>
 * :warning: <a href="library/prim_mst.cpp.html">prim_mst.cpp</a>
@@ -55,6 +55,8 @@ layout: default
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/test/binary_indexed_tree.test.cpp.html">test/binary_indexed_tree.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/cumulative_sum.test.cpp.html">test/cumulative_sum.test.cpp</a>
+* :x: <a href="verify/test/dijkstra.test.cpp.html">test/dijkstra.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/powmod.test.cpp.html">test/powmod.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/union_find.test.cpp.html">test/union_find.test.cpp</a>
 

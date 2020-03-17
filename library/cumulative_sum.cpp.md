@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :warning: cumulative_sum.cpp
+# :heavy_check_mark: cumulative_sum.cpp
 
 <a href="../index.html">Back to top page</a>
 
@@ -34,6 +34,11 @@ layout: default
     - Last commit date: 2020-03-17 18:38:32+09:00
 
 
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../verify/test/cumulative_sum.test.cpp.html">test/cumulative_sum.test.cpp</a>
 
 
 ## Code

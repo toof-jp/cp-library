@@ -25,15 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :warning: dijkstra.cpp
+# :x: dijkstra.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/dijkstra.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-12 00:44:00+09:00
+    - Last commit date: 2020-03-17 21:42:00+09:00
 
 
+
+
+## Verified with
+
+* :x: <a href="../verify/test/dijkstra.test.cpp.html">test/dijkstra.test.cpp</a>
 
 
 ## Code
@@ -41,31 +46,19 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-//
-// https://beta.atcoder.jp/contests/abc035/tasks/abc035_d
-//
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-typedef pair<int, int> pii;
-typedef pair<string, int> psi;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define FOR(i, m, n) for(ll i = m;i < n;i++)
+ll INF = 1LL<<60;
+using pll = pair<ll, ll>;
 
-int INF = 1<<30;
-const int maxn = 1e5+10;
-int n;
-
-// グラフは隣接行列で渡す
-vector<int> dijkstra(int s, vector<vector<pii>> G) {
-  priority_queue<pii, vector<pii>, greater<pii>> que;
-  vector<int> d(n, INF);
+vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
+  priority_queue<pll, vector<pll>, greater<pll>> que;
+  vl d(n, INF);
   d[s] = 0;
   que.push(pii(0, s));
 
   while(!que.empty()) {
-    pii p = que.top(); que.pop();
-    int v = p.second;
+    pll p = que.top();
+    que.pop();
+    ll v = p.second;
     if (d[v] < p.first) continue;
     for (auto&& e : G[v]) {
       if (d[e.first] > d[v] + e.second) {
@@ -75,32 +68,6 @@ vector<int> dijkstra(int s, vector<vector<pii>> G) {
     }
   }
   return d;
-}
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  int m, t;
-  cin >> n >> m >> t;
-  int A[maxn];
-  rep(i, n) cin >> A[i];
-  vector<vector<pii>> G1(maxn);
-  vector<vector<pii>> G2(maxn);
-  rep(i, m) {
-    int a, b, c;
-    cin >> a >> b >> c;
-    a--; b--;
-    G1[a].push_back(pii(b, c));
-    G2[b].push_back(pii(a, c));
-  }
-
-  auto d1 = dijkstra(0, G1);
-  auto d2 = dijkstra(0, G2);
-  ll ans = 0;
-  rep(i, n) {
-    ans = max(ans, (ll)A[i] * (t-d1[i]-d2[i]));
-  }
-  cout << ans << endl;
 }
 
 ```
@@ -110,31 +77,19 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "dijkstra.cpp"
-//
-// https://beta.atcoder.jp/contests/abc035/tasks/abc035_d
-//
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-typedef pair<int, int> pii;
-typedef pair<string, int> psi;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define FOR(i, m, n) for(ll i = m;i < n;i++)
+ll INF = 1LL<<60;
+using pll = pair<ll, ll>;
 
-int INF = 1<<30;
-const int maxn = 1e5+10;
-int n;
-
-// グラフは隣接行列で渡す
-vector<int> dijkstra(int s, vector<vector<pii>> G) {
-  priority_queue<pii, vector<pii>, greater<pii>> que;
-  vector<int> d(n, INF);
+vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
+  priority_queue<pll, vector<pll>, greater<pll>> que;
+  vl d(n, INF);
   d[s] = 0;
   que.push(pii(0, s));
 
   while(!que.empty()) {
-    pii p = que.top(); que.pop();
-    int v = p.second;
+    pll p = que.top();
+    que.pop();
+    ll v = p.second;
     if (d[v] < p.first) continue;
     for (auto&& e : G[v]) {
       if (d[e.first] > d[v] + e.second) {
@@ -144,32 +99,6 @@ vector<int> dijkstra(int s, vector<vector<pii>> G) {
     }
   }
   return d;
-}
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  int m, t;
-  cin >> n >> m >> t;
-  int A[maxn];
-  rep(i, n) cin >> A[i];
-  vector<vector<pii>> G1(maxn);
-  vector<vector<pii>> G2(maxn);
-  rep(i, m) {
-    int a, b, c;
-    cin >> a >> b >> c;
-    a--; b--;
-    G1[a].push_back(pii(b, c));
-    G2[b].push_back(pii(a, c));
-  }
-
-  auto d1 = dijkstra(0, G1);
-  auto d2 = dijkstra(0, G2);
-  ll ans = 0;
-  rep(i, n) {
-    ans = max(ans, (ll)A[i] * (t-d1[i]-d2[i]));
-  }
-  cout << ans << endl;
 }
 
 ```
