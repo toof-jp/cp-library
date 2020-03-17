@@ -25,15 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :warning: cumulative_sum.cpp
+# :x: cumulative_sum.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/cumulative_sum.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-19 18:39:19+09:00
+    - Last commit date: 2020-03-17 18:38:32+09:00
 
 
+
+
+## Verified with
+
+* :x: <a href="../verify/test/cumulative_sum.test.cpp.html">test/cumulative_sum.test.cpp</a>
 
 
 ## Code
@@ -41,18 +46,6 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-// https://onlinejudge.u-aizu.ac.jp/solutions/problem/0022/review/4031365/toof/C++14
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 template<class T>
 struct CumulativeSum {
   vector<T> v;
@@ -91,32 +84,6 @@ struct CumulativeSum {
     return v[i];
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  while (true) {
-    ll n;
-    cin >> n;
-    if (n == 0) break;
-
-    vector<ll> v(n);
-    rep(i, n) {
-      cin >> v[i];
-    }
-
-    CumulativeSum<ll> c(v);
-    c.build();
-
-    ll ans = -1e10;
-    rep(i, n) {
-      for (ll j = i; j < n; j++) {
-        cmax(ans, c.sum(i, j));
-      }
-    }
-    cout << ans << endl;
-  }
-}
 
 ```
 {% endraw %}
@@ -125,18 +92,6 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "cumulative_sum.cpp"
-// https://onlinejudge.u-aizu.ac.jp/solutions/problem/0022/review/4031365/toof/C++14
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 template<class T>
 struct CumulativeSum {
   vector<T> v;
@@ -175,32 +130,6 @@ struct CumulativeSum {
     return v[i];
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  while (true) {
-    ll n;
-    cin >> n;
-    if (n == 0) break;
-
-    vector<ll> v(n);
-    rep(i, n) {
-      cin >> v[i];
-    }
-
-    CumulativeSum<ll> c(v);
-    c.build();
-
-    ll ans = -1e10;
-    rep(i, n) {
-      for (ll j = i; j < n; j++) {
-        cmax(ans, c.sum(i, j));
-      }
-    }
-    cout << ans << endl;
-  }
-}
 
 ```
 {% endraw %}
