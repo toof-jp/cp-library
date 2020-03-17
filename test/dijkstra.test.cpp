@@ -19,7 +19,7 @@ int main() {
   ll v, e, r;
   cin >> v >> e >> r;
   vector<vector<pll>> g(v);
-  rep(i, e-1) {
+  rep(i, e) {
     ll s, t, d;
     cin >> s >> t >> d;
     g[s].emplace_back(t, d);

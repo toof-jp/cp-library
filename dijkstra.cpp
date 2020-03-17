@@ -5,7 +5,7 @@ vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
   priority_queue<pll, vector<pll>, greater<pll>> que;
   vl d(n, INF);
   d[s] = 0;
-  que.push(pii(0, s));
+  que.push(pll(0, s));
 
   while(!que.empty()) {
     pll p = que.top();
@@ -15,7 +15,7 @@ vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
     for (auto&& e : G[v]) {
       if (d[e.first] > d[v] + e.second) {
         d[e.first] = d[v] + e.second;
-        que.push(pii(d[e.first], e.first));
+        que.push(pll(d[e.first], e.first));
       }
     }
   }
