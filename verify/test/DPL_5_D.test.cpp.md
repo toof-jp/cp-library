@@ -25,22 +25,22 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/segment_tree.test.cpp
+# :x: test/DPL_5_D.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/segment_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 22:28:59+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/test/DPL_5_D.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-18 05:32:10+09:00
 
 
-* see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D</a>
 
 
 ## Depends on
 
+* :x: <a href="../../library/combination.cpp.html">combination.cpp</a>
 * :question: <a href="../../library/modint.cpp.html">modint.cpp</a>
-* :heavy_check_mark: <a href="../../library/segment_tree.cpp.html">segment_tree.cpp</a>
 
 
 ## Code
@@ -48,7 +48,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D"
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -61,43 +61,16 @@ using vl = vector<ll>;
 template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
 template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
-#include "../segment_tree.cpp"
 #include "../modint.cpp"
-
-using modint = ModInt<998244353>;
-
-struct F{
-  modint a, b;
-  F(ll a, ll b) : a(a), b(b) {};
-  F(modint a, modint b) : a(a), b(b) {};
-};
+#include "../combination.cpp"
 
 int main() {
   cin.tie(0); ios::sync_with_stdio(false);
 
-  ll n, q;
-  cin >> n >> q;
-  SegmentTree<F> seg(n, F(1, 0), [](F l, F r){ return F(l.a*r.a, l.b*r.a+r.b); });
-  rep(i, n) {
-    ll a, b;
-    cin >> a >> b;
-    seg.change(i, F(a, b));
-  }
-
-  rep(i, q) {
-    ll t;
-    cin >> t;
-    if (t == 0) {
-      ll p, c, d;
-      cin >> p >> c >> d;
-      seg.change(p, F(c, d));
-    } else {
-      ll l, r, x;
-      cin >> l >> r >> x;
-      F f = seg.query(l, r);
-      cout << f.a*modint(x)+f.b << endl;
-    }
-  }
+  ll n, k;
+  cin >> n >> k;
+  Combination<mint> c(n+k);
+  cout << c.H(k, n) << endl;
 }
 
 ```
@@ -106,8 +79,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/segment_tree.test.cpp"
-#define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
+#line 1 "test/DPL_5_D.test.cpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D"
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -120,49 +93,6 @@ using vl = vector<ll>;
 template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
 template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
-#line 1 "test/../segment_tree.cpp"
-template<class T>
-struct SegmentTree {
-  ll n;
-  vector<T> data;
-  T identity;
-  using F = function<T(T, T)>;
-  F operation;
-
-  SegmentTree(ll n_, T identity, F operation) : n(n_), identity(identity), operation(operation) {
-    n = 1;
-    while (n < n_) n *= 2;
-    data.assign(2*n-1, identity);
-  }
-
-  void change(ll i, T x) {
-    i += n-1;
-    data[i] = x;
-    while (i > 0) {
-      i = (i-1)/2;
-      data[i] = operation(data[i*2+1], data[i*2+2]);
-    }
-  }
-
-  T query(ll a, ll b, ll k, ll l, ll r) {
-    if (r <= a or b <= l) return identity;
-    if (a <= l and r <= b) {
-      return data[k];
-    } else {
-      T c1 = query(a, b, 2*k+1, l, (l+r)/2);
-      T c2 = query(a, b, 2*k+2, (l+r)/2, r);
-      return operation(c1, c2);
-    }
-  }
-
-  T query(ll a, ll b) {
-    return query(a, b, 0, 0, n);
-  }
-
-  T operator[](ll i) {
-    return data[i+n-1];
-  }
-};
 #line 1 "test/../modint.cpp"
 template <ll Mod>
 struct ModInt {
@@ -184,42 +114,58 @@ struct ModInt {
 constexpr ll mod = 1000000007;
 using mint = ModInt<mod>;
 mint operator"" _mi(unsigned long long n) { return mint(n); }
-#line 16 "test/segment_tree.test.cpp"
+#line 2 "test/../combination.cpp"
+using namespace std;
+using ll = long long;
+using pii = pair<int, int>;
+using vi = vector<int>;
+using vl = vector<ll>;
+#define rep(i, n) for(ll i = 0;i < n;i++)
+#define all(i) i.begin(), i.end()
+template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
+template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
-using modint = ModInt<998244353>;
+// T modint
+template<class T>
+struct Combination {
+  vector<T> fact, inv_fact;
+  Combination(ll n) : fact(n+1), inv_fact(n+1) {
+    fact[0] = T(1);
+    for (ll i = 1; i <= n; i++) fact[i] = fact[i-1] * static_cast<T>(i);
+    inv_fact[n] = fact[n].inv();
+    for (ll i = n; i > 0; i--) inv_fact[i-1] = inv_fact[i] * static_cast<T>(i);
+  }
 
-struct F{
-  modint a, b;
-  F(ll a, ll b) : a(a), b(b) {};
-  F(modint a, modint b) : a(a), b(b) {};
+  T P(ll n, ll k) const {
+    if (n < k or k < 0) return T(0);
+    return fact[n] * inv_fact[n-k];
+  }
+
+  T C(ll n, ll k) const {
+    if (n < k or k < 0) return T(0);
+    return fact[n] * inv_fact[n-k] * inv_fact[k];
+  }
+
+  T H(ll n, ll k) const {
+    if (n < 0 or k < 0) return T(0);
+    if (n == 0 and k == 0) return T(1);
+    return C(n+k-1, n-1);
+  }
 };
 
 int main() {
   cin.tie(0); ios::sync_with_stdio(false);
 
-  ll n, q;
-  cin >> n >> q;
-  SegmentTree<F> seg(n, F(1, 0), [](F l, F r){ return F(l.a*r.a, l.b*r.a+r.b); });
-  rep(i, n) {
-    ll a, b;
-    cin >> a >> b;
-    seg.change(i, F(a, b));
-  }
+}
+#line 16 "test/DPL_5_D.test.cpp"
 
-  rep(i, q) {
-    ll t;
-    cin >> t;
-    if (t == 0) {
-      ll p, c, d;
-      cin >> p >> c >> d;
-      seg.change(p, F(c, d));
-    } else {
-      ll l, r, x;
-      cin >> l >> r >> x;
-      F f = seg.query(l, r);
-      cout << f.a*modint(x)+f.b << endl;
-    }
-  }
+int main() {
+  cin.tie(0); ios::sync_with_stdio(false);
+
+  ll n, k;
+  cin >> n >> k;
+  Combination<mint> c(n+k);
+  cout << c.H(k, n) << endl;
 }
 
 ```

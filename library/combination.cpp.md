@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :warning: combination.cpp
+# :x: combination.cpp
 
 <a href="../index.html">Back to top page</a>
 
@@ -34,6 +34,13 @@ layout: default
     - Last commit date: 2020-01-19 18:38:56+09:00
 
 
+
+
+## Verified with
+
+* :x: <a href="../verify/test/DPL_5_B.test.cpp.html">test/DPL_5_B.test.cpp</a>
+* :x: <a href="../verify/test/DPL_5_D.test.cpp.html">test/DPL_5_D.test.cpp</a>
+* :x: <a href="../verify/test/DPL_5_E.test.cpp.html">test/DPL_5_E.test.cpp</a>
 
 
 ## Code
