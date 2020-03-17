@@ -49,6 +49,11 @@ layout: default
 * :warning: <a href="library/prim_mst.cpp.html">prim_mst.cpp</a>
 * :warning: <a href="library/primefactorization.cpp.html">primefactorization.cpp</a>
 * :warning: <a href="library/segment_tree.cpp.html">segment_tree.cpp</a>
-* :warning: <a href="library/union_find.cpp.html">union_find.cpp</a>
+* :heavy_check_mark: <a href="library/union_find.cpp.html">union_find.cpp</a>
+
+
+## Verify Files
+
+* :heavy_check_mark: <a href="verify/test/union_find.test.cpp.html">test/union_find.test.cpp</a>
 
 

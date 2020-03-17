@@ -25,15 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :warning: union_find.cpp
+# :heavy_check_mark: union_find.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/union_find.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-16 22:39:00+09:00
+    - Last commit date: 2020-03-17 18:17:55+09:00
 
 
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../verify/test/union_find.test.cpp.html">test/union_find.test.cpp</a>
 
 
 ## Code
@@ -41,18 +46,6 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-// https://atcoder.jp/contests/aising2019/tasks/aising2019_c
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 struct UnionFind {
   struct Node {
     ll parent;
@@ -90,38 +83,6 @@ struct UnionFind {
     return find(x) == find(y);
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  int h, w;
-  cin >> h >> w;
-  vector<string> s(h);
-  rep(i, h) cin >> s[i];
-
-  vi dx = {0, 0, 1, -1};
-  vi dy = {1, -1, 0, 0};
-  UnionFind uf(h*w);
-  rep(i, h) rep(j, w) rep(k, 4) {
-    int ni = i+dx[k];
-    int nj = j+dy[k];
-    if (0 <= ni && ni < h && 0 <= nj && nj < w && s[i][j] != s[ni][nj]) {
-      uf.unite(i*w + j, ni*w + nj);
-    }
-  }
-
-  vector<ll> black(h*w, 0), white(h*w, 0);
-  rep(i, h) rep(j, w) {
-    if (s[i][j] == '#') black[uf.find(i*w + j)]++;
-    else white[uf.find(i*w + j)]++;
-  }
-
-  ll ans = 0;
-  rep(i, h*w) {
-    ans += black[i] * white[i];
-  }
-  cout << ans << endl;
-}
 
 ```
 {% endraw %}
@@ -130,18 +91,6 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "union_find.cpp"
-// https://atcoder.jp/contests/aising2019/tasks/aising2019_c
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 struct UnionFind {
   struct Node {
     ll parent;
@@ -179,38 +128,6 @@ struct UnionFind {
     return find(x) == find(y);
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  int h, w;
-  cin >> h >> w;
-  vector<string> s(h);
-  rep(i, h) cin >> s[i];
-
-  vi dx = {0, 0, 1, -1};
-  vi dy = {1, -1, 0, 0};
-  UnionFind uf(h*w);
-  rep(i, h) rep(j, w) rep(k, 4) {
-    int ni = i+dx[k];
-    int nj = j+dy[k];
-    if (0 <= ni && ni < h && 0 <= nj && nj < w && s[i][j] != s[ni][nj]) {
-      uf.unite(i*w + j, ni*w + nj);
-    }
-  }
-
-  vector<ll> black(h*w, 0), white(h*w, 0);
-  rep(i, h) rep(j, w) {
-    if (s[i][j] == '#') black[uf.find(i*w + j)]++;
-    else white[uf.find(i*w + j)]++;
-  }
-
-  ll ans = 0;
-  rep(i, h*w) {
-    ans += black[i] * white[i];
-  }
-  cout << ans << endl;
-}
 
 ```
 {% endraw %}
