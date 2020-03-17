@@ -45,7 +45,7 @@ layout: default
 * :warning: <a href="library/dfs.cpp.html">dfs.cpp</a>
 * :warning: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
 * :warning: <a href="library/modint.cpp.html">modint.cpp</a>
-* :x: <a href="library/powmod.cpp.html">powmod.cpp</a>
+* :heavy_check_mark: <a href="library/powmod.cpp.html">powmod.cpp</a>
 * :warning: <a href="library/prim_mst.cpp.html">prim_mst.cpp</a>
 * :warning: <a href="library/prime_factorization.cpp.html">prime_factorization.cpp</a>
 * :warning: <a href="library/segment_tree.cpp.html">segment_tree.cpp</a>
@@ -55,7 +55,7 @@ layout: default
 ## Verify Files
 
 * :x: <a href="verify/test/cumulative_sum.test.cpp.html">test/cumulative_sum.test.cpp</a>
-* :x: <a href="verify/test/powmod.test.cpp.html">test/powmod.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/powmod.test.cpp.html">test/powmod.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/union_find.test.cpp.html">test/union_find.test.cpp</a>
 
 

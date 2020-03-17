@@ -31,10 +31,10 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/cumulative_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 19:01:48+09:00
+    - Last commit date: 2020-03-17 19:06:53+09:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/problems/0022">https://onlinejudge.u-aizu.ac.jp/problems/0022</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0022">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0022</a>
 
 
 ## Depends on
@@ -47,7 +47,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/0022"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0022"
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -95,7 +95,7 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "test/cumulative_sum.test.cpp"
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/0022"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0022"
 
 #include <bits/stdc++.h>
 using namespace std;

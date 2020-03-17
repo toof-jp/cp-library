@@ -25,21 +25,21 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: test/powmod.test.cpp
+# :heavy_check_mark: test/powmod.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/powmod.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 18:56:31+09:00
+    - Last commit date: 2020-03-17 19:06:53+09:00
 
 
-* see: <a href="https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_B">https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_B</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B</a>
 
 
 ## Depends on
 
-* :x: <a href="../../library/powmod.cpp.html">powmod.cpp</a>
+* :heavy_check_mark: <a href="../../library/powmod.cpp.html">powmod.cpp</a>
 
 
 ## Code
@@ -47,7 +47,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_B"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B"
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -77,7 +77,7 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "test/powmod.test.cpp"
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/NTL_1_B"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B"
 
 #include <bits/stdc++.h>
 using namespace std;
