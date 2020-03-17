@@ -1,14 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 template<class T>
 struct SegmentTree {
   ll n;
@@ -51,22 +40,3 @@ struct SegmentTree {
     return data[i+n-1];
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  ll n, q;
-  cin >> n >> q;
-  auto mini = [](ll l, ll r) { return min(l, r); };
-  SegmentTree<ll> st(n, (1LL<<31)-1, mini);
-
-  rep(i, q) {
-    ll c, x, y;
-    cin >> c >> x >> y;
-    if (c == 0) {
-      st.change(x, y);
-    } else {
-      cout << st.query(x, y+1) << endl;
-    }
-  }
-}
