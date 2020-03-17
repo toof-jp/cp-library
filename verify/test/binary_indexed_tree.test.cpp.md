@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: test/binary_indexed_tree.test.cpp
+# :heavy_check_mark: test/binary_indexed_tree.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/binary_indexed_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 20:07:52+09:00
+    - Last commit date: 2020-03-17 20:11:09+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_add_range_sum">https://judge.yosupo.jp/problem/point_add_range_sum</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
+* :heavy_check_mark: <a href="../../library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
 
 
 ## Code
@@ -81,7 +81,7 @@ int main() {
     if (t == 0) {
       ll p, x;
       cin >> p >> x;
-      bit.add(p, x);
+      bit.add0(p, x);
     } else {
       ll l, r;
       cin >> l >> r;
@@ -185,7 +185,7 @@ int main() {
     if (t == 0) {
       ll p, x;
       cin >> p >> x;
-      bit.add(p, x);
+      bit.add0(p, x);
     } else {
       ll l, r;
       cin >> l >> r;
