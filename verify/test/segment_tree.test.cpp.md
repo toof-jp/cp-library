@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/segment_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 22:28:59+09:00
+    - Last commit date: 2020-03-18 07:01:22+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -66,10 +66,10 @@ template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;}
 
 using modint = ModInt<998244353>;
 
-struct F{
+struct f{
   modint a, b;
-  F(ll a, ll b) : a(a), b(b) {};
-  F(modint a, modint b) : a(a), b(b) {};
+  f(ll a, ll b) : a(a), b(b) {};
+  f(modint a, modint b) : a(a), b(b) {};
 };
 
 int main() {
@@ -77,11 +77,11 @@ int main() {
 
   ll n, q;
   cin >> n >> q;
-  SegmentTree<F> seg(n, F(1, 0), [](F l, F r){ return F(l.a*r.a, l.b*r.a+r.b); });
+  SegmentTree<f> seg(n, f(modint(1), modint(0)), [](f l, f r){ return f(r.a*l.a, r.a*l.b+r.b); });
   rep(i, n) {
     ll a, b;
     cin >> a >> b;
-    seg.change(i, F(a, b));
+    seg.change(i, f(a, b));
   }
 
   rep(i, q) {
@@ -90,12 +90,12 @@ int main() {
     if (t == 0) {
       ll p, c, d;
       cin >> p >> c >> d;
-      seg.change(p, F(c, d));
+      seg.change(p, f(c, d));
     } else {
       ll l, r, x;
       cin >> l >> r >> x;
-      F f = seg.query(l, r);
-      cout << f.a*modint(x)+f.b << endl;
+      f e = seg.query(l, r);
+      cout << e.a*modint(x)+e.b << endl;
     }
   }
 }
@@ -132,35 +132,34 @@ struct SegmentTree {
   SegmentTree(ll n_, T identity, F operation) : n(n_), identity(identity), operation(operation) {
     n = 1;
     while (n < n_) n *= 2;
-    data.assign(2*n-1, identity);
+    data.assign(2*n, identity);
   }
 
-  void change(ll i, T x) {
-    i += n-1;
-    data[i] = x;
-    while (i > 0) {
-      i = (i-1)/2;
-      data[i] = operation(data[i*2+1], data[i*2+2]);
+  void change(ll p, T x) {
+    p += n;
+    data[p] = x;
+    while (p > 1) {
+      p /= 2;
+      data[p] = operation(data[p*2], data[p*2+1]);
     }
   }
 
-  T query(ll a, ll b, ll k, ll l, ll r) {
-    if (r <= a or b <= l) return identity;
-    if (a <= l and r <= b) {
-      return data[k];
-    } else {
-      T c1 = query(a, b, 2*k+1, l, (l+r)/2);
-      T c2 = query(a, b, 2*k+2, (l+r)/2, r);
-      return operation(c1, c2);
+  T query(ll l, ll r) {
+    l += n;
+    r += n;
+    T l_res = identity;
+    T r_res = identity;
+    while (l < r) {
+      if (l&1) l_res = operation(l_res, data[l++]);
+      l /= 2;
+      if (r&1) r_res = operation(data[--r], r_res);
+      r /= 2;
     }
-  }
-
-  T query(ll a, ll b) {
-    return query(a, b, 0, 0, n);
+    return operation(l_res, r_res);
   }
 
   T operator[](ll i) {
-    return data[i+n-1];
+    return data[i+n];
   }
 };
 #line 1 "test/../modint.cpp"
@@ -188,10 +187,10 @@ mint operator"" _mi(unsigned long long n) { return mint(n); }
 
 using modint = ModInt<998244353>;
 
-struct F{
+struct f{
   modint a, b;
-  F(ll a, ll b) : a(a), b(b) {};
-  F(modint a, modint b) : a(a), b(b) {};
+  f(ll a, ll b) : a(a), b(b) {};
+  f(modint a, modint b) : a(a), b(b) {};
 };
 
 int main() {
@@ -199,11 +198,11 @@ int main() {
 
   ll n, q;
   cin >> n >> q;
-  SegmentTree<F> seg(n, F(1, 0), [](F l, F r){ return F(l.a*r.a, l.b*r.a+r.b); });
+  SegmentTree<f> seg(n, f(modint(1), modint(0)), [](f l, f r){ return f(r.a*l.a, r.a*l.b+r.b); });
   rep(i, n) {
     ll a, b;
     cin >> a >> b;
-    seg.change(i, F(a, b));
+    seg.change(i, f(a, b));
   }
 
   rep(i, q) {
@@ -212,12 +211,12 @@ int main() {
     if (t == 0) {
       ll p, c, d;
       cin >> p >> c >> d;
-      seg.change(p, F(c, d));
+      seg.change(p, f(c, d));
     } else {
       ll l, r, x;
       cin >> l >> r >> x;
-      F f = seg.query(l, r);
-      cout << f.a*modint(x)+f.b << endl;
+      f e = seg.query(l, r);
+      cout << e.a*modint(x)+e.b << endl;
     }
   }
 }

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/segment_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 22:28:59+09:00
+    - Last commit date: 2020-03-18 07:01:22+09:00
 
 
 
@@ -57,35 +57,34 @@ struct SegmentTree {
   SegmentTree(ll n_, T identity, F operation) : n(n_), identity(identity), operation(operation) {
     n = 1;
     while (n < n_) n *= 2;
-    data.assign(2*n-1, identity);
+    data.assign(2*n, identity);
   }
 
-  void change(ll i, T x) {
-    i += n-1;
-    data[i] = x;
-    while (i > 0) {
-      i = (i-1)/2;
-      data[i] = operation(data[i*2+1], data[i*2+2]);
+  void change(ll p, T x) {
+    p += n;
+    data[p] = x;
+    while (p > 1) {
+      p /= 2;
+      data[p] = operation(data[p*2], data[p*2+1]);
     }
   }
 
-  T query(ll a, ll b, ll k, ll l, ll r) {
-    if (r <= a or b <= l) return identity;
-    if (a <= l and r <= b) {
-      return data[k];
-    } else {
-      T c1 = query(a, b, 2*k+1, l, (l+r)/2);
-      T c2 = query(a, b, 2*k+2, (l+r)/2, r);
-      return operation(c1, c2);
+  T query(ll l, ll r) {
+    l += n;
+    r += n;
+    T l_res = identity;
+    T r_res = identity;
+    while (l < r) {
+      if (l&1) l_res = operation(l_res, data[l++]);
+      l /= 2;
+      if (r&1) r_res = operation(data[--r], r_res);
+      r /= 2;
     }
-  }
-
-  T query(ll a, ll b) {
-    return query(a, b, 0, 0, n);
+    return operation(l_res, r_res);
   }
 
   T operator[](ll i) {
-    return data[i+n-1];
+    return data[i+n];
   }
 };
 
@@ -107,35 +106,34 @@ struct SegmentTree {
   SegmentTree(ll n_, T identity, F operation) : n(n_), identity(identity), operation(operation) {
     n = 1;
     while (n < n_) n *= 2;
-    data.assign(2*n-1, identity);
+    data.assign(2*n, identity);
   }
 
-  void change(ll i, T x) {
-    i += n-1;
-    data[i] = x;
-    while (i > 0) {
-      i = (i-1)/2;
-      data[i] = operation(data[i*2+1], data[i*2+2]);
+  void change(ll p, T x) {
+    p += n;
+    data[p] = x;
+    while (p > 1) {
+      p /= 2;
+      data[p] = operation(data[p*2], data[p*2+1]);
     }
   }
 
-  T query(ll a, ll b, ll k, ll l, ll r) {
-    if (r <= a or b <= l) return identity;
-    if (a <= l and r <= b) {
-      return data[k];
-    } else {
-      T c1 = query(a, b, 2*k+1, l, (l+r)/2);
-      T c2 = query(a, b, 2*k+2, (l+r)/2, r);
-      return operation(c1, c2);
+  T query(ll l, ll r) {
+    l += n;
+    r += n;
+    T l_res = identity;
+    T r_res = identity;
+    while (l < r) {
+      if (l&1) l_res = operation(l_res, data[l++]);
+      l /= 2;
+      if (r&1) r_res = operation(data[--r], r_res);
+      r /= 2;
     }
-  }
-
-  T query(ll a, ll b) {
-    return query(a, b, 0, 0, n);
+    return operation(l_res, r_res);
   }
 
   T operator[](ll i) {
-    return data[i+n-1];
+    return data[i+n];
   }
 };
 
