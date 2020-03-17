@@ -41,7 +41,7 @@ layout: default
 * :warning: <a href="library/bfs.cpp.html">bfs.cpp</a>
 * :warning: <a href="library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
 * :warning: <a href="library/combination.cpp.html">combination.cpp</a>
-* :x: <a href="library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
+* :warning: <a href="library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
 * :warning: <a href="library/dfs.cpp.html">dfs.cpp</a>
 * :warning: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
 * :warning: <a href="library/modint.cpp.html">modint.cpp</a>
@@ -54,7 +54,6 @@ layout: default
 
 ## Verify Files
 
-* :x: <a href="verify/test/cumulative_sum.test.cpp.html">test/cumulative_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/powmod.test.cpp.html">test/powmod.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/union_find.test.cpp.html">test/union_find.test.cpp</a>
 
