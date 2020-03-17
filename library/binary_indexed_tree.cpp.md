@@ -25,15 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :warning: binary_indexed_tree.cpp
+# :x: binary_indexed_tree.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/binary_indexed_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2019-08-11 17:45:58+09:00
+    - Last commit date: 2020-03-17 20:07:52+09:00
 
 
+
+
+## Verified with
+
+* :x: <a href="../verify/test/binary_indexed_tree.test.cpp.html">test/binary_indexed_tree.test.cpp</a>
 
 
 ## Code
@@ -41,24 +46,13 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 template<typename T>
-struct BIT {
+struct BinaryIndexedTree {
   // 1-indexed
   int n;
   vector<T> bit;
 
-  BIT(int n_, T d = 0):n(n_), bit(n_+1, d) {}
+  BinaryIndexedTree(int n_, T d = 0):n(n_), bit(n_+1, d) {}
 
   void add(int i, T a) {
     if (i == 0) return;
@@ -105,25 +99,6 @@ struct BIT {
     return sum(r+1) - sum(l);
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  int n, q;
-  cin >> n >> q;
-
-  BIT<int> bit(n);
-
-  rep(i, q) {
-    int a, b, c;
-    cin >> a >> b >> c;
-    if (a) {
-      cout << bit.sum_between(b, c) << endl;
-    } else {
-      bit.add(b, c);
-    }
-  }
-}
 
 ```
 {% endraw %}
@@ -132,24 +107,13 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "binary_indexed_tree.cpp"
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 template<typename T>
-struct BIT {
+struct BinaryIndexedTree {
   // 1-indexed
   int n;
   vector<T> bit;
 
-  BIT(int n_, T d = 0):n(n_), bit(n_+1, d) {}
+  BinaryIndexedTree(int n_, T d = 0):n(n_), bit(n_+1, d) {}
 
   void add(int i, T a) {
     if (i == 0) return;
@@ -196,25 +160,6 @@ struct BIT {
     return sum(r+1) - sum(l);
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  int n, q;
-  cin >> n >> q;
-
-  BIT<int> bit(n);
-
-  rep(i, q) {
-    int a, b, c;
-    cin >> a >> b >> c;
-    if (a) {
-      cout << bit.sum_between(b, c) << endl;
-    } else {
-      bit.add(b, c);
-    }
-  }
-}
 
 ```
 {% endraw %}
