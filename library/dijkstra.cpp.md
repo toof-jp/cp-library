@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :x: dijkstra.cpp
+# :heavy_check_mark: dijkstra.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/dijkstra.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 21:42:00+09:00
+    - Last commit date: 2020-03-17 21:51:39+09:00
 
 
 
 
 ## Verified with
 
-* :x: <a href="../verify/test/dijkstra.test.cpp.html">test/dijkstra.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/test/dijkstra.test.cpp.html">test/dijkstra.test.cpp</a>
 
 
 ## Code
@@ -53,7 +53,7 @@ vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
   priority_queue<pll, vector<pll>, greater<pll>> que;
   vl d(n, INF);
   d[s] = 0;
-  que.push(pii(0, s));
+  que.push(pll(0, s));
 
   while(!que.empty()) {
     pll p = que.top();
@@ -63,7 +63,7 @@ vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
     for (auto&& e : G[v]) {
       if (d[e.first] > d[v] + e.second) {
         d[e.first] = d[v] + e.second;
-        que.push(pii(d[e.first], e.first));
+        que.push(pll(d[e.first], e.first));
       }
     }
   }
@@ -84,7 +84,7 @@ vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
   priority_queue<pll, vector<pll>, greater<pll>> que;
   vl d(n, INF);
   d[s] = 0;
-  que.push(pii(0, s));
+  que.push(pll(0, s));
 
   while(!que.empty()) {
     pll p = que.top();
@@ -94,7 +94,7 @@ vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
     for (auto&& e : G[v]) {
       if (d[e.first] > d[v] + e.second) {
         d[e.first] = d[v] + e.second;
-        que.push(pii(d[e.first], e.first));
+        que.push(pll(d[e.first], e.first));
       }
     }
   }
