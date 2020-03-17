@@ -16,10 +16,10 @@ template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;}
 
 using modint = ModInt<998244353>;
 
-struct F{
+struct f{
   modint a, b;
-  F(ll a, ll b) : a(a), b(b) {};
-  F(modint a, modint b) : a(a), b(b) {};
+  f(ll a, ll b) : a(a), b(b) {};
+  f(modint a, modint b) : a(a), b(b) {};
 };
 
 int main() {
@@ -27,11 +27,11 @@ int main() {
 
   ll n, q;
   cin >> n >> q;
-  SegmentTree<F> seg(n, F(1, 0), [](F l, F r){ return F(l.a*r.a, l.b*r.a+r.b); });
+  SegmentTree<f> seg(n, f(modint(1), modint(0)), [](f l, f r){ return f(r.a*l.a, r.a*l.b+r.b); });
   rep(i, n) {
     ll a, b;
     cin >> a >> b;
-    seg.change(i, F(a, b));
+    seg.change(i, f(a, b));
   }
 
   rep(i, q) {
@@ -40,12 +40,12 @@ int main() {
     if (t == 0) {
       ll p, c, d;
       cin >> p >> c >> d;
-      seg.change(p, F(c, d));
+      seg.change(p, f(c, d));
     } else {
       ll l, r, x;
       cin >> l >> r >> x;
-      F f = seg.query(l, r);
-      cout << f.a*modint(x)+f.b << endl;
+      f e = seg.query(l, r);
+      cout << e.a*modint(x)+e.b << endl;
     }
   }
 }
