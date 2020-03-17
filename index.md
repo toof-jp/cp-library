@@ -39,10 +39,10 @@ layout: default
 ### .
 
 * :heavy_check_mark: <a href="library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
-* :x: <a href="library/combination.cpp.html">combination.cpp</a>
+* :heavy_check_mark: <a href="library/combination.cpp.html">combination.cpp</a>
 * :heavy_check_mark: <a href="library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
 * :heavy_check_mark: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
-* :question: <a href="library/modint.cpp.html">modint.cpp</a>
+* :heavy_check_mark: <a href="library/modint.cpp.html">modint.cpp</a>
 * :heavy_check_mark: <a href="library/powmod.cpp.html">powmod.cpp</a>
 * :heavy_check_mark: <a href="library/prime_factorization.cpp.html">prime_factorization.cpp</a>
 * :heavy_check_mark: <a href="library/segment_tree.cpp.html">segment_tree.cpp</a>
@@ -52,9 +52,9 @@ layout: default
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/test/DPL_5_A.test.cpp.html">test/DPL_5_A.test.cpp</a>
-* :x: <a href="verify/test/DPL_5_B.test.cpp.html">test/DPL_5_B.test.cpp</a>
-* :x: <a href="verify/test/DPL_5_D.test.cpp.html">test/DPL_5_D.test.cpp</a>
-* :x: <a href="verify/test/DPL_5_E.test.cpp.html">test/DPL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/DPL_5_B.test.cpp.html">test/DPL_5_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/DPL_5_D.test.cpp.html">test/DPL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/DPL_5_E.test.cpp.html">test/DPL_5_E.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/binary_indexed_tree.test.cpp.html">test/binary_indexed_tree.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/cumulative_sum.test.cpp.html">test/cumulative_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/dijkstra.test.cpp.html">test/dijkstra.test.cpp</a>

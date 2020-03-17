@@ -25,22 +25,22 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :x: combination.cpp
+# :heavy_check_mark: combination.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/combination.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-01-19 18:38:56+09:00
+    - Last commit date: 2020-03-18 05:36:13+09:00
 
 
 
 
 ## Verified with
 
-* :x: <a href="../verify/test/DPL_5_B.test.cpp.html">test/DPL_5_B.test.cpp</a>
-* :x: <a href="../verify/test/DPL_5_D.test.cpp.html">test/DPL_5_D.test.cpp</a>
-* :x: <a href="../verify/test/DPL_5_E.test.cpp.html">test/DPL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/test/DPL_5_B.test.cpp.html">test/DPL_5_B.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/test/DPL_5_D.test.cpp.html">test/DPL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/test/DPL_5_E.test.cpp.html">test/DPL_5_E.test.cpp</a>
 
 
 ## Code
@@ -48,17 +48,6 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 // T modint
 template<class T>
 struct Combination {
@@ -86,11 +75,6 @@ struct Combination {
     return C(n+k-1, n-1);
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-}
 
 ```
 {% endraw %}
@@ -99,17 +83,6 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "combination.cpp"
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 // T modint
 template<class T>
 struct Combination {
@@ -137,11 +110,6 @@ struct Combination {
     return C(n+k-1, n-1);
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-}
 
 ```
 {% endraw %}

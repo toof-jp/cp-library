@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="../../library/modint.cpp.html">modint.cpp</a>
+* :heavy_check_mark: <a href="../../library/modint.cpp.html">modint.cpp</a>
 * :heavy_check_mark: <a href="../../library/segment_tree.cpp.html">segment_tree.cpp</a>
 
 

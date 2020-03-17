@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: test/DPL_5_E.test.cpp
+# :heavy_check_mark: test/DPL_5_E.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/DPL_5_E.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-18 05:32:10+09:00
+    - Last commit date: 2020-03-18 05:36:13+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="../../library/combination.cpp.html">combination.cpp</a>
-* :question: <a href="../../library/modint.cpp.html">modint.cpp</a>
+* :heavy_check_mark: <a href="../../library/combination.cpp.html">combination.cpp</a>
+* :heavy_check_mark: <a href="../../library/modint.cpp.html">modint.cpp</a>
 
 
 ## Code
@@ -114,17 +114,7 @@ struct ModInt {
 constexpr ll mod = 1000000007;
 using mint = ModInt<mod>;
 mint operator"" _mi(unsigned long long n) { return mint(n); }
-#line 2 "test/../combination.cpp"
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
+#line 1 "test/../combination.cpp"
 // T modint
 template<class T>
 struct Combination {
@@ -152,11 +142,6 @@ struct Combination {
     return C(n+k-1, n-1);
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-}
 #line 16 "test/DPL_5_E.test.cpp"
 
 int main() {
