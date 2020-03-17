@@ -32,7 +32,7 @@ int main() {
     if (t == 0) {
       ll p, x;
       cin >> p >> x;
-      bit.add(p, x);
+      bit.add0(p, x);
     } else {
       ll l, r;
       cin >> l >> r;
