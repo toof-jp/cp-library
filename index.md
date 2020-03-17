@@ -44,7 +44,6 @@ layout: default
 * :heavy_check_mark: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
 * :heavy_check_mark: <a href="library/modint.cpp.html">modint.cpp</a>
 * :heavy_check_mark: <a href="library/powmod.cpp.html">powmod.cpp</a>
-* :warning: <a href="library/prim_mst.cpp.html">prim_mst.cpp</a>
 * :heavy_check_mark: <a href="library/prime_factorization.cpp.html">prime_factorization.cpp</a>
 * :heavy_check_mark: <a href="library/segment_tree.cpp.html">segment_tree.cpp</a>
 * :heavy_check_mark: <a href="library/union_find.cpp.html">union_find.cpp</a>
