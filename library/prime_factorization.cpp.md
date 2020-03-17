@@ -25,15 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :warning: prime_factorization.cpp
+# :heavy_check_mark: prime_factorization.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/prime_factorization.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 18:57:31+09:00
+    - Last commit date: 2020-03-17 21:59:26+09:00
 
 
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../verify/test/prime_factorization.test.cpp.html">test/prime_factorization.test.cpp</a>
 
 
 ## Code
@@ -41,14 +46,6 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-//
-// https://beta.atcoder.jp/contests/abc052/tasks/arc067_a
-//
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-
 map<ll, ll> PrimeFactorization(ll n) {
   map<ll, ll> m;
   for (int i = 2; i*i <= n; i++) {
@@ -59,28 +56,6 @@ map<ll, ll> PrimeFactorization(ll n) {
   }
   if (n != 1) m[n]++;
   return m;
-}
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  int n;
-  cin >> n;
-
-  map<ll, ll> m;
-  rep(i, n) {
-    for (auto&& j : PrimeFactorization(i+1)) {
-      m[j.first] += j.second;
-    }
-  }
-
-  ll ans = 1;
-  const int MOD = (int)1e9+7;
-  for (auto&& i : m) {
-    ans = ans*(i.second+1)%MOD;
-  }
-
-  cout << ans << endl;
 }
 
 ```
@@ -90,14 +65,6 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "prime_factorization.cpp"
-//
-// https://beta.atcoder.jp/contests/abc052/tasks/arc067_a
-//
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-
 map<ll, ll> PrimeFactorization(ll n) {
   map<ll, ll> m;
   for (int i = 2; i*i <= n; i++) {
@@ -108,28 +75,6 @@ map<ll, ll> PrimeFactorization(ll n) {
   }
   if (n != 1) m[n]++;
   return m;
-}
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  int n;
-  cin >> n;
-
-  map<ll, ll> m;
-  rep(i, n) {
-    for (auto&& j : PrimeFactorization(i+1)) {
-      m[j.first] += j.second;
-    }
-  }
-
-  ll ans = 1;
-  const int MOD = (int)1e9+7;
-  for (auto&& i : m) {
-    ans = ans*(i.second+1)%MOD;
-  }
-
-  cout << ans << endl;
 }
 
 ```
