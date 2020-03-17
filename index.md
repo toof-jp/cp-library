@@ -51,6 +51,7 @@ layout: default
 
 ## Verify Files
 
+* :heavy_check_mark: <a href="verify/test/DPL_5_A.test.cpp.html">test/DPL_5_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/binary_indexed_tree.test.cpp.html">test/binary_indexed_tree.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/cumulative_sum.test.cpp.html">test/cumulative_sum.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/dijkstra.test.cpp.html">test/dijkstra.test.cpp</a>
