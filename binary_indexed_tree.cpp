@@ -10,12 +10,12 @@ template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;}
 template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
 template<typename T>
-struct BIT {
+struct BinaryIndexedTree {
   // 1-indexed
   int n;
   vector<T> bit;
 
-  BIT(int n_, T d = 0):n(n_), bit(n_+1, d) {}
+  BinaryIndexedTree(int n_, T d = 0):n(n_), bit(n_+1, d) {}
 
   void add(int i, T a) {
     if (i == 0) return;
@@ -69,7 +69,7 @@ int main() {
   int n, q;
   cin >> n >> q;
 
-  BIT<int> bit(n);
+  BinaryIndexedTree<int> bit(n);
 
   rep(i, q) {
     int a, b, c;
