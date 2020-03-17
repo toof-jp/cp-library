@@ -1,14 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
 template<typename T>
 struct BinaryIndexedTree {
   // 1-indexed
@@ -62,22 +51,3 @@ struct BinaryIndexedTree {
     return sum(r+1) - sum(l);
   }
 };
-
-int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
-  int n, q;
-  cin >> n >> q;
-
-  BinaryIndexedTree<int> bit(n);
-
-  rep(i, q) {
-    int a, b, c;
-    cin >> a >> b >> c;
-    if (a) {
-      cout << bit.sum_between(b, c) << endl;
-    } else {
-      bit.add(b, c);
-    }
-  }
-}
