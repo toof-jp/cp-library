@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: segment_tree.cpp
+# :x: segment_tree.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/segment_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-18 07:01:22+09:00
+    - Last commit date: 2020-03-19 01:59:06+09:00
 
 
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
+* :x: <a href="../verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
 
 
 ## Code
@@ -49,7 +49,7 @@ layout: default
 template<class T>
 struct SegmentTree {
   ll n;
-  vector<T> data;
+  vector<T> tree;
   T identity;
   using F = function<T(T, T)>;
   F operation;
@@ -57,15 +57,22 @@ struct SegmentTree {
   SegmentTree(ll n_, T identity, F operation) : n(n_), identity(identity), operation(operation) {
     n = 1;
     while (n < n_) n *= 2;
-    data.assign(2*n, identity);
+    tree.assign(2*n, identity);
+  }
+
+  void build(const vector<T> &v) {
+    rep(i, n) {
+      tree[i+n] = v[i];
+    }
+    for (ll i = n-1; i >= 0; i--) tree[i] = operation(tree[i*2], tree[i*2+1]);
   }
 
   void change(ll p, T x) {
     p += n;
-    data[p] = x;
+    tree[p] = x;
     while (p > 1) {
       p /= 2;
-      data[p] = operation(data[p*2], data[p*2+1]);
+      tree[p] = operation(tree[p*2], tree[p*2+1]);
     }
   }
 
@@ -75,16 +82,16 @@ struct SegmentTree {
     T l_res = identity;
     T r_res = identity;
     while (l < r) {
-      if (l&1) l_res = operation(l_res, data[l++]);
+      if (l&1) l_res = operation(l_res, tree[l++]);
       l /= 2;
-      if (r&1) r_res = operation(data[--r], r_res);
+      if (r&1) r_res = operation(tree[--r], r_res);
       r /= 2;
     }
     return operation(l_res, r_res);
   }
 
   T operator[](ll i) {
-    return data[i+n];
+    return tree[i+n];
   }
 };
 
@@ -98,7 +105,7 @@ struct SegmentTree {
 template<class T>
 struct SegmentTree {
   ll n;
-  vector<T> data;
+  vector<T> tree;
   T identity;
   using F = function<T(T, T)>;
   F operation;
@@ -106,15 +113,22 @@ struct SegmentTree {
   SegmentTree(ll n_, T identity, F operation) : n(n_), identity(identity), operation(operation) {
     n = 1;
     while (n < n_) n *= 2;
-    data.assign(2*n, identity);
+    tree.assign(2*n, identity);
+  }
+
+  void build(const vector<T> &v) {
+    rep(i, n) {
+      tree[i+n] = v[i];
+    }
+    for (ll i = n-1; i >= 0; i--) tree[i] = operation(tree[i*2], tree[i*2+1]);
   }
 
   void change(ll p, T x) {
     p += n;
-    data[p] = x;
+    tree[p] = x;
     while (p > 1) {
       p /= 2;
-      data[p] = operation(data[p*2], data[p*2+1]);
+      tree[p] = operation(tree[p*2], tree[p*2+1]);
     }
   }
 
@@ -124,16 +138,16 @@ struct SegmentTree {
     T l_res = identity;
     T r_res = identity;
     while (l < r) {
-      if (l&1) l_res = operation(l_res, data[l++]);
+      if (l&1) l_res = operation(l_res, tree[l++]);
       l /= 2;
-      if (r&1) r_res = operation(data[--r], r_res);
+      if (r&1) r_res = operation(tree[--r], r_res);
       r /= 2;
     }
     return operation(l_res, r_res);
   }
 
   T operator[](ll i) {
-    return data[i+n];
+    return tree[i+n];
   }
 };
 

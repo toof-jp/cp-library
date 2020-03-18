@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/combination.cpp.html">combination.cpp</a>
-* :heavy_check_mark: <a href="../../library/modint.cpp.html">modint.cpp</a>
+* :question: <a href="../../library/modint.cpp.html">modint.cpp</a>
 
 
 ## Code

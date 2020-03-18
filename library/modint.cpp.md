@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modint.cpp
+# :question: modint.cpp
 
 <a href="../index.html">Back to top page</a>
 
@@ -41,7 +41,7 @@ layout: default
 * :heavy_check_mark: <a href="../verify/test/DPL_5_B.test.cpp.html">test/DPL_5_B.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/test/DPL_5_D.test.cpp.html">test/DPL_5_D.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/test/DPL_5_E.test.cpp.html">test/DPL_5_E.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
+* :x: <a href="../verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
 
 
 ## Code
