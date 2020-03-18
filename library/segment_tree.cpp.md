@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :x: segment_tree.cpp
+# :heavy_check_mark: segment_tree.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/segment_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 01:59:06+09:00
+    - Last commit date: 2020-03-19 02:27:33+09:00
 
 
 
 
 ## Verified with
 
-* :x: <a href="../verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
 
 
 ## Code
@@ -61,7 +61,7 @@ struct SegmentTree {
   }
 
   void build(const vector<T> &v) {
-    rep(i, n) {
+    rep(i, v.size()) {
       tree[i+n] = v[i];
     }
     for (ll i = n-1; i >= 0; i--) tree[i] = operation(tree[i*2], tree[i*2+1]);
@@ -117,7 +117,7 @@ struct SegmentTree {
   }
 
   void build(const vector<T> &v) {
-    rep(i, n) {
+    rep(i, v.size()) {
       tree[i+n] = v[i];
     }
     for (ll i = n-1; i >= 0; i--) tree[i] = operation(tree[i*2], tree[i*2+1]);
