@@ -1,3 +1,6 @@
+#pragma once
+#include "template.cpp"
+
 ll powmod(ll a, ll n, ll p) {
   ll res = 1;
   while (n) {

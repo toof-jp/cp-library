@@ -1,3 +1,6 @@
+#pragma once
+#include "template.cpp"
+
 template <ll Mod>
 struct ModInt {
   ll n;

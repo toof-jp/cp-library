@@ -1,3 +1,6 @@
+#pragma once
+#include "template.cpp"
+
 map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
   for (int i = 2; i*i <= n; i++) {

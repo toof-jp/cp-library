@@ -1,3 +1,6 @@
+#pragma once
+#include "template.cpp"
+
 template<typename T>
 struct BinaryIndexedTree {
   // 1-indexed

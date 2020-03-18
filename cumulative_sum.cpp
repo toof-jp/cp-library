@@ -1,3 +1,6 @@
+#pragma once
+#include "template.cpp"
+
 template<class T>
 struct CumulativeSum {
   vector<T> v;

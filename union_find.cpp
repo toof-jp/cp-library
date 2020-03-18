@@ -1,3 +1,6 @@
+#pragma once
+#include "template.cpp"
+
 struct UnionFind {
   struct Node {
     ll parent;

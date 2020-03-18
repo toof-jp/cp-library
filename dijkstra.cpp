@@ -1,3 +1,6 @@
+#pragma once
+#include "template.cpp"
+
 ll INF = 1LL<<60;
 
 vl dijkstra(ll n, ll s, vector<vector<pl>> G) {

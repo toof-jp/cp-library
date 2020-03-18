@@ -1,3 +1,6 @@
+#pragma once
+#include "template.cpp"
+
 // T modint
 template<class T>
 struct Combination {
