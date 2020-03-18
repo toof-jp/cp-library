@@ -1,13 +1,14 @@
 {
-"test/DPL_5_A.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/DPL_5_B.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/DPL_5_D.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/DPL_5_E.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/binary_indexed_tree.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/cumulative_sum.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/dijkstra.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/powmod.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/prime_factorization.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/segment_tree.test.cpp": "2020-03-19 02:50:19 +0900",
-"test/union_find.test.cpp": "2020-03-19 02:50:19 +0900"
+"verify/DPL_5_A.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/DPL_5_B.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/DPL_5_D.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/DPL_5_E.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/binary_indexed_tree.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/cumulative_sum.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/dijkstra.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/powmod.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/prime_factorization.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/segment_tree.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/template.test.cpp": "2020-03-19 03:53:36 +0900",
+"verify/union_find.test.cpp": "2020-03-19 03:53:36 +0900"
 }
