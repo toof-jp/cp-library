@@ -13,7 +13,7 @@ struct SegmentTree {
   }
 
   void build(const vector<T> &v) {
-    rep(i, n) {
+    rep(i, v.size()) {
       tree[i+n] = v[i];
     }
     for (ll i = n-1; i >= 0; i--) tree[i] = operation(tree[i*2], tree[i*2+1]);
