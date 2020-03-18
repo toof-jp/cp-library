@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: template.cpp
+# :question: template.cpp
 
 <a href="../index.html">Back to top page</a>
 
@@ -36,20 +36,33 @@ layout: default
 
 
 
+## Required by
+
+* :x: <a href="binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
+* :x: <a href="combination.cpp.html">combination.cpp</a>
+* :x: <a href="cumulative_sum.cpp.html">cumulative_sum.cpp</a>
+* :x: <a href="dijkstra.cpp.html">dijkstra.cpp</a>
+* :x: <a href="modint.cpp.html">modint.cpp</a>
+* :x: <a href="powmod.cpp.html">powmod.cpp</a>
+* :x: <a href="prime_factorization.cpp.html">prime_factorization.cpp</a>
+* :x: <a href="segment_tree.cpp.html">segment_tree.cpp</a>
+* :x: <a href="union_find.cpp.html">union_find.cpp</a>
+
+
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/verify/DPL_5_A.test.cpp.html">verify/DPL_5_A.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/DPL_5_B.test.cpp.html">verify/DPL_5_B.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/DPL_5_D.test.cpp.html">verify/DPL_5_D.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/DPL_5_E.test.cpp.html">verify/DPL_5_E.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/binary_indexed_tree.test.cpp.html">verify/binary_indexed_tree.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
+* :x: <a href="../verify/verify/DPL_5_A.test.cpp.html">verify/DPL_5_A.test.cpp</a>
+* :x: <a href="../verify/verify/DPL_5_B.test.cpp.html">verify/DPL_5_B.test.cpp</a>
+* :x: <a href="../verify/verify/DPL_5_D.test.cpp.html">verify/DPL_5_D.test.cpp</a>
+* :x: <a href="../verify/verify/DPL_5_E.test.cpp.html">verify/DPL_5_E.test.cpp</a>
+* :x: <a href="../verify/verify/binary_indexed_tree.test.cpp.html">verify/binary_indexed_tree.test.cpp</a>
+* :x: <a href="../verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
+* :x: <a href="../verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
+* :x: <a href="../verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
+* :x: <a href="../verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
+* :x: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
+* :x: <a href="../verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
 
 
 ## Code

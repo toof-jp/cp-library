@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: verify/cumulative_sum.test.cpp
+# :x: verify/cumulative_sum.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/cumulative_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 03:53:36+09:00
+    - Last commit date: 2020-03-19 04:19:57+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
+* :x: <a href="../../library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
+* :question: <a href="../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code
@@ -106,7 +106,28 @@ struct IoSetup {
     ios::sync_with_stdio(false);
   }
 } io_setup;
-#line 1 "verify/../cumulative_sum.cpp"
+#line 2 "verify/../template.cpp"
+using namespace std;
+
+using ll = long long;
+using pl = pair<ll, ll>;
+using vl = vector<ll>;
+#define rep(i, n) for(ll i = 0; i < n; i++)
+#define per(i, n) for(ll i = n-1; i >= 0; i--)
+#define all(v) begin(v), end(v)
+template<class T, class U>
+inline void cmax(T& a, U b) { if (a < b) a = b; }
+template<class T, class U>
+inline void cmin(T& a, U b) { if (a > b) a = b; }
+
+struct IoSetup {
+  IoSetup() {
+    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+  }
+} io_setup;
+#line 3 "verify/../cumulative_sum.cpp"
+
 template<class T>
 struct CumulativeSum {
   vector<T> v;

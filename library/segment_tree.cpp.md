@@ -25,20 +25,25 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: segment_tree.cpp
+# :x: segment_tree.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/segment_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 02:27:33+09:00
+    - Last commit date: 2020-03-19 04:19:57+09:00
 
 
+
+
+## Depends on
+
+* :question: <a href="template.cpp.html">template.cpp</a>
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
+* :x: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
 
 
 ## Code
@@ -46,6 +51,9 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+#pragma once
+#include "template.cpp"
+
 template<class T>
 struct SegmentTree {
   ll n;
@@ -101,7 +109,29 @@ struct SegmentTree {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "segment_tree.cpp"
+#line 1 "template.cpp"
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+using pl = pair<ll, ll>;
+using vl = vector<ll>;
+#define rep(i, n) for(ll i = 0; i < n; i++)
+#define per(i, n) for(ll i = n-1; i >= 0; i--)
+#define all(v) begin(v), end(v)
+template<class T, class U>
+inline void cmax(T& a, U b) { if (a < b) a = b; }
+template<class T, class U>
+inline void cmin(T& a, U b) { if (a > b) a = b; }
+
+struct IoSetup {
+  IoSetup() {
+    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+  }
+} io_setup;
+#line 3 "segment_tree.cpp"
+
 template<class T>
 struct SegmentTree {
   ll n;
