@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/union_find.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 18:17:55+09:00
+    - Last commit date: 2020-03-19 02:50:19+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/unionfind">https://judge.yosupo.jp/problem/unionfind</a>
@@ -39,6 +39,7 @@ layout: default
 
 ## Depends on
 
+* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
 * :heavy_check_mark: <a href="../../library/union_find.cpp.html">union_find.cpp</a>
 
 
@@ -49,17 +50,7 @@ layout: default
 ```cpp
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
+#include "../template.cpp"
 #include "../union_find.cpp"
 
 int main() {
@@ -89,17 +80,18 @@ int main() {
 #line 1 "test/union_find.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
+#line 1 "test/../template.cpp"
 #include <bits/stdc++.h>
 using namespace std;
+
 using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
+using pl = pair<ll, ll>;
 using vl = vector<ll>;
 #define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
+#define per(i, n) for(ll i = n-1;i >= 0; i--)
+#define all(v) (v).begin(), (v).end()
+template<class T, class U> void cmax(T& a, U b) { if (a<b) a = b; }
+template<class T, class U> void cmin(T& a, U b) { if (a>b) a = b; }
 #line 1 "test/../union_find.cpp"
 struct UnionFind {
   struct Node {
@@ -138,7 +130,7 @@ struct UnionFind {
     return find(x) == find(y);
   }
 };
-#line 15 "test/union_find.test.cpp"
+#line 5 "test/union_find.test.cpp"
 
 int main() {
   cin.tie(0); ios::sync_with_stdio(false);

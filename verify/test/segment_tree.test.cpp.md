@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/segment_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 02:27:33+09:00
+    - Last commit date: 2020-03-19 02:50:19+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -41,6 +41,7 @@ layout: default
 
 * :heavy_check_mark: <a href="../../library/modint.cpp.html">modint.cpp</a>
 * :heavy_check_mark: <a href="../../library/segment_tree.cpp.html">segment_tree.cpp</a>
+* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code
@@ -50,17 +51,7 @@ layout: default
 ```cpp
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
 
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
+#include "../template.cpp"
 #include "../segment_tree.cpp"
 #include "../modint.cpp"
 
@@ -111,17 +102,18 @@ int main() {
 #line 1 "test/segment_tree.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
 
+#line 1 "test/../template.cpp"
 #include <bits/stdc++.h>
 using namespace std;
+
 using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
+using pl = pair<ll, ll>;
 using vl = vector<ll>;
 #define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
+#define per(i, n) for(ll i = n-1;i >= 0; i--)
+#define all(v) (v).begin(), (v).end()
+template<class T, class U> void cmax(T& a, U b) { if (a<b) a = b; }
+template<class T, class U> void cmin(T& a, U b) { if (a>b) a = b; }
 #line 1 "test/../segment_tree.cpp"
 template<class T>
 struct SegmentTree {
@@ -224,7 +216,7 @@ struct ModInt {
 constexpr ll mod = 1000000007;
 using mint = ModInt<mod>;
 mint operator"" _mi(unsigned long long n) { return mint(n); }
-#line 16 "test/segment_tree.test.cpp"
+#line 6 "test/segment_tree.test.cpp"
 
 using modint = ModInt<998244353>;
 
