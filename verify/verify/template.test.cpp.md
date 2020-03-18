@@ -25,21 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: verify/template.test.cpp
+# :x: verify/template.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/template.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 04:25:01+09:00
+    - Last commit date: 2020-03-19 04:40:30+09:00
 
 
-* see: <a href="https://judge.yosupo.jp/problem/aplusb">https://judge.yosupo.jp/problem/aplusb</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
+* :question: <a href="../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code
@@ -47,8 +46,6 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
-
 #include "../template.cpp"
 
 int main() {
@@ -70,10 +67,6 @@ int main() {
   }
   assert(maxi == 9);
   assert(mini == 1);
-
-  ll a, b;
-  cin >> a >> b;
-  cout << a+b << endl;
 }
 
 ```
@@ -82,9 +75,6 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "verify/template.test.cpp"
-#define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
-
 #line 2 "verify/../template.cpp"
 
 #include <bits/stdc++.h>
@@ -107,7 +97,7 @@ struct IoSetup {
     ios::sync_with_stdio(false);
   }
 } io_setup;
-#line 4 "verify/template.test.cpp"
+#line 2 "verify/template.test.cpp"
 
 int main() {
   ll n = 10;
@@ -128,10 +118,6 @@ int main() {
   }
   assert(maxi == 9);
   assert(mini == 1);
-
-  ll a, b;
-  cin >> a >> b;
-  cout << a+b << endl;
 }
 
 ```

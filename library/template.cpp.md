@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: template.cpp
+# :question: template.cpp
 
 <a href="../index.html">Back to top page</a>
 
@@ -43,6 +43,7 @@ layout: default
 * :heavy_check_mark: <a href="cumulative_sum.cpp.html">cumulative_sum.cpp</a>
 * :heavy_check_mark: <a href="dijkstra.cpp.html">dijkstra.cpp</a>
 * :heavy_check_mark: <a href="modint.cpp.html">modint.cpp</a>
+* :warning: <a href="popcount.cpp.html">popcount.cpp</a>
 * :heavy_check_mark: <a href="powmod.cpp.html">powmod.cpp</a>
 * :heavy_check_mark: <a href="prime_factorization.cpp.html">prime_factorization.cpp</a>
 * :heavy_check_mark: <a href="segment_tree.cpp.html">segment_tree.cpp</a>
@@ -61,7 +62,7 @@ layout: default
 * :heavy_check_mark: <a href="../verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
+* :x: <a href="../verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
 
 

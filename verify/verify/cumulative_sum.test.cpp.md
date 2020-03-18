@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
+* :question: <a href="../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code

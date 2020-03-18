@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: cumulative_sum.cpp
+# :warning: popcount.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
-* <a href="{{ site.github.repository_url }}/blob/master/cumulative_sum.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 04:25:01+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/popcount.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-19 04:39:50+09:00
 
 
 
@@ -39,11 +39,6 @@ layout: default
 ## Depends on
 
 * :question: <a href="template.cpp.html">template.cpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
 
 
 ## Code
@@ -54,44 +49,13 @@ layout: default
 #pragma once
 #include "template.cpp"
 
-template<class T>
-struct CumulativeSum {
-  vector<T> v;
+int popcount(int n) {
+  return __builtin_popcount(n);
+}
 
-  CumulativeSum(size_t n) : v(n+1) {};
-  CumulativeSum(vector<T> v_) {
-    v.resize(v_.size()+1);
-    for (size_t i = 0; i < v_.size(); i++) v[i+1] = v_[i];
-  };
-
-  void add(size_t i, T x) {
-    v[i+1] += x;
-  }
-
-  // O(N)
-  void build() {
-    for (size_t i = 0; i < v.size()-1; i++)
-      v[i+1] += v[i];
-  }
-
-  // O(1) sum [l, r]
-  T sum(size_t l, size_t r) const {
-    return l == 0 ? v[r+1] : v[r+1]-v[l];
-  }
-
-  // O(1) sum [0, r]
-  T sum(size_t r) const {
-    return v[r+1];
-  }
-
-  T& operator[](size_t i) {
-    return v[i];
-  }
-
-  const T& operator[](size_t i) const {
-    return v[i];
-  }
-};
+ll popcount(ll n) {
+  return __builtin_popcountll(n);
+}
 
 ```
 {% endraw %}
@@ -121,46 +85,15 @@ struct IoSetup {
     ios::sync_with_stdio(false);
   }
 } io_setup;
-#line 3 "cumulative_sum.cpp"
+#line 3 "popcount.cpp"
 
-template<class T>
-struct CumulativeSum {
-  vector<T> v;
+int popcount(int n) {
+  return __builtin_popcount(n);
+}
 
-  CumulativeSum(size_t n) : v(n+1) {};
-  CumulativeSum(vector<T> v_) {
-    v.resize(v_.size()+1);
-    for (size_t i = 0; i < v_.size(); i++) v[i+1] = v_[i];
-  };
-
-  void add(size_t i, T x) {
-    v[i+1] += x;
-  }
-
-  // O(N)
-  void build() {
-    for (size_t i = 0; i < v.size()-1; i++)
-      v[i+1] += v[i];
-  }
-
-  // O(1) sum [l, r]
-  T sum(size_t l, size_t r) const {
-    return l == 0 ? v[r+1] : v[r+1]-v[l];
-  }
-
-  // O(1) sum [0, r]
-  T sum(size_t r) const {
-    return v[r+1];
-  }
-
-  T& operator[](size_t i) {
-    return v[i];
-  }
-
-  const T& operator[](size_t i) const {
-    return v[i];
-  }
-};
+ll popcount(ll n) {
+  return __builtin_popcountll(n);
+}
 
 ```
 {% endraw %}
