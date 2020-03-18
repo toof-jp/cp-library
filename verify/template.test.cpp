@@ -1,3 +1,5 @@
+#define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
+
 #include "../template.cpp"
 
 int main() {
@@ -19,4 +21,8 @@ int main() {
   }
   assert(maxi == 9);
   assert(mini == 1);
+
+  ll a, b;
+  cin >> a >> b;
+  cout << a+b << endl;
 }
