@@ -18,7 +18,7 @@ using modint = ModInt<998244353>;
 
 struct f{
   modint a, b;
-  f(ll a, ll b) : a(a), b(b) {};
+  f(ll a = 1, ll b = 0) : a(a), b(b) {};
   f(modint a, modint b) : a(a), b(b) {};
 };
 
@@ -27,12 +27,14 @@ int main() {
 
   ll n, q;
   cin >> n >> q;
-  SegmentTree<f> seg(n, f(modint(1), modint(0)), [](f l, f r){ return f(r.a*l.a, r.a*l.b+r.b); });
+  SegmentTree<f> seg(n, f(), [](f l, f r){ return f(r.a*l.a, r.a*l.b+r.b); });
+
+  vector<f> vec(n);
   rep(i, n) {
-    ll a, b;
-    cin >> a >> b;
-    seg.change(i, f(a, b));
+    cin >> vec[i].a >> vec[i].b;
   }
+
+  seg.build(vec);
 
   rep(i, q) {
     ll t;

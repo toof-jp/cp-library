@@ -1,7 +1,7 @@
 template<class T>
 struct SegmentTree {
   ll n;
-  vector<T> data;
+  vector<T> tree;
   T identity;
   using F = function<T(T, T)>;
   F operation;
@@ -9,15 +9,22 @@ struct SegmentTree {
   SegmentTree(ll n_, T identity, F operation) : n(n_), identity(identity), operation(operation) {
     n = 1;
     while (n < n_) n *= 2;
-    data.assign(2*n, identity);
+    tree.assign(2*n, identity);
+  }
+
+  void build(const vector<T> &v) {
+    rep(i, n) {
+      tree[i+n] = v[i];
+    }
+    for (ll i = n-1; i >= 0; i--) tree[i] = operation(tree[i*2], tree[i*2+1]);
   }
 
   void change(ll p, T x) {
     p += n;
-    data[p] = x;
+    tree[p] = x;
     while (p > 1) {
       p /= 2;
-      data[p] = operation(data[p*2], data[p*2+1]);
+      tree[p] = operation(tree[p*2], tree[p*2+1]);
     }
   }
 
@@ -27,15 +34,15 @@ struct SegmentTree {
     T l_res = identity;
     T r_res = identity;
     while (l < r) {
-      if (l&1) l_res = operation(l_res, data[l++]);
+      if (l&1) l_res = operation(l_res, tree[l++]);
       l /= 2;
-      if (r&1) r_res = operation(data[--r], r_res);
+      if (r&1) r_res = operation(tree[--r], r_res);
       r /= 2;
     }
     return operation(l_res, r_res);
   }
 
   T operator[](ll i) {
-    return data[i+n];
+    return tree[i+n];
   }
 };
