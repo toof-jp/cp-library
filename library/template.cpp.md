@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :question: template.cpp
+# :heavy_check_mark: template.cpp
 
 <a href="../index.html">Back to top page</a>
 
@@ -62,7 +62,7 @@ layout: default
 * :heavy_check_mark: <a href="../verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
-* :x: <a href="../verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
 
 

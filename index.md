@@ -47,7 +47,7 @@ layout: default
 * :heavy_check_mark: <a href="library/powmod.cpp.html">powmod.cpp</a>
 * :heavy_check_mark: <a href="library/prime_factorization.cpp.html">prime_factorization.cpp</a>
 * :heavy_check_mark: <a href="library/segment_tree.cpp.html">segment_tree.cpp</a>
-* :question: <a href="library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="library/template.cpp.html">template.cpp</a>
 * :heavy_check_mark: <a href="library/union_find.cpp.html">union_find.cpp</a>
 
 
@@ -63,7 +63,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
 * :heavy_check_mark: <a href="verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
 * :heavy_check_mark: <a href="verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
-* :x: <a href="verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
 * :heavy_check_mark: <a href="verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
 
 

@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/dijkstra.cpp.html">dijkstra.cpp</a>
-* :question: <a href="../../library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code
