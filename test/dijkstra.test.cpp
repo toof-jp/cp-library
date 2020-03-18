@@ -1,16 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A"
 
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-using pii = pair<int, int>;
-using vi = vector<int>;
-using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define all(i) i.begin(), i.end()
-template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;} else return false; }
-template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
-
+#include "../template.cpp"
 #include "../dijkstra.cpp"
 
 int main() {
@@ -18,7 +8,7 @@ int main() {
 
   ll v, e, r;
   cin >> v >> e >> r;
-  vector<vector<pll>> g(v);
+  vector<vector<pl>> g(v);
   rep(i, e) {
     ll s, t, d;
     cin >> s >> t >> d;
