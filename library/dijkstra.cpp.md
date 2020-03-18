@@ -31,14 +31,14 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/dijkstra.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 21:51:39+09:00
+    - Last commit date: 2020-03-19 03:53:36+09:00
 
 
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/test/dijkstra.test.cpp.html">test/dijkstra.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
 
 
 ## Code
@@ -47,23 +47,22 @@ layout: default
 {% raw %}
 ```cpp
 ll INF = 1LL<<60;
-using pll = pair<ll, ll>;
 
-vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
-  priority_queue<pll, vector<pll>, greater<pll>> que;
+vl dijkstra(ll n, ll s, vector<vector<pl>> G) {
+  priority_queue<pl, vector<pl>, greater<pl>> que;
   vl d(n, INF);
   d[s] = 0;
-  que.push(pll(0, s));
+  que.push(pl(0, s));
 
   while(!que.empty()) {
-    pll p = que.top();
+    pl p = que.top();
     que.pop();
     ll v = p.second;
     if (d[v] < p.first) continue;
     for (auto&& e : G[v]) {
       if (d[e.first] > d[v] + e.second) {
         d[e.first] = d[v] + e.second;
-        que.push(pll(d[e.first], e.first));
+        que.push(pl(d[e.first], e.first));
       }
     }
   }
@@ -78,23 +77,22 @@ vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
 ```cpp
 #line 1 "dijkstra.cpp"
 ll INF = 1LL<<60;
-using pll = pair<ll, ll>;
 
-vl dijkstra(ll n, ll s, vector<vector<pll>> G) {
-  priority_queue<pll, vector<pll>, greater<pll>> que;
+vl dijkstra(ll n, ll s, vector<vector<pl>> G) {
+  priority_queue<pl, vector<pl>, greater<pl>> que;
   vl d(n, INF);
   d[s] = 0;
-  que.push(pll(0, s));
+  que.push(pl(0, s));
 
   while(!que.empty()) {
-    pll p = que.top();
+    pl p = que.top();
     que.pop();
     ll v = p.second;
     if (d[v] < p.first) continue;
     for (auto&& e : G[v]) {
       if (d[e.first] > d[v] + e.second) {
         d[e.first] = d[v] + e.second;
-        que.push(pll(d[e.first], e.first));
+        que.push(pl(d[e.first], e.first));
       }
     }
   }

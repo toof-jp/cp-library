@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/test/prime_factorization.test.cpp.html">test/prime_factorization.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
 
 
 ## Code

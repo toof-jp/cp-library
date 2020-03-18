@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/test/binary_indexed_tree.test.cpp.html">test/binary_indexed_tree.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/binary_indexed_tree.test.cpp.html">verify/binary_indexed_tree.test.cpp</a>
 
 
 ## Code

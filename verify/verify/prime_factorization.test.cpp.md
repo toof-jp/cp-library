@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/prime_factorization.test.cpp
+# :heavy_check_mark: verify/prime_factorization.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
-* category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
-* <a href="{{ site.github.repository_url }}/blob/master/test/prime_factorization.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 02:50:19+09:00
+* category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
+* <a href="{{ site.github.repository_url }}/blob/master/verify/prime_factorization.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-19 03:53:36+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A</a>
@@ -76,22 +76,31 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "test/prime_factorization.test.cpp"
+#line 1 "verify/prime_factorization.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A"
 
-#line 1 "test/../template.cpp"
+#line 1 "verify/../template.cpp"
 #include <bits/stdc++.h>
 using namespace std;
 
 using ll = long long;
 using pl = pair<ll, ll>;
 using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0;i < n;i++)
-#define per(i, n) for(ll i = n-1;i >= 0; i--)
-#define all(v) (v).begin(), (v).end()
-template<class T, class U> void cmax(T& a, U b) { if (a<b) a = b; }
-template<class T, class U> void cmin(T& a, U b) { if (a>b) a = b; }
-#line 1 "test/../prime_factorization.cpp"
+#define rep(i, n) for(ll i = 0; i < n; i++)
+#define per(i, n) for(ll i = n-1; i >= 0; i--)
+#define all(v) begin(v), end(v)
+template<class T, class U>
+inline void cmax(T& a, U b) { if (a < b) a = b; }
+template<class T, class U>
+inline void cmin(T& a, U b) { if (a > b) a = b; }
+
+struct IoSetup {
+  IoSetup() {
+    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+  }
+} io_setup;
+#line 1 "verify/../prime_factorization.cpp"
 map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
   for (int i = 2; i*i <= n; i++) {
@@ -103,7 +112,7 @@ map<ll, ll> prime_factorization(ll n) {
   if (n != 1) m[n]++;
   return m;
 }
-#line 5 "test/prime_factorization.test.cpp"
+#line 5 "verify/prime_factorization.test.cpp"
 
 int main() {
   cin.tie(0); ios::sync_with_stdio(false);

@@ -52,16 +52,17 @@ layout: default
 
 ## Verify Files
 
-* :heavy_check_mark: <a href="verify/test/DPL_5_A.test.cpp.html">test/DPL_5_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/DPL_5_B.test.cpp.html">test/DPL_5_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/DPL_5_D.test.cpp.html">test/DPL_5_D.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/DPL_5_E.test.cpp.html">test/DPL_5_E.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/binary_indexed_tree.test.cpp.html">test/binary_indexed_tree.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/cumulative_sum.test.cpp.html">test/cumulative_sum.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/dijkstra.test.cpp.html">test/dijkstra.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/powmod.test.cpp.html">test/powmod.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/prime_factorization.test.cpp.html">test/prime_factorization.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/segment_tree.test.cpp.html">test/segment_tree.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/union_find.test.cpp.html">test/union_find.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/DPL_5_A.test.cpp.html">verify/DPL_5_A.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/DPL_5_B.test.cpp.html">verify/DPL_5_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/DPL_5_D.test.cpp.html">verify/DPL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/DPL_5_E.test.cpp.html">verify/DPL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/binary_indexed_tree.test.cpp.html">verify/binary_indexed_tree.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
 
 

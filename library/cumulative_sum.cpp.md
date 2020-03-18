@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/test/cumulative_sum.test.cpp.html">test/cumulative_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
 
 
 ## Code

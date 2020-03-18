@@ -38,8 +38,8 @@ layout: default
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/test/DPL_5_A.test.cpp.html">test/DPL_5_A.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/test/powmod.test.cpp.html">test/powmod.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/DPL_5_A.test.cpp.html">verify/DPL_5_A.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
 
 
 ## Code
