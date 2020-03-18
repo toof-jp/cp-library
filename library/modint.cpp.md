@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modint.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 22:28:59+09:00
+    - Last commit date: 2020-03-18 22:46:07+09:00
 
 
 
@@ -52,20 +52,52 @@ layout: default
 template <ll Mod>
 struct ModInt {
   ll n;
-  ModInt(const ll x = 0) : n(x) { while (n < 0) n += Mod; n %= Mod; }
+
+  ModInt(const ll x = 0) : n(x) {
+    while (n < 0) n += Mod;
+    n %= Mod;
+  }
+
   ModInt operator+(const ModInt r) const { return ModInt(*this) += r; }
   ModInt operator-(const ModInt r) const { return ModInt(*this) -= r; }
   ModInt operator*(const ModInt r) const { return ModInt(*this) *= r; }
   ModInt operator/(const ModInt r) const { return ModInt(*this) /= r; }
-  ModInt &operator+=(const ModInt r) { n += r.n; if (n >= Mod) n -= Mod; return *this; }
-  ModInt &operator-=(const ModInt r) { if (n < r.n) n += Mod; n -= r.n; return *this; }
-  ModInt &operator*=(const ModInt r) { n = n * r.n % Mod; return *this; }
+  ModInt &operator+=(const ModInt r) {
+    n += r.n;
+    if (n >= Mod) n -= Mod;
+    return *this;
+  }
+  ModInt &operator-=(const ModInt r) {
+    if (n < r.n) n += Mod;
+    n -= r.n;
+    return *this;
+  }
+  ModInt &operator*=(const ModInt r) {
+    n = n * r.n % Mod;
+    return *this;
+  }
   ModInt &operator/=(const ModInt r) { return *this *= r.inv(); }
-  ModInt pow(ll x) const { ModInt<Mod> ret(1), tmp(*this); while (x) { if (x&1) ret *= tmp; tmp *= tmp; x >>= 1; } return ret; }
+
+  ModInt pow(ll x) const {
+    ModInt<Mod> ret(1), tmp(*this);
+    while (x) {
+      if (x&1) ret *= tmp;
+      tmp *= tmp;
+      x >>= 1;
+    }
+    return ret;
+  }
   ModInt inv() const { return pow(Mod-2); }
+
   friend ostream& operator<<(ostream& os, const ModInt& obj) { return os << obj.n; }
-  friend istream& operator>>(istream& is, ModInt& obj) { ll t; is >> t; obj = ModInt(t); return is; }
+  friend istream& operator>>(istream& is, ModInt& obj) {
+    ll t;
+    is >> t;
+    obj = ModInt(t);
+    return is;
+  }
 };
+
 constexpr ll mod = 1000000007;
 using mint = ModInt<mod>;
 mint operator"" _mi(unsigned long long n) { return mint(n); }
@@ -80,20 +112,52 @@ mint operator"" _mi(unsigned long long n) { return mint(n); }
 template <ll Mod>
 struct ModInt {
   ll n;
-  ModInt(const ll x = 0) : n(x) { while (n < 0) n += Mod; n %= Mod; }
+
+  ModInt(const ll x = 0) : n(x) {
+    while (n < 0) n += Mod;
+    n %= Mod;
+  }
+
   ModInt operator+(const ModInt r) const { return ModInt(*this) += r; }
   ModInt operator-(const ModInt r) const { return ModInt(*this) -= r; }
   ModInt operator*(const ModInt r) const { return ModInt(*this) *= r; }
   ModInt operator/(const ModInt r) const { return ModInt(*this) /= r; }
-  ModInt &operator+=(const ModInt r) { n += r.n; if (n >= Mod) n -= Mod; return *this; }
-  ModInt &operator-=(const ModInt r) { if (n < r.n) n += Mod; n -= r.n; return *this; }
-  ModInt &operator*=(const ModInt r) { n = n * r.n % Mod; return *this; }
+  ModInt &operator+=(const ModInt r) {
+    n += r.n;
+    if (n >= Mod) n -= Mod;
+    return *this;
+  }
+  ModInt &operator-=(const ModInt r) {
+    if (n < r.n) n += Mod;
+    n -= r.n;
+    return *this;
+  }
+  ModInt &operator*=(const ModInt r) {
+    n = n * r.n % Mod;
+    return *this;
+  }
   ModInt &operator/=(const ModInt r) { return *this *= r.inv(); }
-  ModInt pow(ll x) const { ModInt<Mod> ret(1), tmp(*this); while (x) { if (x&1) ret *= tmp; tmp *= tmp; x >>= 1; } return ret; }
+
+  ModInt pow(ll x) const {
+    ModInt<Mod> ret(1), tmp(*this);
+    while (x) {
+      if (x&1) ret *= tmp;
+      tmp *= tmp;
+      x >>= 1;
+    }
+    return ret;
+  }
   ModInt inv() const { return pow(Mod-2); }
+
   friend ostream& operator<<(ostream& os, const ModInt& obj) { return os << obj.n; }
-  friend istream& operator>>(istream& is, ModInt& obj) { ll t; is >> t; obj = ModInt(t); return is; }
+  friend istream& operator>>(istream& is, ModInt& obj) {
+    ll t;
+    is >> t;
+    obj = ModInt(t);
+    return is;
+  }
 };
+
 constexpr ll mod = 1000000007;
 using mint = ModInt<mod>;
 mint operator"" _mi(unsigned long long n) { return mint(n); }
