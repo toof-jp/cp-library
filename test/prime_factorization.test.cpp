@@ -19,7 +19,7 @@ int main() {
   ll n;
   cin >> n;
 
-  auto m = PrimeFactorization(n);
+  auto m = prime_factorization(n);
 
   cout << n << ": ";
   for (auto&& i : m) {

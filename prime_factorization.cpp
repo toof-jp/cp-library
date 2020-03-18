@@ -1,4 +1,4 @@
-map<ll, ll> PrimeFactorization(ll n) {
+map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
   for (int i = 2; i*i <= n; i++) {
     while (n%i == 0) {
