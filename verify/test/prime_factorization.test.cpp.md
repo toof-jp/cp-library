@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/prime_factorization.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 21:59:26+09:00
+    - Last commit date: 2020-03-19 00:48:38+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A</a>
@@ -68,7 +68,7 @@ int main() {
   ll n;
   cin >> n;
 
-  auto m = PrimeFactorization(n);
+  auto m = prime_factorization(n);
 
   cout << n << ": ";
   for (auto&& i : m) {
@@ -100,7 +100,7 @@ template<class T, class U> bool cmax(T& a, U b) { if (a<b) {a = b; return true;}
 template<class T, class U> bool cmin(T& a, U b) { if (a>b) {a = b; return true;} else return false; }
 
 #line 1 "test/../prime_factorization.cpp"
-map<ll, ll> PrimeFactorization(ll n) {
+map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
   for (int i = 2; i*i <= n; i++) {
     while (n%i == 0) {
@@ -119,7 +119,7 @@ int main() {
   ll n;
   cin >> n;
 
-  auto m = PrimeFactorization(n);
+  auto m = prime_factorization(n);
 
   cout << n << ": ";
   for (auto&& i : m) {

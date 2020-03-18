@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/prime_factorization.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-17 21:59:26+09:00
+    - Last commit date: 2020-03-19 00:48:38+09:00
 
 
 
@@ -46,7 +46,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-map<ll, ll> PrimeFactorization(ll n) {
+map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
   for (int i = 2; i*i <= n; i++) {
     while (n%i == 0) {
@@ -65,7 +65,7 @@ map<ll, ll> PrimeFactorization(ll n) {
 {% raw %}
 ```cpp
 #line 1 "prime_factorization.cpp"
-map<ll, ll> PrimeFactorization(ll n) {
+map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
   for (int i = 2; i*i <= n; i++) {
     while (n%i == 0) {
