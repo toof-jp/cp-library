@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/template.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 03:53:36+09:00
+    - Last commit date: 2020-03-19 04:25:01+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/aplusb">https://judge.yosupo.jp/problem/aplusb</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="../../library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code
@@ -85,7 +85,8 @@ int main() {
 #line 1 "verify/template.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
 
-#line 1 "verify/../template.cpp"
+#line 2 "verify/../template.cpp"
+
 #include <bits/stdc++.h>
 using namespace std;
 

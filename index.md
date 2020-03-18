@@ -38,31 +38,31 @@ layout: default
 
 ### .
 
-* :x: <a href="library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
-* :x: <a href="library/combination.cpp.html">combination.cpp</a>
-* :x: <a href="library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
-* :x: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
-* :x: <a href="library/modint.cpp.html">modint.cpp</a>
-* :x: <a href="library/powmod.cpp.html">powmod.cpp</a>
-* :x: <a href="library/prime_factorization.cpp.html">prime_factorization.cpp</a>
-* :x: <a href="library/segment_tree.cpp.html">segment_tree.cpp</a>
-* :question: <a href="library/template.cpp.html">template.cpp</a>
-* :x: <a href="library/union_find.cpp.html">union_find.cpp</a>
+* :heavy_check_mark: <a href="library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
+* :heavy_check_mark: <a href="library/combination.cpp.html">combination.cpp</a>
+* :heavy_check_mark: <a href="library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
+* :heavy_check_mark: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
+* :heavy_check_mark: <a href="library/modint.cpp.html">modint.cpp</a>
+* :heavy_check_mark: <a href="library/powmod.cpp.html">powmod.cpp</a>
+* :heavy_check_mark: <a href="library/prime_factorization.cpp.html">prime_factorization.cpp</a>
+* :heavy_check_mark: <a href="library/segment_tree.cpp.html">segment_tree.cpp</a>
+* :heavy_check_mark: <a href="library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="library/union_find.cpp.html">union_find.cpp</a>
 
 
 ## Verify Files
 
-* :x: <a href="verify/verify/DPL_5_A.test.cpp.html">verify/DPL_5_A.test.cpp</a>
-* :x: <a href="verify/verify/DPL_5_B.test.cpp.html">verify/DPL_5_B.test.cpp</a>
-* :x: <a href="verify/verify/DPL_5_D.test.cpp.html">verify/DPL_5_D.test.cpp</a>
-* :x: <a href="verify/verify/DPL_5_E.test.cpp.html">verify/DPL_5_E.test.cpp</a>
-* :x: <a href="verify/verify/binary_indexed_tree.test.cpp.html">verify/binary_indexed_tree.test.cpp</a>
-* :x: <a href="verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
-* :x: <a href="verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
-* :x: <a href="verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
-* :x: <a href="verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
-* :x: <a href="verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/DPL_5_A.test.cpp.html">verify/DPL_5_A.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/DPL_5_B.test.cpp.html">verify/DPL_5_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/DPL_5_D.test.cpp.html">verify/DPL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/DPL_5_E.test.cpp.html">verify/DPL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/binary_indexed_tree.test.cpp.html">verify/binary_indexed_tree.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
 * :heavy_check_mark: <a href="verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
-* :x: <a href="verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
+* :heavy_check_mark: <a href="verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
 
 

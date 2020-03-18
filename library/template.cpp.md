@@ -25,44 +25,44 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :question: template.cpp
+# :heavy_check_mark: template.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/template.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 03:53:36+09:00
+    - Last commit date: 2020-03-19 04:25:01+09:00
 
 
 
 
 ## Required by
 
-* :x: <a href="binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
-* :x: <a href="combination.cpp.html">combination.cpp</a>
-* :x: <a href="cumulative_sum.cpp.html">cumulative_sum.cpp</a>
-* :x: <a href="dijkstra.cpp.html">dijkstra.cpp</a>
-* :x: <a href="modint.cpp.html">modint.cpp</a>
-* :x: <a href="powmod.cpp.html">powmod.cpp</a>
-* :x: <a href="prime_factorization.cpp.html">prime_factorization.cpp</a>
-* :x: <a href="segment_tree.cpp.html">segment_tree.cpp</a>
-* :x: <a href="union_find.cpp.html">union_find.cpp</a>
+* :heavy_check_mark: <a href="binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
+* :heavy_check_mark: <a href="combination.cpp.html">combination.cpp</a>
+* :heavy_check_mark: <a href="cumulative_sum.cpp.html">cumulative_sum.cpp</a>
+* :heavy_check_mark: <a href="dijkstra.cpp.html">dijkstra.cpp</a>
+* :heavy_check_mark: <a href="modint.cpp.html">modint.cpp</a>
+* :heavy_check_mark: <a href="powmod.cpp.html">powmod.cpp</a>
+* :heavy_check_mark: <a href="prime_factorization.cpp.html">prime_factorization.cpp</a>
+* :heavy_check_mark: <a href="segment_tree.cpp.html">segment_tree.cpp</a>
+* :heavy_check_mark: <a href="union_find.cpp.html">union_find.cpp</a>
 
 
 ## Verified with
 
-* :x: <a href="../verify/verify/DPL_5_A.test.cpp.html">verify/DPL_5_A.test.cpp</a>
-* :x: <a href="../verify/verify/DPL_5_B.test.cpp.html">verify/DPL_5_B.test.cpp</a>
-* :x: <a href="../verify/verify/DPL_5_D.test.cpp.html">verify/DPL_5_D.test.cpp</a>
-* :x: <a href="../verify/verify/DPL_5_E.test.cpp.html">verify/DPL_5_E.test.cpp</a>
-* :x: <a href="../verify/verify/binary_indexed_tree.test.cpp.html">verify/binary_indexed_tree.test.cpp</a>
-* :x: <a href="../verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
-* :x: <a href="../verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
-* :x: <a href="../verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
-* :x: <a href="../verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
-* :x: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/DPL_5_A.test.cpp.html">verify/DPL_5_A.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/DPL_5_B.test.cpp.html">verify/DPL_5_B.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/DPL_5_D.test.cpp.html">verify/DPL_5_D.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/DPL_5_E.test.cpp.html">verify/DPL_5_E.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/binary_indexed_tree.test.cpp.html">verify/binary_indexed_tree.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/template.test.cpp.html">verify/template.test.cpp</a>
-* :x: <a href="../verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
 
 
 ## Code
@@ -70,6 +70,8 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+#pragma once
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -97,7 +99,8 @@ struct IoSetup {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "template.cpp"
+#line 2 "template.cpp"
+
 #include <bits/stdc++.h>
 using namespace std;
 

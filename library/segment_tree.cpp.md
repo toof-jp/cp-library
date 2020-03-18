@@ -25,25 +25,25 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :x: segment_tree.cpp
+# :heavy_check_mark: segment_tree.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/segment_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 04:19:57+09:00
+    - Last commit date: 2020-03-19 04:25:01+09:00
 
 
 
 
 ## Depends on
 
-* :question: <a href="template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="template.cpp.html">template.cpp</a>
 
 
 ## Verified with
 
-* :x: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
 
 
 ## Code
@@ -109,7 +109,8 @@ struct SegmentTree {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "template.cpp"
+#line 2 "template.cpp"
+
 #include <bits/stdc++.h>
 using namespace std;
 
