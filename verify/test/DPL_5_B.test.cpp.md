@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/DPL_5_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-18 22:46:07+09:00
+    - Last commit date: 2020-03-18 23:33:13+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_B</a>
@@ -103,27 +103,27 @@ struct ModInt {
     n %= Mod;
   }
 
-  ModInt operator+(const ModInt r) const { return ModInt(*this) += r; }
-  ModInt operator-(const ModInt r) const { return ModInt(*this) -= r; }
-  ModInt operator*(const ModInt r) const { return ModInt(*this) *= r; }
-  ModInt operator/(const ModInt r) const { return ModInt(*this) /= r; }
-  ModInt &operator+=(const ModInt r) {
+  inline constexpr ModInt operator+(const ModInt r) const noexcept { return ModInt(*this) += r; }
+  inline constexpr ModInt operator-(const ModInt r) const noexcept { return ModInt(*this) -= r; }
+  inline constexpr ModInt operator*(const ModInt r) const noexcept { return ModInt(*this) *= r; }
+  inline constexpr ModInt operator/(const ModInt r) const noexcept { return ModInt(*this) /= r; }
+  inline constexpr ModInt &operator+=(const ModInt r) noexcept {
     n += r.n;
     if (n >= Mod) n -= Mod;
     return *this;
   }
-  ModInt &operator-=(const ModInt r) {
+  inline constexpr ModInt &operator-=(const ModInt r) noexcept {
     if (n < r.n) n += Mod;
     n -= r.n;
     return *this;
   }
-  ModInt &operator*=(const ModInt r) {
+  inline constexpr ModInt &operator*=(const ModInt r) noexcept {
     n = n * r.n % Mod;
     return *this;
   }
-  ModInt &operator/=(const ModInt r) { return *this *= r.inv(); }
+  inline constexpr ModInt &operator/=(const ModInt r) noexcept { return *this *= r.inv(); }
 
-  ModInt pow(ll x) const {
+  inline constexpr ModInt pow(ll x) const noexcept {
     ModInt<Mod> ret(1), tmp(*this);
     while (x) {
       if (x&1) ret *= tmp;
@@ -132,7 +132,7 @@ struct ModInt {
     }
     return ret;
   }
-  ModInt inv() const { return pow(Mod-2); }
+  inline constexpr ModInt inv() const noexcept { return pow(Mod-2); }
 
   friend ostream& operator<<(ostream& os, const ModInt& obj) { return os << obj.n; }
   friend istream& operator>>(istream& is, ModInt& obj) {
