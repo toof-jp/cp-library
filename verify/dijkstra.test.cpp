@@ -4,8 +4,6 @@
 #include "../dijkstra.cpp"
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll v, e, r;
   cin >> v >> e >> r;
   vector<vector<pl>> g(v);

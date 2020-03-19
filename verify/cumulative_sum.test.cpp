@@ -4,8 +4,6 @@
 #include "../cumulative_sum.cpp"
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   while (1) {
     ll n, k;
     cin >> n >> k;

@@ -5,8 +5,6 @@
 #include "../combination.cpp"
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll n, k;
   cin >> n >> k;
   Combination<mint> c(max(n, k));
