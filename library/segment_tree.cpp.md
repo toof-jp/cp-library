@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/segment_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 21:48:10+09:00
+    - Last commit date: 2020-03-19 23:04:03+09:00
 
 
 
@@ -69,31 +69,25 @@ struct SegmentTree {
   }
 
   void build(const vector<T>& v) {
-    rep(i, v.size()) {
+    rep(i, v.size())
       tree[i+n] = v[i];
-    }
-    for (ll i = n-1; i >= 0; i--) tree[i] = ope(tree[i*2], tree[i*2+1]);
+    per(i, n)
+      tree[i] = ope(tree[i*2], tree[i*2+1]);
   }
 
   void change(ll p, const T& x) {
     p += n;
     tree[p] = x;
-    while (p > 1) {
-      p /= 2;
+    while (p >>= 1)
       tree[p] = ope(tree[p*2], tree[p*2+1]);
-    }
   }
 
   T query(ll l, ll r) {
-    l += n;
-    r += n;
-    T l_res = ope.ide;
-    T r_res = ope.ide;
-    while (l < r) {
+    T l_res{};
+    T r_res{};
+    for (l += n, r+= n; l < r; l >>= 1, r >>= 1) {
       if (l&1) l_res = ope(l_res, tree[l++]);
-      l /= 2;
       if (r&1) r_res = ope(tree[--r], r_res);
-      r /= 2;
     }
     return ope(l_res, r_res);
   }
@@ -148,31 +142,25 @@ struct SegmentTree {
   }
 
   void build(const vector<T>& v) {
-    rep(i, v.size()) {
+    rep(i, v.size())
       tree[i+n] = v[i];
-    }
-    for (ll i = n-1; i >= 0; i--) tree[i] = ope(tree[i*2], tree[i*2+1]);
+    per(i, n)
+      tree[i] = ope(tree[i*2], tree[i*2+1]);
   }
 
   void change(ll p, const T& x) {
     p += n;
     tree[p] = x;
-    while (p > 1) {
-      p /= 2;
+    while (p >>= 1)
       tree[p] = ope(tree[p*2], tree[p*2+1]);
-    }
   }
 
   T query(ll l, ll r) {
-    l += n;
-    r += n;
-    T l_res = ope.ide;
-    T r_res = ope.ide;
-    while (l < r) {
+    T l_res{};
+    T r_res{};
+    for (l += n, r+= n; l < r; l >>= 1, r >>= 1) {
       if (l&1) l_res = ope(l_res, tree[l++]);
-      l /= 2;
       if (r&1) r_res = ope(tree[--r], r_res);
-      r /= 2;
     }
     return ope(l_res, r_res);
   }
