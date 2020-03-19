@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/DPL_5_A.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 04:25:01+09:00
+    - Last commit date: 2020-03-19 21:48:10+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A</a>
@@ -54,8 +54,6 @@ layout: default
 #include "../powmod.cpp"
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll n, k;
   cin >> n >> k;
   ll mod = 1e9+7;
@@ -71,7 +69,7 @@ int main() {
 #line 1 "verify/DPL_5_A.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A"
 
-#line 2 "verify/../template.cpp"
+#line 2 "template.cpp"
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -93,7 +91,7 @@ struct IoSetup {
     ios::sync_with_stdio(false);
   }
 } io_setup;
-#line 3 "verify/../powmod.cpp"
+#line 3 "powmod.cpp"
 
 ll powmod(ll a, ll n, ll p) {
   ll res = 1;
@@ -107,8 +105,6 @@ ll powmod(ll a, ll n, ll p) {
 #line 5 "verify/DPL_5_A.test.cpp"
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll n, k;
   cin >> n >> k;
   ll mod = 1e9+7;

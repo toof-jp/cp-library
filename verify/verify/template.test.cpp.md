@@ -85,7 +85,7 @@ int main() {
 #line 1 "verify/template.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
 
-#line 2 "verify/../template.cpp"
+#line 2 "template.cpp"
 
 #include <bits/stdc++.h>
 using namespace std;

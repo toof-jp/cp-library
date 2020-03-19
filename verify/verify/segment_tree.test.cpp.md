@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/segment_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 04:25:01+09:00
+    - Last commit date: 2020-03-19 21:48:10+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -57,20 +57,27 @@ layout: default
 
 using modint = ModInt<998244353>;
 
-struct f{
+struct Func{
   modint a, b;
-  f(ll a = 1, ll b = 0) : a(a), b(b) {};
-  f(modint a, modint b) : a(a), b(b) {};
+  Func(ll a = 1, ll b = 0) : a(a), b(b) {};
+  Func(modint a, modint b) : a(a), b(b) {};
+};
+
+struct F{
+  using value_type = Func;
+
+  Func operator()(const Func& l, const Func& r) const {
+    return Func(r.a*l.a, r.a*l.b+r.b);
+  }
+  const Func ide = Func();
 };
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll n, q;
   cin >> n >> q;
-  SegmentTree<f> seg(n, f(), [](f l, f r){ return f(r.a*l.a, r.a*l.b+r.b); });
+  SegmentTree<F> seg(n);
 
-  vector<f> vec(n);
+  vector<Func> vec(n);
   rep(i, n) {
     cin >> vec[i].a >> vec[i].b;
   }
@@ -81,14 +88,14 @@ int main() {
     ll t;
     cin >> t;
     if (t == 0) {
-      ll p, c, d;
-      cin >> p >> c >> d;
-      seg.change(p, f(c, d));
+      ll x, y, z;
+      cin >> x >> y >> z;
+      seg.change(x, Func(y, z));
     } else {
-      ll l, r, x;
-      cin >> l >> r >> x;
-      f e = seg.query(l, r);
-      cout << e.a*modint(x)+e.b << endl;
+      ll x, y, z;
+      cin >> x >> y >> z;
+      Func e = seg.query(x, y);
+      cout << e.a*modint(z)+e.b << endl;
     }
   }
 }
@@ -102,7 +109,7 @@ int main() {
 #line 1 "verify/segment_tree.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
 
-#line 2 "verify/../template.cpp"
+#line 2 "template.cpp"
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -124,57 +131,57 @@ struct IoSetup {
     ios::sync_with_stdio(false);
   }
 } io_setup;
-#line 3 "verify/../segment_tree.cpp"
+#line 3 "segment_tree.cpp"
 
-template<class T>
+template<class Monoid>
 struct SegmentTree {
+  using T = typename Monoid::value_type;
+
   ll n;
   vector<T> tree;
-  T identity;
-  using F = function<T(T, T)>;
-  F operation;
+  const Monoid ope;
 
-  SegmentTree(ll n_, T identity, F operation) : n(n_), identity(identity), operation(operation) {
+  SegmentTree(ll n_) : n(n_) {
     n = 1;
     while (n < n_) n *= 2;
-    tree.assign(2*n, identity);
+    tree.assign(2*n, ope.ide);
   }
 
-  void build(const vector<T> &v) {
+  void build(const vector<T>& v) {
     rep(i, v.size()) {
       tree[i+n] = v[i];
     }
-    for (ll i = n-1; i >= 0; i--) tree[i] = operation(tree[i*2], tree[i*2+1]);
+    for (ll i = n-1; i >= 0; i--) tree[i] = ope(tree[i*2], tree[i*2+1]);
   }
 
-  void change(ll p, T x) {
+  void change(ll p, const T& x) {
     p += n;
     tree[p] = x;
     while (p > 1) {
       p /= 2;
-      tree[p] = operation(tree[p*2], tree[p*2+1]);
+      tree[p] = ope(tree[p*2], tree[p*2+1]);
     }
   }
 
   T query(ll l, ll r) {
     l += n;
     r += n;
-    T l_res = identity;
-    T r_res = identity;
+    T l_res = ope.ide;
+    T r_res = ope.ide;
     while (l < r) {
-      if (l&1) l_res = operation(l_res, tree[l++]);
+      if (l&1) l_res = ope(l_res, tree[l++]);
       l /= 2;
-      if (r&1) r_res = operation(tree[--r], r_res);
+      if (r&1) r_res = ope(tree[--r], r_res);
       r /= 2;
     }
-    return operation(l_res, r_res);
+    return ope(l_res, r_res);
   }
 
   T operator[](ll i) {
     return tree[i+n];
   }
 };
-#line 3 "verify/../modint.cpp"
+#line 3 "modint.cpp"
 
 template <ll Mod>
 struct ModInt {
@@ -232,20 +239,27 @@ mint operator"" _mi(unsigned long long n) { return mint(n); }
 
 using modint = ModInt<998244353>;
 
-struct f{
+struct Func{
   modint a, b;
-  f(ll a = 1, ll b = 0) : a(a), b(b) {};
-  f(modint a, modint b) : a(a), b(b) {};
+  Func(ll a = 1, ll b = 0) : a(a), b(b) {};
+  Func(modint a, modint b) : a(a), b(b) {};
+};
+
+struct F{
+  using value_type = Func;
+
+  Func operator()(const Func& l, const Func& r) const {
+    return Func(r.a*l.a, r.a*l.b+r.b);
+  }
+  const Func ide = Func();
 };
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll n, q;
   cin >> n >> q;
-  SegmentTree<f> seg(n, f(), [](f l, f r){ return f(r.a*l.a, r.a*l.b+r.b); });
+  SegmentTree<F> seg(n);
 
-  vector<f> vec(n);
+  vector<Func> vec(n);
   rep(i, n) {
     cin >> vec[i].a >> vec[i].b;
   }
@@ -256,14 +270,14 @@ int main() {
     ll t;
     cin >> t;
     if (t == 0) {
-      ll p, c, d;
-      cin >> p >> c >> d;
-      seg.change(p, f(c, d));
+      ll x, y, z;
+      cin >> x >> y >> z;
+      seg.change(x, Func(y, z));
     } else {
-      ll l, r, x;
-      cin >> l >> r >> x;
-      f e = seg.query(l, r);
-      cout << e.a*modint(x)+e.b << endl;
+      ll x, y, z;
+      cin >> x >> y >> z;
+      Func e = seg.query(x, y);
+      cout << e.a*modint(z)+e.b << endl;
     }
   }
 }

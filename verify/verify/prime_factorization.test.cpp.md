@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/prime_factorization.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 04:25:01+09:00
+    - Last commit date: 2020-03-19 21:48:10+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A</a>
@@ -54,8 +54,6 @@ layout: default
 #include "../prime_factorization.cpp"
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll n;
   cin >> n;
 
@@ -79,7 +77,7 @@ int main() {
 #line 1 "verify/prime_factorization.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A"
 
-#line 2 "verify/../template.cpp"
+#line 2 "template.cpp"
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -101,7 +99,7 @@ struct IoSetup {
     ios::sync_with_stdio(false);
   }
 } io_setup;
-#line 3 "verify/../prime_factorization.cpp"
+#line 3 "prime_factorization.cpp"
 
 map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
@@ -117,8 +115,6 @@ map<ll, ll> prime_factorization(ll n) {
 #line 5 "verify/prime_factorization.test.cpp"
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll n;
   cin >> n;
 

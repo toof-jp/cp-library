@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/dijkstra.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 04:25:01+09:00
+    - Last commit date: 2020-03-19 21:48:10+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A</a>
@@ -54,8 +54,6 @@ layout: default
 #include "../dijkstra.cpp"
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll v, e, r;
   cin >> v >> e >> r;
   vector<vector<pl>> g(v);
@@ -82,7 +80,7 @@ int main() {
 #line 1 "verify/dijkstra.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A"
 
-#line 2 "verify/../template.cpp"
+#line 2 "template.cpp"
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -104,7 +102,7 @@ struct IoSetup {
     ios::sync_with_stdio(false);
   }
 } io_setup;
-#line 3 "verify/../dijkstra.cpp"
+#line 3 "dijkstra.cpp"
 
 ll INF = 1LL<<60;
 
@@ -131,8 +129,6 @@ vl dijkstra(ll n, ll s, vector<vector<pl>> G) {
 #line 5 "verify/dijkstra.test.cpp"
 
 int main() {
-  cin.tie(0); ios::sync_with_stdio(false);
-
   ll v, e, r;
   cin >> v >> e >> r;
   vector<vector<pl>> g(v);
