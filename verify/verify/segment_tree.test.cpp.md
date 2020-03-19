@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/segment_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-19 23:04:03+09:00
+    - Last commit date: 2020-03-20 00:20:54+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -85,17 +85,13 @@ int main() {
   seg.build(vec);
 
   rep(i, q) {
-    ll t;
-    cin >> t;
+    ll t, a, b, c;
+    cin >> t >> a >> b >> c;
     if (t == 0) {
-      ll x, y, z;
-      cin >> x >> y >> z;
-      seg.change(x, Func(y, z));
+      seg.change(a, Func(b, c));
     } else {
-      ll x, y, z;
-      cin >> x >> y >> z;
-      Func e = seg.query(x, y);
-      cout << e.a*modint(z)+e.b << endl;
+      Func e = seg.query(a, b);
+      cout << e.a*modint(c)+e.b << endl;
     }
   }
 }
@@ -261,17 +257,13 @@ int main() {
   seg.build(vec);
 
   rep(i, q) {
-    ll t;
-    cin >> t;
+    ll t, a, b, c;
+    cin >> t >> a >> b >> c;
     if (t == 0) {
-      ll x, y, z;
-      cin >> x >> y >> z;
-      seg.change(x, Func(y, z));
+      seg.change(a, Func(b, c));
     } else {
-      ll x, y, z;
-      cin >> x >> y >> z;
-      Func e = seg.query(x, y);
-      cout << e.a*modint(z)+e.b << endl;
+      Func e = seg.query(a, b);
+      cout << e.a*modint(c)+e.b << endl;
     }
   }
 }
