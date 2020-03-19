@@ -34,17 +34,13 @@ int main() {
   seg.build(vec);
 
   rep(i, q) {
-    ll t;
-    cin >> t;
+    ll t, a, b, c;
+    cin >> t >> a >> b >> c;
     if (t == 0) {
-      ll x, y, z;
-      cin >> x >> y >> z;
-      seg.change(x, Func(y, z));
+      seg.change(a, Func(b, c));
     } else {
-      ll x, y, z;
-      cin >> x >> y >> z;
-      Func e = seg.query(x, y);
-      cout << e.a*modint(z)+e.b << endl;
+      Func e = seg.query(a, b);
+      cout << e.a*modint(c)+e.b << endl;
     }
   }
 }
