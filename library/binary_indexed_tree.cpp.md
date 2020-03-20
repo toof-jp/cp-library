@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/binary_indexed_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-20 18:29:17+09:00
+    - Last commit date: 2020-03-20 18:36:50+09:00
 
 
 
@@ -74,7 +74,7 @@ struct BinaryIndexedTree {
 
   // sum [0, r)
   T sum(ll r) const {
-    T sum = T();
+    T sum = ope.ide;
     for (ll x = r; x > 0; x -= x&-x) {
       sum = ope(sum, tree[x]);
     }
@@ -148,7 +148,7 @@ struct BinaryIndexedTree {
 
   // sum [0, r)
   T sum(ll r) const {
-    T sum = T();
+    T sum = ope.ide;
     for (ll x = r; x > 0; x -= x&-x) {
       sum = ope(sum, tree[x]);
     }

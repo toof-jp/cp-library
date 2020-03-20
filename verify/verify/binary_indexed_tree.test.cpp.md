@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/binary_indexed_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-20 18:29:17+09:00
+    - Last commit date: 2020-03-20 18:36:50+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_add_range_sum">https://judge.yosupo.jp/problem/point_add_range_sum</a>
@@ -139,7 +139,7 @@ struct BinaryIndexedTree {
 
   // sum [0, r)
   T sum(ll r) const {
-    T sum = T();
+    T sum = ope.ide;
     for (ll x = r; x > 0; x -= x&-x) {
       sum = ope(sum, tree[x]);
     }
