@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/segment_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 01:43:15+09:00
+    - Last commit date: 2020-03-21 02:30:16+09:00
 
 
 
@@ -62,7 +62,7 @@ struct SegmentTree {
   vector<T> tree;
   const Monoid ope;
 
-  SegmentTree(ll n_) : n(n_) {
+  SegmentTree(ll n) : n(n) {
     tree.assign(2*n, ope.ide);
   }
 
@@ -136,7 +136,7 @@ struct SegmentTree {
   vector<T> tree;
   const Monoid ope;
 
-  SegmentTree(ll n_) : n(n_) {
+  SegmentTree(ll n) : n(n) {
     tree.assign(2*n, ope.ide);
   }
 
