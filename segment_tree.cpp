@@ -29,7 +29,7 @@ struct SegmentTree {
       tree[p] = ope(tree[p*2], tree[p*2+1]);
   }
 
-  T query(ll l, ll r) {
+  T query(ll l, ll r) const {
     T l_res{};
     T r_res{};
     for (l += n, r+= n; l < r; l >>= 1, r >>= 1) {
