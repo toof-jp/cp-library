@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/segment_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 01:16:37+09:00
+    - Last commit date: 2020-03-21 01:43:15+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -113,10 +113,10 @@ using namespace std;
 using ll = long long;
 using pl = pair<ll, ll>;
 using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0; i < n; i++)
-#define rep3(i, l, r) for(ll i = l; i < r; i++)
+#define rep(i, n) for(ll i = 0; i < (ll)n; i++)
+#define rep3(i, l, r) for(ll i = l; i < (ll)r; i++)
 #define per(i, n) for(ll i = n-1; i >= 0; i--)
-#define per3(i, l, r) for(ll i = r-1; i >= l; i--)
+#define per3(i, l, r) for(ll i = r-1; i >= (ll)l; i--)
 #define all(v) begin(v), end(v)
 template<class T, class U>
 inline void cmax(T& a, U b) { if (a < b) a = b; }
@@ -141,8 +141,6 @@ struct SegmentTree {
   const Monoid ope;
 
   SegmentTree(ll n_) : n(n_) {
-    n = 1;
-    while (n < n_) n *= 2;
     tree.assign(2*n, ope.ide);
   }
 
