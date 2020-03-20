@@ -20,5 +20,6 @@ struct IoSetup {
   IoSetup() {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
+    cout << fixed << setprecision(15);
   }
 } io_setup;
