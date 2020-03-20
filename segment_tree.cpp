@@ -9,7 +9,7 @@ struct SegmentTree {
   vector<T> tree;
   const Monoid ope;
 
-  SegmentTree(ll n_) : n(n_) {
+  SegmentTree(ll n) : n(n) {
     tree.assign(2*n, ope.ide);
   }
 
