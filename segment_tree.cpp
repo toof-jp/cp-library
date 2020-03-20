@@ -10,8 +10,6 @@ struct SegmentTree {
   const Monoid ope;
 
   SegmentTree(ll n_) : n(n_) {
-    n = 1;
-    while (n < n_) n *= 2;
     tree.assign(2*n, ope.ide);
   }
 

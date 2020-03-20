@@ -6,10 +6,10 @@ using namespace std;
 using ll = long long;
 using pl = pair<ll, ll>;
 using vl = vector<ll>;
-#define rep(i, n) for(ll i = 0; i < n; i++)
-#define rep3(i, l, r) for(ll i = l; i < r; i++)
+#define rep(i, n) for(ll i = 0; i < (ll)n; i++)
+#define rep3(i, l, r) for(ll i = l; i < (ll)r; i++)
 #define per(i, n) for(ll i = n-1; i >= 0; i--)
-#define per3(i, l, r) for(ll i = r-1; i >= l; i--)
+#define per3(i, l, r) for(ll i = r-1; i >= (ll)l; i--)
 #define all(v) begin(v), end(v)
 template<class T, class U>
 inline void cmax(T& a, U b) { if (a < b) a = b; }
