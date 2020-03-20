@@ -21,7 +21,7 @@ struct BinaryIndexedTree {
 
   // sum [0, r)
   T sum(ll r) const {
-    T sum = T();
+    T sum = ope.ide;
     for (ll x = r; x > 0; x -= x&-x) {
       sum = ope(sum, tree[x]);
     }
