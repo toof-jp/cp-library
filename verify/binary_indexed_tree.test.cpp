@@ -3,28 +3,35 @@
 #include "../template.cpp"
 #include "../binary_indexed_tree.cpp"
 
+template <class T>
+struct Plus {
+  using value_type = T;
+
+  T operator()(const T& l, const T& r) const {
+    return l + r;
+  }
+  const T ide{};
+};
+
 int main() {
   ll n, q;
   cin >> n >> q;
 
-  BinaryIndexedTree<ll> bit(n);
+  BinaryIndexedTree<Plus<ll>> bit(n);
+
   rep(i, n) {
     ll a;
     cin >> a;
-    bit.add0(i, a);
+    bit.add(i, a);
   }
 
   rep(i, q) {
-    ll t;
-    cin >> t;
+    ll t, a, b;
+    cin >> t >> a >> b;
     if (t == 0) {
-      ll p, x;
-      cin >> p >> x;
-      bit.add0(p, x);
+      bit.add(a, b);
     } else {
-      ll l, r;
-      cin >> l >> r;
-      cout << bit.sum_between0(l, r-1) << endl;
+      cout << bit.sum(b) - bit.sum(a) << endl;
     }
   }
 }
