@@ -42,6 +42,7 @@ layout: default
 * :heavy_check_mark: <a href="library/combination.cpp.html">combination.cpp</a>
 * :heavy_check_mark: <a href="library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
 * :heavy_check_mark: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
+* :warning: <a href="library/div_round_up.cpp.html">div_round_up.cpp</a>
 * :heavy_check_mark: <a href="library/modint.cpp.html">modint.cpp</a>
 * :warning: <a href="library/popcount.cpp.html">popcount.cpp</a>
 * :heavy_check_mark: <a href="library/powmod.cpp.html">powmod.cpp</a>

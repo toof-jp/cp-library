@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/template.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-20 19:45:02+09:00
+    - Last commit date: 2020-03-21 01:16:37+09:00
 
 
 
@@ -42,6 +42,7 @@ layout: default
 * :heavy_check_mark: <a href="combination.cpp.html">combination.cpp</a>
 * :heavy_check_mark: <a href="cumulative_sum.cpp.html">cumulative_sum.cpp</a>
 * :heavy_check_mark: <a href="dijkstra.cpp.html">dijkstra.cpp</a>
+* :warning: <a href="div_round_up.cpp.html">div_round_up.cpp</a>
 * :heavy_check_mark: <a href="modint.cpp.html">modint.cpp</a>
 * :warning: <a href="popcount.cpp.html">popcount.cpp</a>
 * :heavy_check_mark: <a href="powmod.cpp.html">powmod.cpp</a>
@@ -93,6 +94,7 @@ struct IoSetup {
   IoSetup() {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
+    cout << fixed << setprecision(15);
   }
 } io_setup;
 
@@ -124,6 +126,7 @@ struct IoSetup {
   IoSetup() {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
+    cout << fixed << setprecision(15);
   }
 } io_setup;
 

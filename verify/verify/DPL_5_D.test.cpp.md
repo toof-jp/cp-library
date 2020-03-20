@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/DPL_5_D.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-20 19:45:02+09:00
+    - Last commit date: 2020-03-21 01:16:37+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D</a>
@@ -93,6 +93,7 @@ struct IoSetup {
   IoSetup() {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
+    cout << fixed << setprecision(15);
   }
 } io_setup;
 #line 3 "modint.cpp"
