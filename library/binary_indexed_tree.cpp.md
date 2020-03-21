@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/binary_indexed_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 01:43:15+09:00
+    - Last commit date: 2020-03-21 17:18:40+09:00
 
 
 
@@ -54,15 +54,15 @@ layout: default
 #pragma once
 #include "template.cpp"
 
-template<typename Monoid>
+template<typename ComumutativeMonoid>
 struct BinaryIndexedTree {
-  using T = typename Monoid::value_type;
+  using T = typename ComumutativeMonoid::value_type;
   // 1-indexed
   ll n;
   vector<T> tree;
-  const Monoid ope;
+  const ComumutativeMonoid ope;
 
-  BinaryIndexedTree(ll n) : n(n), ope(Monoid()) {
+  BinaryIndexedTree(ll n) : n(n), ope(ComumutativeMonoid()) {
     tree.assign(n+1, ope.ide);
   }
 
@@ -131,15 +131,15 @@ struct IoSetup {
 } io_setup;
 #line 3 "binary_indexed_tree.cpp"
 
-template<typename Monoid>
+template<typename ComumutativeMonoid>
 struct BinaryIndexedTree {
-  using T = typename Monoid::value_type;
+  using T = typename ComumutativeMonoid::value_type;
   // 1-indexed
   ll n;
   vector<T> tree;
-  const Monoid ope;
+  const ComumutativeMonoid ope;
 
-  BinaryIndexedTree(ll n) : n(n), ope(Monoid()) {
+  BinaryIndexedTree(ll n) : n(n), ope(ComumutativeMonoid()) {
     tree.assign(n+1, ope.ide);
   }
 
