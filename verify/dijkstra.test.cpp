@@ -16,7 +16,8 @@ int main() {
   vl vec = dijkstra(v, r, g);
 
   for (auto&& i : vec) {
-    if (i == INF) cout << "INF" << endl;
-    else cout << i << endl;
+    if (i == INF) cout << "INF" << el;
+    else cout << i << el;
   }
+  cout << flush;
 }

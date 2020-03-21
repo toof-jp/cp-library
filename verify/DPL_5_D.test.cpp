@@ -8,5 +8,6 @@ int main() {
   ll n, k;
   cin >> n >> k;
   Combination<mint> c(n+k);
-  cout << c.H(k, n) << endl;
+  cout << c.H(k, n) << el;
+  cout << flush;
 }

@@ -20,6 +20,7 @@ int main() {
       cmax(ans, cs.sum(i, i+k-1));
     }
 
-    cout << ans << endl;
+    cout << ans << el;
   }
+  cout << flush;
 }

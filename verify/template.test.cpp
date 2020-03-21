@@ -28,5 +28,6 @@ int main() {
 
   ll a, b;
   cin >> a >> b;
-  cout << a+b << endl;
+  cout << a+b << el;
+  cout << flush;
 }

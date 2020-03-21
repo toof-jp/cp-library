@@ -14,7 +14,8 @@ int main() {
     if (t == 0) {
       uf.unite(u, v);
     } else {
-      cout << uf.same(u, v) << endl;
+      cout << uf.same(u, v) << el;
     }
   }
+  cout << flush;
 }

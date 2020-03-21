@@ -31,7 +31,8 @@ int main() {
     if (t == 0) {
       bit.add(a, b);
     } else {
-      cout << bit.sum(b) - bit.sum(a) << endl;
+      cout << bit.sum(b) - bit.sum(a) << el;
     }
   }
+  cout << flush;
 }

@@ -15,5 +15,6 @@ int main() {
       cout << i.first << " ";
     }
   }
-  cout << endl;
+  cout << el;
+  cout << flush;
 }

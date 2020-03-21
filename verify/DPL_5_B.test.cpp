@@ -8,5 +8,6 @@ int main() {
   ll n, k;
   cin >> n >> k;
   Combination<mint> c(max(n, k));
-  cout << c.P(k, n) << endl;
+  cout << c.P(k, n) << el;
+  cout << flush;
 }

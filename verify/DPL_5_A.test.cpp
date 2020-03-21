@@ -7,5 +7,6 @@ int main() {
   ll n, k;
   cin >> n >> k;
   ll mod = 1e9+7;
-  cout << powmod(k, n, mod) << endl;
+  cout << powmod(k, n, mod) << el;
+  cout << flush;
 }

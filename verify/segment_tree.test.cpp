@@ -40,7 +40,7 @@ int main() {
       seg.change(a, Func(b, c));
     } else {
       Func e = seg.query(a, b);
-      cout << e.a*modint(c)+e.b << '\n';
+      cout << e.a*modint(c)+e.b << el;
     }
   }
   cout << flush;
