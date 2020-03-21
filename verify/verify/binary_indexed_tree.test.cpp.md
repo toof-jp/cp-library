@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/binary_indexed_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:18:40+09:00
+    - Last commit date: 2020-03-21 17:26:17+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_add_range_sum">https://judge.yosupo.jp/problem/point_add_range_sum</a>
@@ -81,9 +81,10 @@ int main() {
     if (t == 0) {
       bit.add(a, b);
     } else {
-      cout << bit.sum(b) - bit.sum(a) << endl;
+      cout << bit.sum(b) - bit.sum(a) << el;
     }
   }
+  cout << flush;
 }
 
 ```
@@ -120,6 +121,8 @@ struct IoSetup {
     cout << fixed << setprecision(15);
   }
 } io_setup;
+
+constexpr char el = '\n';
 #line 3 "binary_indexed_tree.cpp"
 
 template<typename ComumutativeMonoid>
@@ -195,9 +198,10 @@ int main() {
     if (t == 0) {
       bit.add(a, b);
     } else {
-      cout << bit.sum(b) - bit.sum(a) << endl;
+      cout << bit.sum(b) - bit.sum(a) << el;
     }
   }
+  cout << flush;
 }
 
 ```

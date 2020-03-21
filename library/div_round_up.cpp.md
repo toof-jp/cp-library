@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/div_round_up.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 01:43:15+09:00
+    - Last commit date: 2020-03-21 17:26:17+09:00
 
 
 
@@ -88,6 +88,8 @@ struct IoSetup {
     cout << fixed << setprecision(15);
   }
 } io_setup;
+
+constexpr char el = '\n';
 #line 4 "div_round_up.cpp"
 
 // return ceil(n/m)

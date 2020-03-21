@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/cumulative_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 01:43:15+09:00
+    - Last commit date: 2020-03-21 17:26:17+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516</a>
@@ -70,8 +70,9 @@ int main() {
       cmax(ans, cs.sum(i, i+k-1));
     }
 
-    cout << ans << endl;
+    cout << ans << el;
   }
+  cout << flush;
 }
 
 ```
@@ -108,6 +109,8 @@ struct IoSetup {
     cout << fixed << setprecision(15);
   }
 } io_setup;
+
+constexpr char el = '\n';
 #line 3 "cumulative_sum.cpp"
 
 template<class T>
@@ -167,8 +170,9 @@ int main() {
       cmax(ans, cs.sum(i, i+k-1));
     }
 
-    cout << ans << endl;
+    cout << ans << el;
   }
+  cout << flush;
 }
 
 ```

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/dijkstra.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 01:43:15+09:00
+    - Last commit date: 2020-03-21 17:26:17+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A</a>
@@ -66,9 +66,10 @@ int main() {
   vl vec = dijkstra(v, r, g);
 
   for (auto&& i : vec) {
-    if (i == INF) cout << "INF" << endl;
-    else cout << i << endl;
+    if (i == INF) cout << "INF" << el;
+    else cout << i << el;
   }
+  cout << flush;
 }
 
 ```
@@ -105,6 +106,8 @@ struct IoSetup {
     cout << fixed << setprecision(15);
   }
 } io_setup;
+
+constexpr char el = '\n';
 #line 3 "dijkstra.cpp"
 
 ll INF = 1LL<<60;
@@ -144,9 +147,10 @@ int main() {
   vl vec = dijkstra(v, r, g);
 
   for (auto&& i : vec) {
-    if (i == INF) cout << "INF" << endl;
-    else cout << i << endl;
+    if (i == INF) cout << "INF" << el;
+    else cout << i << el;
   }
+  cout << flush;
 }
 
 ```

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/DPL_5_A.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 01:43:15+09:00
+    - Last commit date: 2020-03-21 17:26:17+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A</a>
@@ -57,7 +57,8 @@ int main() {
   ll n, k;
   cin >> n >> k;
   ll mod = 1e9+7;
-  cout << powmod(k, n, mod) << endl;
+  cout << powmod(k, n, mod) << el;
+  cout << flush;
 }
 
 ```
@@ -94,6 +95,8 @@ struct IoSetup {
     cout << fixed << setprecision(15);
   }
 } io_setup;
+
+constexpr char el = '\n';
 #line 3 "powmod.cpp"
 
 ll powmod(ll a, ll n, ll p) {
@@ -111,7 +114,8 @@ int main() {
   ll n, k;
   cin >> n >> k;
   ll mod = 1e9+7;
-  cout << powmod(k, n, mod) << endl;
+  cout << powmod(k, n, mod) << el;
+  cout << flush;
 }
 
 ```

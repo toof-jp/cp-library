@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/segment_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 02:30:16+09:00
+    - Last commit date: 2020-03-21 17:26:17+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -91,7 +91,7 @@ int main() {
       seg.change(a, Func(b, c));
     } else {
       Func e = seg.query(a, b);
-      cout << e.a*modint(c)+e.b << '\n';
+      cout << e.a*modint(c)+e.b << el;
     }
   }
   cout << flush;
@@ -131,6 +131,8 @@ struct IoSetup {
     cout << fixed << setprecision(15);
   }
 } io_setup;
+
+constexpr char el = '\n';
 #line 3 "segment_tree.cpp"
 
 template<class Monoid>
@@ -265,7 +267,7 @@ int main() {
       seg.change(a, Func(b, c));
     } else {
       Func e = seg.query(a, b);
-      cout << e.a*modint(c)+e.b << '\n';
+      cout << e.a*modint(c)+e.b << el;
     }
   }
   cout << flush;
