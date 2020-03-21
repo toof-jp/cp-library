@@ -1,15 +1,15 @@
 #pragma once
 #include "template.cpp"
 
-template<typename Monoid>
+template<typename ComumutativeMonoid>
 struct BinaryIndexedTree {
-  using T = typename Monoid::value_type;
+  using T = typename ComumutativeMonoid::value_type;
   // 1-indexed
   ll n;
   vector<T> tree;
-  const Monoid ope;
+  const ComumutativeMonoid ope;
 
-  BinaryIndexedTree(ll n) : n(n), ope(Monoid()) {
+  BinaryIndexedTree(ll n) : n(n), ope(ComumutativeMonoid()) {
     tree.assign(n+1, ope.ide);
   }
 
