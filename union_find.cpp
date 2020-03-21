@@ -9,7 +9,7 @@ struct UnionFind {
   vector<Node> tree;
 
   UnionFind(ll size) : tree(size) {
-    for (ll i = 0; i < size; i++) {
+    rep(i, size) {
       tree[i].parent = i;
       tree[i].size = 1;
     }
@@ -34,7 +34,7 @@ struct UnionFind {
     tree[x].size += tree[y].size;
   }
 
-  bool same(ll x, ll y) {
+  bool same(ll x, ll y) const {
     return find(x) == find(y);
   }
 };
