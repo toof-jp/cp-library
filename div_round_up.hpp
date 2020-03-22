@@ -1,5 +1,4 @@
 #pragma once
-
 #include "template.hpp"
 
 // return ceil(n/m)
