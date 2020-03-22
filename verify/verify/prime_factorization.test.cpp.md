@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/prime_factorization.cpp.html">prime_factorization.cpp</a>
-* :question: <a href="../../library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code

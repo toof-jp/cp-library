@@ -31,14 +31,14 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/cumulative_sum.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+    - Last commit date: 2020-03-22 09:18:32+09:00
 
 
 
 
 ## Depends on
 
-* :question: <a href="template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="template.cpp.html">template.cpp</a>
 
 
 ## Verified with
@@ -61,7 +61,8 @@ struct CumulativeSum {
   CumulativeSum(size_t n) : v(n+1) {};
   CumulativeSum(vector<T> v_) {
     v.resize(v_.size()+1);
-    for (size_t i = 0; i < v_.size(); i++) v[i+1] = v_[i];
+    rep(i, v_.size())
+      v[i+1] = v_[i];
   };
 
   void add(size_t i, T x) {
@@ -70,7 +71,8 @@ struct CumulativeSum {
 
   // O(N)
   void build() {
-    for (size_t i = 0; i < v.size()-1; i++)
+    if (v.size() == 0) return;
+    rep(i, v.size()-1)
       v[i+1] += v[i];
   }
 
@@ -135,7 +137,8 @@ struct CumulativeSum {
   CumulativeSum(size_t n) : v(n+1) {};
   CumulativeSum(vector<T> v_) {
     v.resize(v_.size()+1);
-    for (size_t i = 0; i < v_.size(); i++) v[i+1] = v_[i];
+    rep(i, v_.size())
+      v[i+1] = v_[i];
   };
 
   void add(size_t i, T x) {
@@ -144,7 +147,8 @@ struct CumulativeSum {
 
   // O(N)
   void build() {
-    for (size_t i = 0; i < v.size()-1; i++)
+    if (v.size() == 0) return;
+    rep(i, v.size()-1)
       v[i+1] += v[i];
   }
 
