@@ -8,7 +8,8 @@ struct CumulativeSum {
   CumulativeSum(size_t n) : v(n+1) {};
   CumulativeSum(vector<T> v_) {
     v.resize(v_.size()+1);
-    for (size_t i = 0; i < v_.size(); i++) v[i+1] = v_[i];
+    rep(i, v_.size())
+      v[i+1] = v_[i];
   };
 
   void add(size_t i, T x) {
@@ -17,7 +18,8 @@ struct CumulativeSum {
 
   // O(N)
   void build() {
-    for (size_t i = 0; i < v.size()-1; i++)
+    if (v.size() == 0) return;
+    rep(i, v.size()-1)
       v[i+1] += v[i];
   }
 
