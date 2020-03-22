@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/union_find.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-22 09:19:12+09:00
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/unionfind">https://judge.yosupo.jp/problem/unionfind</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
-* :heavy_check_mark: <a href="../../library/union_find.cpp.html">union_find.cpp</a>
+* :heavy_check_mark: <a href="../../library/template.hpp.html">template.hpp</a>
+* :heavy_check_mark: <a href="../../library/union_find.hpp.html">union_find.hpp</a>
 
 
 ## Code
@@ -50,8 +50,8 @@ layout: default
 ```cpp
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
-#include "../template.cpp"
-#include "../union_find.cpp"
+#include "../template.hpp"
+#include "../union_find.hpp"
 
 int main() {
   ll n, q;
@@ -79,8 +79,7 @@ int main() {
 #line 1 "verify/union_find.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -106,7 +105,7 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "union_find.cpp"
+#line 3 "union_find.hpp"
 
 struct UnionFind {
   struct Node {

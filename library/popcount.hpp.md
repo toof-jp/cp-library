@@ -25,25 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: prime_factorization.cpp
+# :warning: popcount.hpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
-* <a href="{{ site.github.repository_url }}/blob/master/prime_factorization.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/popcount.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="template.cpp.html">template.cpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
+* :heavy_check_mark: <a href="template.hpp.html">template.hpp</a>
 
 
 ## Code
@@ -52,18 +47,14 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
-#include "template.cpp"
+#include "template.hpp"
 
-map<ll, ll> prime_factorization(ll n) {
-  map<ll, ll> m;
-  for (int i = 2; i*i <= n; i++) {
-    while (n%i == 0) {
-      m[i]++;
-      n /= i;
-    }
-  }
-  if (n != 1) m[n]++;
-  return m;
+int popcount(int n) {
+  return __builtin_popcount(n);
+}
+
+ll popcount(ll n) {
+  return __builtin_popcountll(n);
 }
 
 ```
@@ -72,8 +63,7 @@ map<ll, ll> prime_factorization(ll n) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -99,18 +89,14 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "prime_factorization.cpp"
+#line 3 "popcount.hpp"
 
-map<ll, ll> prime_factorization(ll n) {
-  map<ll, ll> m;
-  for (int i = 2; i*i <= n; i++) {
-    while (n%i == 0) {
-      m[i]++;
-      n /= i;
-    }
-  }
-  if (n != 1) m[n]++;
-  return m;
+int popcount(int n) {
+  return __builtin_popcount(n);
+}
+
+ll popcount(ll n) {
+  return __builtin_popcountll(n);
 }
 
 ```

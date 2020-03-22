@@ -25,25 +25,26 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: segment_tree.cpp
+# :heavy_check_mark: powmod.hpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
-* <a href="{{ site.github.repository_url }}/blob/master/segment_tree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/powmod.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="template.hpp.html">template.hpp</a>
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/DPL_5_A.test.cpp.html">verify/DPL_5_A.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
 
 
 ## Code
@@ -52,48 +53,17 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
-#include "template.cpp"
+#include "template.hpp"
 
-template<class Monoid>
-struct SegmentTree {
-  using T = typename Monoid::value_type;
-
-  ll n;
-  vector<T> tree;
-  const Monoid ope;
-
-  SegmentTree(ll n) : n(n) {
-    tree.assign(2*n, ope.ide);
+ll powmod(ll a, ll n, ll p) {
+  ll res = 1;
+  while (n) {
+    if (n&1) res = res * a % p;
+    a = a * a % p;
+    n >>= 1;
   }
-
-  void build(const vector<T>& v) {
-    rep(i, v.size())
-      tree[i+n] = v[i];
-    per(i, n)
-      tree[i] = ope(tree[i*2], tree[i*2+1]);
-  }
-
-  void change(ll p, const T& x) {
-    p += n;
-    tree[p] = x;
-    while (p >>= 1)
-      tree[p] = ope(tree[p*2], tree[p*2+1]);
-  }
-
-  T query(ll l, ll r) const {
-    T l_res{};
-    T r_res{};
-    for (l += n, r+= n; l < r; l >>= 1, r >>= 1) {
-      if (l&1) l_res = ope(l_res, tree[l++]);
-      if (r&1) r_res = ope(tree[--r], r_res);
-    }
-    return ope(l_res, r_res);
-  }
-
-  T operator[](ll i) {
-    return tree[i+n];
-  }
-};
+  return res;
+}
 
 ```
 {% endraw %}
@@ -101,8 +71,7 @@ struct SegmentTree {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -128,48 +97,17 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "segment_tree.cpp"
+#line 3 "powmod.hpp"
 
-template<class Monoid>
-struct SegmentTree {
-  using T = typename Monoid::value_type;
-
-  ll n;
-  vector<T> tree;
-  const Monoid ope;
-
-  SegmentTree(ll n) : n(n) {
-    tree.assign(2*n, ope.ide);
+ll powmod(ll a, ll n, ll p) {
+  ll res = 1;
+  while (n) {
+    if (n&1) res = res * a % p;
+    a = a * a % p;
+    n >>= 1;
   }
-
-  void build(const vector<T>& v) {
-    rep(i, v.size())
-      tree[i+n] = v[i];
-    per(i, n)
-      tree[i] = ope(tree[i*2], tree[i*2+1]);
-  }
-
-  void change(ll p, const T& x) {
-    p += n;
-    tree[p] = x;
-    while (p >>= 1)
-      tree[p] = ope(tree[p*2], tree[p*2+1]);
-  }
-
-  T query(ll l, ll r) const {
-    T l_res{};
-    T r_res{};
-    for (l += n, r+= n; l < r; l >>= 1, r >>= 1) {
-      if (l&1) l_res = ope(l_res, tree[l++]);
-      if (r&1) r_res = ope(tree[--r], r_res);
-    }
-    return ope(l_res, r_res);
-  }
-
-  T operator[](ll i) {
-    return tree[i+n];
-  }
-};
+  return res;
+}
 
 ```
 {% endraw %}

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/DPL_5_E.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E</a>
@@ -39,9 +39,9 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/combination.cpp.html">combination.cpp</a>
-* :heavy_check_mark: <a href="../../library/modint.cpp.html">modint.cpp</a>
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="../../library/combination.hpp.html">combination.hpp</a>
+* :heavy_check_mark: <a href="../../library/modint.hpp.html">modint.hpp</a>
+* :heavy_check_mark: <a href="../../library/template.hpp.html">template.hpp</a>
 
 
 ## Code
@@ -51,9 +51,9 @@ layout: default
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E"
 
-#include "../template.cpp"
-#include "../modint.cpp"
-#include "../combination.cpp"
+#include "../template.hpp"
+#include "../modint.hpp"
+#include "../combination.hpp"
 
 int main() {
   ll n, k;
@@ -72,8 +72,7 @@ int main() {
 #line 1 "verify/DPL_5_E.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E"
 
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -99,7 +98,7 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "modint.cpp"
+#line 3 "modint.hpp"
 
 template <ll Mod>
 struct ModInt {
@@ -153,7 +152,7 @@ struct ModInt {
 constexpr ll mod = 1000000007;
 using mint = ModInt<mod>;
 mint operator"" _mi(unsigned long long n) { return mint(n); }
-#line 3 "combination.cpp"
+#line 3 "combination.hpp"
 
 // T modint
 template<class T>

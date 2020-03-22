@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/cumulative_sum.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-22 09:18:32+09:00
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="../../library/cumulative_sum.hpp.html">cumulative_sum.hpp</a>
+* :heavy_check_mark: <a href="../../library/template.hpp.html">template.hpp</a>
 
 
 ## Code
@@ -50,8 +50,8 @@ layout: default
 ```cpp
 #define  PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516"
 
-#include "../template.cpp"
-#include "../cumulative_sum.cpp"
+#include "../template.hpp"
+#include "../cumulative_sum.hpp"
 
 int main() {
   while (1) {
@@ -84,8 +84,7 @@ int main() {
 #line 1 "verify/cumulative_sum.test.cpp"
 #define  PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516"
 
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -111,7 +110,7 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "cumulative_sum.cpp"
+#line 3 "cumulative_sum.hpp"
 
 template<class T>
 struct CumulativeSum {

@@ -38,18 +38,18 @@ layout: default
 
 ### .
 
-* :heavy_check_mark: <a href="library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
-* :heavy_check_mark: <a href="library/combination.cpp.html">combination.cpp</a>
-* :heavy_check_mark: <a href="library/cumulative_sum.cpp.html">cumulative_sum.cpp</a>
-* :heavy_check_mark: <a href="library/dijkstra.cpp.html">dijkstra.cpp</a>
-* :warning: <a href="library/div_round_up.cpp.html">div_round_up.cpp</a>
-* :heavy_check_mark: <a href="library/modint.cpp.html">modint.cpp</a>
-* :warning: <a href="library/popcount.cpp.html">popcount.cpp</a>
-* :heavy_check_mark: <a href="library/powmod.cpp.html">powmod.cpp</a>
-* :heavy_check_mark: <a href="library/prime_factorization.cpp.html">prime_factorization.cpp</a>
-* :heavy_check_mark: <a href="library/segment_tree.cpp.html">segment_tree.cpp</a>
-* :heavy_check_mark: <a href="library/template.cpp.html">template.cpp</a>
-* :heavy_check_mark: <a href="library/union_find.cpp.html">union_find.cpp</a>
+* :heavy_check_mark: <a href="library/binary_indexed_tree.hpp.html">binary_indexed_tree.hpp</a>
+* :heavy_check_mark: <a href="library/combination.hpp.html">combination.hpp</a>
+* :heavy_check_mark: <a href="library/cumulative_sum.hpp.html">cumulative_sum.hpp</a>
+* :heavy_check_mark: <a href="library/dijkstra.hpp.html">dijkstra.hpp</a>
+* :warning: <a href="library/div_round_up.hpp.html">div_round_up.hpp</a>
+* :heavy_check_mark: <a href="library/modint.hpp.html">modint.hpp</a>
+* :warning: <a href="library/popcount.hpp.html">popcount.hpp</a>
+* :heavy_check_mark: <a href="library/powmod.hpp.html">powmod.hpp</a>
+* :heavy_check_mark: <a href="library/prime_factorization.hpp.html">prime_factorization.hpp</a>
+* :heavy_check_mark: <a href="library/segment_tree.hpp.html">segment_tree.hpp</a>
+* :heavy_check_mark: <a href="library/template.hpp.html">template.hpp</a>
+* :heavy_check_mark: <a href="library/union_find.hpp.html">union_find.hpp</a>
 
 
 ## Verify Files

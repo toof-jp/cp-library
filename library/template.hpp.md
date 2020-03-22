@@ -25,30 +25,30 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: template.cpp
+# :heavy_check_mark: template.hpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
-* <a href="{{ site.github.repository_url }}/blob/master/template.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/template.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 
 
 ## Required by
 
-* :heavy_check_mark: <a href="binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
-* :heavy_check_mark: <a href="combination.cpp.html">combination.cpp</a>
-* :heavy_check_mark: <a href="cumulative_sum.cpp.html">cumulative_sum.cpp</a>
-* :heavy_check_mark: <a href="dijkstra.cpp.html">dijkstra.cpp</a>
-* :warning: <a href="div_round_up.cpp.html">div_round_up.cpp</a>
-* :heavy_check_mark: <a href="modint.cpp.html">modint.cpp</a>
-* :warning: <a href="popcount.cpp.html">popcount.cpp</a>
-* :heavy_check_mark: <a href="powmod.cpp.html">powmod.cpp</a>
-* :heavy_check_mark: <a href="prime_factorization.cpp.html">prime_factorization.cpp</a>
-* :heavy_check_mark: <a href="segment_tree.cpp.html">segment_tree.cpp</a>
-* :heavy_check_mark: <a href="union_find.cpp.html">union_find.cpp</a>
+* :heavy_check_mark: <a href="binary_indexed_tree.hpp.html">binary_indexed_tree.hpp</a>
+* :heavy_check_mark: <a href="combination.hpp.html">combination.hpp</a>
+* :heavy_check_mark: <a href="cumulative_sum.hpp.html">cumulative_sum.hpp</a>
+* :heavy_check_mark: <a href="dijkstra.hpp.html">dijkstra.hpp</a>
+* :warning: <a href="div_round_up.hpp.html">div_round_up.hpp</a>
+* :heavy_check_mark: <a href="modint.hpp.html">modint.hpp</a>
+* :warning: <a href="popcount.hpp.html">popcount.hpp</a>
+* :heavy_check_mark: <a href="powmod.hpp.html">powmod.hpp</a>
+* :heavy_check_mark: <a href="prime_factorization.hpp.html">prime_factorization.hpp</a>
+* :heavy_check_mark: <a href="segment_tree.hpp.html">segment_tree.hpp</a>
+* :heavy_check_mark: <a href="union_find.hpp.html">union_find.hpp</a>
 
 
 ## Verified with
@@ -73,7 +73,6 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -106,8 +105,7 @@ constexpr char el = '\n';
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 

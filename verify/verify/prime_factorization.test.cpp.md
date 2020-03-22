@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/prime_factorization.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/prime_factorization.cpp.html">prime_factorization.cpp</a>
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="../../library/prime_factorization.hpp.html">prime_factorization.hpp</a>
+* :heavy_check_mark: <a href="../../library/template.hpp.html">template.hpp</a>
 
 
 ## Code
@@ -50,8 +50,8 @@ layout: default
 ```cpp
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A"
 
-#include "../template.cpp"
-#include "../prime_factorization.cpp"
+#include "../template.hpp"
+#include "../prime_factorization.hpp"
 
 int main() {
   ll n;
@@ -78,8 +78,7 @@ int main() {
 #line 1 "verify/prime_factorization.test.cpp"
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A"
 
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -105,7 +104,7 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "prime_factorization.cpp"
+#line 3 "prime_factorization.hpp"
 
 map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;

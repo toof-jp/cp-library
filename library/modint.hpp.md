@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: modint.cpp
+# :heavy_check_mark: modint.hpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
-* <a href="{{ site.github.repository_url }}/blob/master/modint.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/modint.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="template.hpp.html">template.hpp</a>
 
 
 ## Verified with
@@ -55,7 +55,7 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
-#include "template.cpp"
+#include "template.hpp"
 
 template <ll Mod>
 struct ModInt {
@@ -116,8 +116,7 @@ mint operator"" _mi(unsigned long long n) { return mint(n); }
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -143,7 +142,7 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "modint.cpp"
+#line 3 "modint.hpp"
 
 template <ll Mod>
 struct ModInt {

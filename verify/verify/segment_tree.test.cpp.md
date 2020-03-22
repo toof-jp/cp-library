@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/segment_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_set_range_composite">https://judge.yosupo.jp/problem/point_set_range_composite</a>
@@ -39,9 +39,9 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/modint.cpp.html">modint.cpp</a>
-* :heavy_check_mark: <a href="../../library/segment_tree.cpp.html">segment_tree.cpp</a>
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="../../library/modint.hpp.html">modint.hpp</a>
+* :heavy_check_mark: <a href="../../library/segment_tree.hpp.html">segment_tree.hpp</a>
+* :heavy_check_mark: <a href="../../library/template.hpp.html">template.hpp</a>
 
 
 ## Code
@@ -51,9 +51,9 @@ layout: default
 ```cpp
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
 
-#include "../template.cpp"
-#include "../segment_tree.cpp"
-#include "../modint.cpp"
+#include "../template.hpp"
+#include "../segment_tree.hpp"
+#include "../modint.hpp"
 
 using modint = ModInt<998244353>;
 
@@ -106,8 +106,7 @@ int main() {
 #line 1 "verify/segment_tree.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
 
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -133,7 +132,7 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "segment_tree.cpp"
+#line 3 "segment_tree.hpp"
 
 template<class Monoid>
 struct SegmentTree {
@@ -175,7 +174,7 @@ struct SegmentTree {
     return tree[i+n];
   }
 };
-#line 3 "modint.cpp"
+#line 3 "modint.hpp"
 
 template <ll Mod>
 struct ModInt {

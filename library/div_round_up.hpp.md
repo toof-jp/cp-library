@@ -25,25 +25,20 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: dijkstra.cpp
+# :warning: div_round_up.hpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
-* <a href="{{ site.github.repository_url }}/blob/master/dijkstra.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/div_round_up.hpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="template.cpp.html">template.cpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
+* :heavy_check_mark: <a href="template.hpp.html">template.hpp</a>
 
 
 ## Code
@@ -52,29 +47,12 @@ layout: default
 {% raw %}
 ```cpp
 #pragma once
-#include "template.cpp"
 
-ll INF = 1LL<<60;
+#include "template.hpp"
 
-vl dijkstra(ll n, ll s, vector<vector<pl>> G) {
-  priority_queue<pl, vector<pl>, greater<pl>> que;
-  vl d(n, INF);
-  d[s] = 0;
-  que.push(pl(0, s));
-
-  while(!que.empty()) {
-    pl p = que.top();
-    que.pop();
-    ll v = p.second;
-    if (d[v] < p.first) continue;
-    for (auto&& e : G[v]) {
-      if (d[e.first] > d[v] + e.second) {
-        d[e.first] = d[v] + e.second;
-        que.push(pl(d[e.first], e.first));
-      }
-    }
-  }
-  return d;
+// return ceil(n/m)
+inline ll div_round_up(ll n, ll m) {
+  return (n+m-1) / m;
 }
 
 ```
@@ -83,8 +61,9 @@ vl dijkstra(ll n, ll s, vector<vector<pl>> G) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "template.cpp"
+#line 2 "div_round_up.hpp"
 
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -110,29 +89,11 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "dijkstra.cpp"
+#line 4 "div_round_up.hpp"
 
-ll INF = 1LL<<60;
-
-vl dijkstra(ll n, ll s, vector<vector<pl>> G) {
-  priority_queue<pl, vector<pl>, greater<pl>> que;
-  vl d(n, INF);
-  d[s] = 0;
-  que.push(pl(0, s));
-
-  while(!que.empty()) {
-    pl p = que.top();
-    que.pop();
-    ll v = p.second;
-    if (d[v] < p.first) continue;
-    for (auto&& e : G[v]) {
-      if (d[e.first] > d[v] + e.second) {
-        d[e.first] = d[v] + e.second;
-        que.push(pl(d[e.first], e.first));
-      }
-    }
-  }
-  return d;
+// return ceil(n/m)
+inline ll div_round_up(ll n, ll m) {
+  return (n+m-1) / m;
 }
 
 ```

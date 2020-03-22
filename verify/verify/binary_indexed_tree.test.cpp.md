@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/binary_indexed_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+    - Last commit date: 2020-03-22 09:31:38+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/point_add_range_sum">https://judge.yosupo.jp/problem/point_add_range_sum</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="../../library/binary_indexed_tree.hpp.html">binary_indexed_tree.hpp</a>
+* :heavy_check_mark: <a href="../../library/template.hpp.html">template.hpp</a>
 
 
 ## Code
@@ -50,8 +50,8 @@ layout: default
 ```cpp
 #define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
 
-#include "../template.cpp"
-#include "../binary_indexed_tree.cpp"
+#include "../template.hpp"
+#include "../binary_indexed_tree.hpp"
 
 template <class T>
 struct Plus {
@@ -96,8 +96,7 @@ int main() {
 #line 1 "verify/binary_indexed_tree.test.cpp"
 #define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
 
-#line 2 "template.cpp"
-
+#line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -123,7 +122,7 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "binary_indexed_tree.cpp"
+#line 3 "binary_indexed_tree.hpp"
 
 template<typename ComumutativeMonoid>
 struct BinaryIndexedTree {
