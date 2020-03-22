@@ -1,5 +1,5 @@
 #pragma once
-#include "template.cpp"
+#include "template.hpp"
 
 ll INF = 1LL<<60;
 

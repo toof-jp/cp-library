@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_set_range_composite"
 
-#include "../template.cpp"
-#include "../segment_tree.cpp"
-#include "../modint.cpp"
+#include "../template.hpp"
+#include "../segment_tree.hpp"
+#include "../modint.hpp"
 
 using modint = ModInt<998244353>;
 

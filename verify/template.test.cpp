@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
 
-#include "../template.cpp"
+#include "../template.hpp"
 
 int main() {
   ll n = 10;

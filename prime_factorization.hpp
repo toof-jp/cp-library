@@ -1,5 +1,5 @@
 #pragma once
-#include "template.cpp"
+#include "template.hpp"
 
 map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;

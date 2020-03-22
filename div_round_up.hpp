@@ -1,6 +1,6 @@
 #pragma once
 
-#include "template.cpp"
+#include "template.hpp"
 
 // return ceil(n/m)
 inline ll div_round_up(ll n, ll m) {

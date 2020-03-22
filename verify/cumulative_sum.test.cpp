@@ -1,7 +1,7 @@
 #define  PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516"
 
-#include "../template.cpp"
-#include "../cumulative_sum.cpp"
+#include "../template.hpp"
+#include "../cumulative_sum.hpp"
 
 int main() {
   while (1) {

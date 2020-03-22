@@ -1,5 +1,5 @@
 #pragma once
-#include "template.cpp"
+#include "template.hpp"
 
 int popcount(int n) {
   return __builtin_popcount(n);

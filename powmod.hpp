@@ -1,5 +1,5 @@
 #pragma once
-#include "template.cpp"
+#include "template.hpp"
 
 ll powmod(ll a, ll n, ll p) {
   ll res = 1;
