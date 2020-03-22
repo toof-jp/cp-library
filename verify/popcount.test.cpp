@@ -1,4 +1,4 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
 #include "../template.hpp"
 #include "../popcount.hpp"
@@ -8,8 +8,5 @@ int main() {
   assert(popcount(0b11010111) == 6);
   assert(popcount(0b00000000) == 0);
 
-  ll a, b;
-  cin >> a >> b;
-  cout << a+b << el;
-  cout << flush;
+  cout << "Hello World" << endl;
 }

@@ -1,4 +1,4 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
 #include "../template.hpp"
 
@@ -26,8 +26,5 @@ int main() {
   assert(maxi == 9);
   assert(mini == 1);
 
-  ll a, b;
-  cin >> a >> b;
-  cout << a+b << el;
-  cout << flush;
+  cout << "Hello World" << el << flush;
 }
