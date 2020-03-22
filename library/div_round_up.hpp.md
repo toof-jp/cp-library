@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :warning: div_round_up.hpp
+# :heavy_check_mark: div_round_up.hpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/div_round_up.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-22 09:31:38+09:00
+    - Last commit date: 2020-03-22 09:40:08+09:00
 
 
 
@@ -41,13 +41,17 @@ layout: default
 * :heavy_check_mark: <a href="template.hpp.html">template.hpp</a>
 
 
+## Verified with
+
+* :heavy_check_mark: <a href="../verify/verify/div_round_up.test.cpp.html">verify/div_round_up.test.cpp</a>
+
+
 ## Code
 
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
 #pragma once
-
 #include "template.hpp"
 
 // return ceil(n/m)
@@ -61,8 +65,6 @@ inline ll div_round_up(ll n, ll m) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 2 "div_round_up.hpp"
-
 #line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
@@ -89,7 +91,7 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 4 "div_round_up.hpp"
+#line 3 "div_round_up.hpp"
 
 // return ceil(n/m)
 inline ll div_round_up(ll n, ll m) {

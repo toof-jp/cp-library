@@ -31,10 +31,10 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/template.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-22 09:31:38+09:00
+    - Last commit date: 2020-03-22 09:52:59+09:00
 
 
-* see: <a href="https://judge.yosupo.jp/problem/aplusb">https://judge.yosupo.jp/problem/aplusb</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A</a>
 
 
 ## Depends on
@@ -47,7 +47,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
 #include "../template.hpp"
 
@@ -75,10 +75,7 @@ int main() {
   assert(maxi == 9);
   assert(mini == 1);
 
-  ll a, b;
-  cin >> a >> b;
-  cout << a+b << el;
-  cout << flush;
+  cout << "Hello World" << el << flush;
 }
 
 ```
@@ -88,7 +85,7 @@ int main() {
 {% raw %}
 ```cpp
 #line 1 "verify/template.test.cpp"
-#define PROBLEM "https://judge.yosupo.jp/problem/aplusb"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
 #line 2 "template.hpp"
 #include <bits/stdc++.h>
@@ -142,10 +139,7 @@ int main() {
   assert(maxi == 9);
   assert(mini == 1);
 
-  ll a, b;
-  cin >> a >> b;
-  cout << a+b << el;
-  cout << flush;
+  cout << "Hello World" << el << flush;
 }
 
 ```

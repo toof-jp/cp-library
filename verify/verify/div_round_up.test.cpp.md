@@ -21,29 +21,26 @@ layout: default
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-balloon-js@1.1.2/jquery.balloon.min.js" integrity="sha256-ZEYs9VrgAeNuPvs15E39OsyOJaIkXEEt10fzxJ20+2I=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../assets/js/copy-button.js"></script>
-<link rel="stylesheet" href="../assets/css/copy-button.css" />
+<script type="text/javascript" src="../../assets/js/copy-button.js"></script>
+<link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: popcount.hpp
+# :heavy_check_mark: verify/div_round_up.test.cpp
 
-<a href="../index.html">Back to top page</a>
+<a href="../../index.html">Back to top page</a>
 
-* category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
-* <a href="{{ site.github.repository_url }}/blob/master/popcount.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-22 09:31:38+09:00
+* category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
+* <a href="{{ site.github.repository_url }}/blob/master/verify/div_round_up.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-03-22 09:52:59+09:00
 
 
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="template.hpp.html">template.hpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../verify/verify/popcount.test.cpp.html">verify/popcount.test.cpp</a>
+* :heavy_check_mark: <a href="../../library/div_round_up.hpp.html">div_round_up.hpp</a>
+* :heavy_check_mark: <a href="../../library/template.hpp.html">template.hpp</a>
 
 
 ## Code
@@ -51,15 +48,17 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#pragma once
-#include "template.hpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
-int popcount(int n) {
-  return __builtin_popcount(n);
-}
+#include "../template.hpp"
+#include "../div_round_up.hpp"
 
-ll popcount(ll n) {
-  return __builtin_popcountll(n);
+int main() {
+  assert(div_round_up(5, 3) == 2);
+  assert(div_round_up(0, 2) == 0);
+  assert(div_round_up(31, 7) == 5);
+
+  cout << "Hello World" << endl;
 }
 
 ```
@@ -68,6 +67,9 @@ ll popcount(ll n) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "verify/div_round_up.test.cpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
+
 #line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
@@ -94,18 +96,24 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
-#line 3 "popcount.hpp"
+#line 3 "div_round_up.hpp"
 
-int popcount(int n) {
-  return __builtin_popcount(n);
+// return ceil(n/m)
+inline ll div_round_up(ll n, ll m) {
+  return (n+m-1) / m;
 }
+#line 5 "verify/div_round_up.test.cpp"
 
-ll popcount(ll n) {
-  return __builtin_popcountll(n);
+int main() {
+  assert(div_round_up(5, 3) == 2);
+  assert(div_round_up(0, 2) == 0);
+  assert(div_round_up(31, 7) == 5);
+
+  cout << "Hello World" << endl;
 }
 
 ```
 {% endraw %}
 
-<a href="../index.html">Back to top page</a>
+<a href="../../index.html">Back to top page</a>
 

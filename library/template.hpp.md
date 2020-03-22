@@ -42,9 +42,9 @@ layout: default
 * :heavy_check_mark: <a href="combination.hpp.html">combination.hpp</a>
 * :heavy_check_mark: <a href="cumulative_sum.hpp.html">cumulative_sum.hpp</a>
 * :heavy_check_mark: <a href="dijkstra.hpp.html">dijkstra.hpp</a>
-* :warning: <a href="div_round_up.hpp.html">div_round_up.hpp</a>
+* :heavy_check_mark: <a href="div_round_up.hpp.html">div_round_up.hpp</a>
 * :heavy_check_mark: <a href="modint.hpp.html">modint.hpp</a>
-* :warning: <a href="popcount.hpp.html">popcount.hpp</a>
+* :heavy_check_mark: <a href="popcount.hpp.html">popcount.hpp</a>
 * :heavy_check_mark: <a href="powmod.hpp.html">powmod.hpp</a>
 * :heavy_check_mark: <a href="prime_factorization.hpp.html">prime_factorization.hpp</a>
 * :heavy_check_mark: <a href="segment_tree.hpp.html">segment_tree.hpp</a>
@@ -60,6 +60,8 @@ layout: default
 * :heavy_check_mark: <a href="../verify/verify/binary_indexed_tree.test.cpp.html">verify/binary_indexed_tree.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/cumulative_sum.test.cpp.html">verify/cumulative_sum.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/dijkstra.test.cpp.html">verify/dijkstra.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/div_round_up.test.cpp.html">verify/div_round_up.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/verify/popcount.test.cpp.html">verify/popcount.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/powmod.test.cpp.html">verify/powmod.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/prime_factorization.test.cpp.html">verify/prime_factorization.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/verify/segment_tree.test.cpp.html">verify/segment_tree.test.cpp</a>
