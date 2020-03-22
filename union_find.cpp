@@ -34,7 +34,7 @@ struct UnionFind {
     tree[x].size += tree[y].size;
   }
 
-  bool same(ll x, ll y) const {
+  bool same(ll x, ll y) {
     return find(x) == find(y);
   }
 };
