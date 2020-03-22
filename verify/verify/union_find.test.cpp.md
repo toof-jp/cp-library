@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: verify/union_find.test.cpp
+# :x: verify/union_find.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/union_find.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+    - Last commit date: 2020-03-21 18:39:49+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/unionfind">https://judge.yosupo.jp/problem/unionfind</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
-* :heavy_check_mark: <a href="../../library/union_find.cpp.html">union_find.cpp</a>
+* :question: <a href="../../library/template.cpp.html">template.cpp</a>
+* :x: <a href="../../library/union_find.cpp.html">union_find.cpp</a>
 
 
 ## Code
@@ -116,7 +116,7 @@ struct UnionFind {
   vector<Node> tree;
 
   UnionFind(ll size) : tree(size) {
-    for (ll i = 0; i < size; i++) {
+    rep(i, size) {
       tree[i].parent = i;
       tree[i].size = 1;
     }
@@ -141,7 +141,7 @@ struct UnionFind {
     tree[x].size += tree[y].size;
   }
 
-  bool same(ll x, ll y) {
+  bool same(ll x, ll y) const {
     return find(x) == find(y);
   }
 };

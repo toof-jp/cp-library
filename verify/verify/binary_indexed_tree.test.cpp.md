@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../library/binary_indexed_tree.cpp.html">binary_indexed_tree.cpp</a>
-* :heavy_check_mark: <a href="../../library/template.cpp.html">template.cpp</a>
+* :question: <a href="../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code

@@ -25,25 +25,25 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: union_find.cpp
+# :x: union_find.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/union_find.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-21 17:26:17+09:00
+    - Last commit date: 2020-03-21 18:39:49+09:00
 
 
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="template.cpp.html">template.cpp</a>
+* :question: <a href="template.cpp.html">template.cpp</a>
 
 
 ## Verified with
 
-* :heavy_check_mark: <a href="../verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
+* :x: <a href="../verify/verify/union_find.test.cpp.html">verify/union_find.test.cpp</a>
 
 
 ## Code
@@ -62,7 +62,7 @@ struct UnionFind {
   vector<Node> tree;
 
   UnionFind(ll size) : tree(size) {
-    for (ll i = 0; i < size; i++) {
+    rep(i, size) {
       tree[i].parent = i;
       tree[i].size = 1;
     }
@@ -87,7 +87,7 @@ struct UnionFind {
     tree[x].size += tree[y].size;
   }
 
-  bool same(ll x, ll y) {
+  bool same(ll x, ll y) const {
     return find(x) == find(y);
   }
 };
@@ -135,7 +135,7 @@ struct UnionFind {
   vector<Node> tree;
 
   UnionFind(ll size) : tree(size) {
-    for (ll i = 0; i < size; i++) {
+    rep(i, size) {
       tree[i].parent = i;
       tree[i].size = 1;
     }
@@ -160,7 +160,7 @@ struct UnionFind {
     tree[x].size += tree[y].size;
   }
 
-  bool same(ll x, ll y) {
+  bool same(ll x, ll y) const {
     return find(x) == find(y);
   }
 };
