@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/cumulative_sum.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-22 09:31:38+09:00
+    - Last commit date: 2020-03-22 22:35:17+09:00
 
 
 
@@ -123,6 +123,7 @@ struct IoSetup {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
     cout << fixed << setprecision(15);
+    cerr << fixed << setprecision(15);
   }
 } io_setup;
 
