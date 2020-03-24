@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/powmod.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-22 22:35:17+09:00
+    - Last commit date: 2020-03-24 19:40:21+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B</a>
@@ -78,8 +78,8 @@ using pl = pair<ll, ll>;
 using vl = vector<ll>;
 #define rep(i, n) for(ll i = 0; i < (ll)n; i++)
 #define rep3(i, l, r) for(ll i = l; i < (ll)r; i++)
-#define per(i, n) for(ll i = n-1; i >= 0; i--)
-#define per3(i, l, r) for(ll i = r-1; i >= (ll)l; i--)
+#define per(i, n) for(ll i = (ll)n-1; i >= 0; i--)
+#define per3(i, l, r) for(ll i = (ll)r-1; i >= (ll)l; i--)
 #define all(v) begin(v), end(v)
 template<class T, class U>
 inline void cmax(T& a, U b) { if (a < b) a = b; }
@@ -96,6 +96,28 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
+
+template<typename T, typename U>
+ostream &operator<<(ostream &os, const pair<T, U>& p) {
+  os << p.first << " " << p.second;
+  return os;
+}
+template<typename T, typename U>
+istream &operator>>(istream &is, pair<T, U> &p) {
+  is >> p.first >> p.second;
+  return is;
+}
+template<typename T>
+ostream &operator<<(ostream &os, const vector< T > &v) {
+  rep(i, v.size())
+    os << v[i] << (i + 1 != v.size() ? " " : "");
+  return os;
+}
+template<typename T>
+istream &operator>>(istream &is, vector< T > &v) {
+  for(T &in : v) is >> in;
+  return is;
+}
 #line 3 "powmod.hpp"
 
 ll powmod(ll a, ll n, ll p) {

@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/union_find.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-22 22:35:17+09:00
+    - Last commit date: 2020-03-24 19:40:21+09:00
 
 
 
@@ -107,8 +107,8 @@ using pl = pair<ll, ll>;
 using vl = vector<ll>;
 #define rep(i, n) for(ll i = 0; i < (ll)n; i++)
 #define rep3(i, l, r) for(ll i = l; i < (ll)r; i++)
-#define per(i, n) for(ll i = n-1; i >= 0; i--)
-#define per3(i, l, r) for(ll i = r-1; i >= (ll)l; i--)
+#define per(i, n) for(ll i = (ll)n-1; i >= 0; i--)
+#define per3(i, l, r) for(ll i = (ll)r-1; i >= (ll)l; i--)
 #define all(v) begin(v), end(v)
 template<class T, class U>
 inline void cmax(T& a, U b) { if (a < b) a = b; }
@@ -125,6 +125,28 @@ struct IoSetup {
 } io_setup;
 
 constexpr char el = '\n';
+
+template<typename T, typename U>
+ostream &operator<<(ostream &os, const pair<T, U>& p) {
+  os << p.first << " " << p.second;
+  return os;
+}
+template<typename T, typename U>
+istream &operator>>(istream &is, pair<T, U> &p) {
+  is >> p.first >> p.second;
+  return is;
+}
+template<typename T>
+ostream &operator<<(ostream &os, const vector< T > &v) {
+  rep(i, v.size())
+    os << v[i] << (i + 1 != v.size() ? " " : "");
+  return os;
+}
+template<typename T>
+istream &operator>>(istream &is, vector< T > &v) {
+  for(T &in : v) is >> in;
+  return is;
+}
 #line 3 "union_find.hpp"
 
 struct UnionFind {
