@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/popcount.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-24 19:40:21+09:00
+    - Last commit date: 2020-04-14 02:24:11+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A</a>
@@ -58,7 +58,7 @@ int main() {
   assert(popcount(0b11010111) == 6);
   assert(popcount(0b00000000) == 0);
 
-  cout << "Hello World" << endl;
+  cout << "Hello World" << el;
 }
 
 ```
@@ -135,7 +135,7 @@ int main() {
   assert(popcount(0b11010111) == 6);
   assert(popcount(0b00000000) == 0);
 
-  cout << "Hello World" << endl;
+  cout << "Hello World" << el;
 }
 
 ```

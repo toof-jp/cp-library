@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/DPL_5_B.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-24 19:40:21+09:00
+    - Last commit date: 2020-04-14 02:24:11+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_B</a>
@@ -60,7 +60,6 @@ int main() {
   cin >> n >> k;
   Combination<mint> c(max(n, k));
   cout << c.P(k, n) << el;
-  cout << flush;
 }
 
 ```
@@ -211,7 +210,6 @@ int main() {
   cin >> n >> k;
   Combination<mint> c(max(n, k));
   cout << c.P(k, n) << el;
-  cout << flush;
 }
 
 ```

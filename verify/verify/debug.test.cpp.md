@@ -25,21 +25,21 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: verify/binary_indexed_tree.test.cpp
+# :heavy_check_mark: verify/debug.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
-* <a href="{{ site.github.repository_url }}/blob/master/verify/binary_indexed_tree.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-14 02:24:11+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/verify/debug.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-04-14 02:21:31+09:00
 
 
-* see: <a href="https://judge.yosupo.jp/problem/point_add_range_sum">https://judge.yosupo.jp/problem/point_add_range_sum</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/binary_indexed_tree.hpp.html">binary_indexed_tree.hpp</a>
+* :heavy_check_mark: <a href="../../library/debug.hpp.html">debug.hpp</a>
 * :heavy_check_mark: <a href="../../library/template.hpp.html">template.hpp</a>
 
 
@@ -48,42 +48,25 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
 #include "../template.hpp"
-#include "../binary_indexed_tree.hpp"
-
-template <class T>
-struct Plus {
-  using value_type = T;
-
-  T operator()(const T& l, const T& r) const {
-    return l + r;
-  }
-  const T ide{};
-};
+#include "../debug.hpp"
 
 int main() {
-  ll n, q;
-  cin >> n >> q;
+  ll n = 10;
+  double m = 3.141592;
+  bool f = true;
 
-  BinaryIndexedTree<Plus<ll>> bit(n);
+  debug(n, m, f);
 
-  rep(i, n) {
-    ll a;
-    cin >> a;
-    bit.add(i, a);
-  }
+  vector<int> a(n);
+  debug(a);
 
-  rep(i, q) {
-    ll t, a, b;
-    cin >> t >> a >> b;
-    if (t == 0) {
-      bit.add(a, b);
-    } else {
-      cout << bit.sum(b) - bit.sum(a) << el;
-    }
-  }
+  vector<vl> b(n, vl(n));
+  debug(b);
+
+  cout << "Hello World" << el;
 }
 
 ```
@@ -92,8 +75,8 @@ int main() {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "verify/binary_indexed_tree.test.cpp"
-#define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
+#line 1 "verify/debug.test.cpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
 #line 2 "template.hpp"
 #include <bits/stdc++.h>
@@ -144,84 +127,50 @@ istream &operator>>(istream &is, vector< T > &v) {
   for(T &in : v) is >> in;
   return is;
 }
-#line 3 "binary_indexed_tree.hpp"
+#line 3 "debug.hpp"
 
-template<typename ComumutativeMonoid>
-struct BinaryIndexedTree {
-  using T = typename ComumutativeMonoid::value_type;
-  // 1-indexed
-  ll n;
-  vector<T> tree;
-  const ComumutativeMonoid ope;
+// https://codeforces.com/blog/entry/68809
+void debug_print(int x) {cerr << x;}
+void debug_print(long x) {cerr << x;}
+void debug_print(long long x) {cerr << x;}
+void debug_print(unsigned x) {cerr << x;}
+void debug_print(unsigned long x) {cerr << x;}
+void debug_print(unsigned long long x) {cerr << x;}
+void debug_print(float x) {cerr << x;}
+void debug_print(double x) {cerr << x;}
+void debug_print(long double x) {cerr << x;}
+void debug_print(char x) {cerr << '\'' << x << '\'';}
+void debug_print(const char *x) {cerr << '\"' << x << '\"';}
+void debug_print(const string &x) {cerr << '\"' << x << '\"';}
+void debug_print(bool x) {cerr << (x ? "true" : "false");}
+template<typename T, typename V> void debug_print(const pair<T, V> &x) {cerr << '{'; debug_print(x.first); cerr << ','; debug_print(x.second); cerr << '}';}
+template<typename T> void debug_print(const T &x) {int f = 0; cerr << '{'; for (auto &i: x) cerr << (f++ ? "," : ""), debug_print(i); cerr << "}";}
 
-  BinaryIndexedTree(ll n) : n(n), ope(ComumutativeMonoid()) {
-    tree.assign(n+1, ope.ide);
-  }
+void debug_print_() {cerr << "]\n";}
+template <typename T, typename... V>
+void debug_print_(T t, V... v) {debug_print(t); if (sizeof...(v)) cerr << ", "; debug_print_(v...);}
 
-  void add(ll p, T a) {
-    for (ll x = p+1; x <= n; x += x&-x) {
-      tree[x] = ope(tree[x], a);
-    }
-  }
-
-  // sum [0, r)
-  T sum(ll r) const {
-    T sum = ope.ide;
-    for (ll x = r; x > 0; x -= x&-x) {
-      sum = ope(sum, tree[x]);
-    }
-    return sum;
-  }
-
-  /*
-  // bit[1] + bit[2] + ... + bit[x] >= w;
-  ll lower_bound(T w) const {
-    if (w <= 0) return 0;
-    ll x = 0, r = 1;
-    while (r < n) r <<= 1;
-    for (ll k = r; k > 0; k >>= 1){
-      if(x+k <= n && tree[x+k] < w){
-        w -= tree[x+k];
-        x += k;
-      }
-    }
-    return x+1;
-  }
-  */
-};
-#line 5 "verify/binary_indexed_tree.test.cpp"
-
-template <class T>
-struct Plus {
-  using value_type = T;
-
-  T operator()(const T& l, const T& r) const {
-    return l + r;
-  }
-  const T ide{};
-};
+#ifdef LOCAL
+#define debug(x...) cerr << "[" << #x << "] = ["; debug_print_(x)
+#else
+#define debug(x...)
+#endif
+#line 5 "verify/debug.test.cpp"
 
 int main() {
-  ll n, q;
-  cin >> n >> q;
+  ll n = 10;
+  double m = 3.141592;
+  bool f = true;
 
-  BinaryIndexedTree<Plus<ll>> bit(n);
+  debug(n, m, f);
 
-  rep(i, n) {
-    ll a;
-    cin >> a;
-    bit.add(i, a);
-  }
+  vector<int> a(n);
+  debug(a);
 
-  rep(i, q) {
-    ll t, a, b;
-    cin >> t >> a >> b;
-    if (t == 0) {
-      bit.add(a, b);
-    } else {
-      cout << bit.sum(b) - bit.sum(a) << el;
-    }
-  }
+  vector<vl> b(n, vl(n));
+  debug(b);
+
+  cout << "Hello World" << el;
 }
 
 ```
