@@ -43,5 +43,4 @@ int main() {
       cout << e.a*modint(c)+e.b << el;
     }
   }
-  cout << flush;
 }

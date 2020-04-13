@@ -9,5 +9,4 @@ int main() {
   cin >> n >> k;
   Combination<mint> c(max(n, k));
   cout << c.P(k, n) << el;
-  cout << flush;
 }

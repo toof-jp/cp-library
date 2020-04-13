@@ -34,5 +34,4 @@ int main() {
       cout << bit.sum(b) - bit.sum(a) << el;
     }
   }
-  cout << flush;
 }

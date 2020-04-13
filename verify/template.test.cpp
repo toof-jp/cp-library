@@ -26,5 +26,5 @@ int main() {
   assert(maxi == 9);
   assert(mini == 1);
 
-  cout << "Hello World" << el << flush;
+  cout << "Hello World" << el;
 }

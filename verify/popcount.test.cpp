@@ -8,5 +8,5 @@ int main() {
   assert(popcount(0b11010111) == 6);
   assert(popcount(0b00000000) == 0);
 
-  cout << "Hello World" << endl;
+  cout << "Hello World" << el;
 }

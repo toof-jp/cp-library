@@ -19,5 +19,4 @@ int main() {
     if (i == INF) cout << "INF" << el;
     else cout << i << el;
   }
-  cout << flush;
 }

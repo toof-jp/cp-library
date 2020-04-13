@@ -9,5 +9,4 @@ int main() {
   cin >> n >> k;
   Combination<mint> c(n+k);
   cout << c.H(k, n) << el;
-  cout << flush;
 }

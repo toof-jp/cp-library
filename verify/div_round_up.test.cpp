@@ -8,5 +8,5 @@ int main() {
   assert(div_round_up(0, 2) == 0);
   assert(div_round_up(31, 7) == 5);
 
-  cout << "Hello World" << endl;
+  cout << "Hello World" << el;
 }

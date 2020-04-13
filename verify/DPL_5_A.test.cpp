@@ -8,5 +8,4 @@ int main() {
   cin >> n >> k;
   ll mod = 1e9+7;
   cout << powmod(k, n, mod) << el;
-  cout << flush;
 }

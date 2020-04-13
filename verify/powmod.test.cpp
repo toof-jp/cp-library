@@ -7,5 +7,4 @@ int main() {
   int m, n;
   cin >> m >> n;
   cout << powmod(m, n, 1e9+7) << el;
-  cout << flush;
 }
