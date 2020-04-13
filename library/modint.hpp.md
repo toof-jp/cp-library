@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/modint.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-03-24 19:40:21+09:00
+    - Last commit date: 2020-04-14 03:40:52+09:00
 
 
 
@@ -144,23 +144,23 @@ struct IoSetup {
 
 constexpr char el = '\n';
 
-template<typename T, typename U>
+template<class T, class U>
 ostream &operator<<(ostream &os, const pair<T, U>& p) {
   os << p.first << " " << p.second;
   return os;
 }
-template<typename T, typename U>
+template<class T, class U>
 istream &operator>>(istream &is, pair<T, U> &p) {
   is >> p.first >> p.second;
   return is;
 }
-template<typename T>
+template<class T>
 ostream &operator<<(ostream &os, const vector< T > &v) {
   rep(i, v.size())
     os << v[i] << (i + 1 != v.size() ? " " : "");
   return os;
 }
-template<typename T>
+template<class T>
 istream &operator>>(istream &is, vector< T > &v) {
   for(T &in : v) is >> in;
   return is;

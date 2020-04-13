@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/DPL_5_E.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-14 02:24:11+09:00
+    - Last commit date: 2020-04-14 03:40:52+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E</a>
@@ -99,23 +99,23 @@ struct IoSetup {
 
 constexpr char el = '\n';
 
-template<typename T, typename U>
+template<class T, class U>
 ostream &operator<<(ostream &os, const pair<T, U>& p) {
   os << p.first << " " << p.second;
   return os;
 }
-template<typename T, typename U>
+template<class T, class U>
 istream &operator>>(istream &is, pair<T, U> &p) {
   is >> p.first >> p.second;
   return is;
 }
-template<typename T>
+template<class T>
 ostream &operator<<(ostream &os, const vector< T > &v) {
   rep(i, v.size())
     os << v[i] << (i + 1 != v.size() ? " " : "");
   return os;
 }
-template<typename T>
+template<class T>
 istream &operator>>(istream &is, vector< T > &v) {
   for(T &in : v) is >> in;
   return is;
