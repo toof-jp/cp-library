@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/popcount.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-14 03:40:52+09:00
+    - Last commit date: 2020-04-19 21:55:00+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A</a>
@@ -73,7 +73,6 @@ int main() {
 #line 2 "template.hpp"
 #include <bits/stdc++.h>
 using namespace std;
-
 using ll = long long;
 using pl = pair<ll, ll>;
 using vl = vector<ll>;
@@ -82,43 +81,16 @@ using vl = vector<ll>;
 #define per(i, n) for(ll i = (ll)n-1; i >= 0; i--)
 #define per3(i, l, r) for(ll i = (ll)r-1; i >= (ll)l; i--)
 #define all(v) begin(v), end(v)
-template<class T, class U>
-inline void cmax(T& a, U b) { if (a < b) a = b; }
-template<class T, class U>
-inline void cmin(T& a, U b) { if (a > b) a = b; }
-
-struct IoSetup {
-  IoSetup() {
-    cin.tie(nullptr);
-    ios::sync_with_stdio(false);
-    cout << fixed << setprecision(15);
-    cerr << fixed << setprecision(15);
-  }
-} io_setup;
-
+template<class T, class U> inline void cmax(T& a, U b) { if (a < b) a = b; }
+template<class T, class U> inline void cmin(T& a, U b) { if (a > b) a = b; }
 constexpr char el = '\n';
-
-template<class T, class U>
-ostream &operator<<(ostream &os, const pair<T, U>& p) {
-  os << p.first << " " << p.second;
-  return os;
-}
-template<class T, class U>
-istream &operator>>(istream &is, pair<T, U> &p) {
-  is >> p.first >> p.second;
-  return is;
-}
-template<class T>
-ostream &operator<<(ostream &os, const vector< T > &v) {
-  rep(i, v.size())
-    os << v[i] << (i + 1 != v.size() ? " " : "");
-  return os;
-}
-template<class T>
-istream &operator>>(istream &is, vector< T > &v) {
-  for(T &in : v) is >> in;
-  return is;
-}
+template<class T, class U> ostream &operator<<(ostream &os, const pair<T, U>& p) { os << p.first << " " << p.second; return os; }
+template<class T, class U> istream &operator>>(istream &is, pair<T, U> &p) { is >> p.first >> p.second; return is; }
+template<class T> ostream &operator<<(ostream &os, const vector< T > &v) { rep(i, v.size()) os << v[i] << (i + 1 != v.size() ? " " : ""); return os; }
+template<class T> istream &operator>>(istream &is, vector< T > &v) { for(T &in : v) is >> in; return is; }
+struct IoSetup {
+  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed << setprecision(15); cerr << fixed << setprecision(15); }
+} io_setup;
 #line 3 "popcount.hpp"
 
 int popcount(int n) {
