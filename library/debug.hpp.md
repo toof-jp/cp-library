@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/debug.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-27 01:07:21+09:00
+    - Last commit date: 2020-05-03 23:03:42+09:00
 
 
 
@@ -76,9 +76,9 @@ template <typename T, typename... V>
 void debug_print_(T t, V... v) {debug_print(t); if (sizeof...(v)) cerr << ", "; debug_print_(v...);}
 
 #ifdef LOCAL
-#define debug(x...) cerr << "[" << #x << "] = ["; debug_print_(x)
+  #define debug(x...) cerr << "[" << #x << "] = ["; debug_print_(x)
 #else
-#define debug(x...)
+  #define debug(x...)
 #endif
 
 ```
@@ -132,9 +132,9 @@ template <typename T, typename... V>
 void debug_print_(T t, V... v) {debug_print(t); if (sizeof...(v)) cerr << ", "; debug_print_(v...);}
 
 #ifdef LOCAL
-#define debug(x...) cerr << "[" << #x << "] = ["; debug_print_(x)
+  #define debug(x...) cerr << "[" << #x << "] = ["; debug_print_(x)
 #else
-#define debug(x...)
+  #define debug(x...)
 #endif
 
 ```
