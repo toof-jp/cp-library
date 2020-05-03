@@ -23,7 +23,7 @@ template <typename T, typename... V>
 void debug_print_(T t, V... v) {debug_print(t); if (sizeof...(v)) cerr << ", "; debug_print_(v...);}
 
 #ifdef LOCAL
-#define debug(x...) cerr << "[" << #x << "] = ["; debug_print_(x)
+  #define debug(x...) cerr << "[" << #x << "] = ["; debug_print_(x)
 #else
-#define debug(x...)
+  #define debug(x...)
 #endif
