@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#e8418d1d706cd73548f9f16f1d55ad6e">verify</a>
 * <a href="{{ site.github.repository_url }}/blob/master/verify/prime_factorization.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-27 01:07:21+09:00
+    - Last commit date: 2020-06-08 21:30:16+09:00
 
 
 * see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A</a>
@@ -102,7 +102,7 @@ struct IoSetup {
 
 map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
-  for (int i = 2; i*i <= n; i++) {
+  for (ll i = 2; i*i <= n; i++) {
     while (n%i == 0) {
       m[i]++;
       n /= i;

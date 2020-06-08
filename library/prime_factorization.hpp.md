@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/prime_factorization.hpp">View this file on GitHub</a>
-    - Last commit date: 2020-04-27 01:07:21+09:00
+    - Last commit date: 2020-06-08 21:30:16+09:00
 
 
 
@@ -56,7 +56,7 @@ layout: default
 
 map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
-  for (int i = 2; i*i <= n; i++) {
+  for (ll i = 2; i*i <= n; i++) {
     while (n%i == 0) {
       m[i]++;
       n /= i;
@@ -97,7 +97,7 @@ struct IoSetup {
 
 map<ll, ll> prime_factorization(ll n) {
   map<ll, ll> m;
-  for (int i = 2; i*i <= n; i++) {
+  for (ll i = 2; i*i <= n; i++) {
     while (n%i == 0) {
       m[i]++;
       n /= i;
