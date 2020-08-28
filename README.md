@@ -3,4 +3,4 @@
 
 # 競技プログラミングのためのC++ライブラリ
 https://toof-jp.github.io/cp-library/ <br>
-https://github.com/kmyk/online-judge-verify-helper <br>
+https://github.com/online-judge-tools/verification-helper <br>
