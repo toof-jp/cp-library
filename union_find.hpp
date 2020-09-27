@@ -6,19 +6,21 @@ struct UnionFind {
     ll parent;
     ll size;
   };
-  vector<Node> tree;
+  vector<Node> data;
+  ll num;
 
-  UnionFind(ll size) : tree(size) {
+  UnionFind(ll size) : data(size) {
     rep(i, size) {
-      tree[i].parent = i;
-      tree[i].size = 1;
+      data[i].parent = i;
+      data[i].size = 1;
     }
+    num = size;
   }
 
   ll find(ll x) {
-    while (tree[x].parent != x) {
-      ll p = tree[x].parent;
-      tree[x].parent = tree[p].parent;
+    while (data[x].parent != x) {
+      ll p = data[x].parent;
+      data[x].parent = data[p].parent;
       x = p;
     }
     return x;
@@ -29,12 +31,17 @@ struct UnionFind {
     y = find(y);
     if (x == y) return;
 
-    if (tree[x].size < tree[y].size) swap(x, y);
-    tree[y].parent = x;
-    tree[x].size += tree[y].size;
+    if (data[x].size < data[y].size) swap(x, y);
+    data[y].parent = x;
+    data[x].size += data[y].size;
+    num--;
   }
 
   bool same(ll x, ll y) {
     return find(x) == find(y);
+  }
+
+  ll count() const {
+    return num;
   }
 };
