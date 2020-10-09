@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: prime_factorization.hpp
     title: prime_factorization.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A
@@ -38,21 +38,21 @@ data:
     \ i*i <= n; i++) {\n    while (n%i == 0) {\n      m[i]++;\n      n /= i;\n   \
     \ }\n  }\n  if (n != 1) m[n]++;\n  return m;\n}\n#line 5 \"verify/prime_factorization.test.cpp\"\
     \n\nint main() {\n  ll n;\n  cin >> n;\n\n  auto m = prime_factorization(n);\n\
-    \n  cout << n << \": \";\n  for (auto&& i : m) {\n    rep(j, i.second) {\n   \
-    \   cout << i.first << \" \";\n    }\n  }\n  cout << el;\n}\n"
+    \n  cout << n << \": \";\n  vl ans;\n  for (auto&& i : m) {\n    rep(j, i.second)\
+    \ {\n      ans.push_back(i.first);\n    }\n  }\n  cout << ans << el;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A\"\
     \n\n#include \"../template.hpp\"\n#include \"../prime_factorization.hpp\"\n\n\
     int main() {\n  ll n;\n  cin >> n;\n\n  auto m = prime_factorization(n);\n\n \
-    \ cout << n << \": \";\n  for (auto&& i : m) {\n    rep(j, i.second) {\n     \
-    \ cout << i.first << \" \";\n    }\n  }\n  cout << el;\n}\n"
+    \ cout << n << \": \";\n  vl ans;\n  for (auto&& i : m) {\n    rep(j, i.second)\
+    \ {\n      ans.push_back(i.first);\n    }\n  }\n  cout << ans << el;\n}\n"
   dependsOn:
   - template.hpp
   - prime_factorization.hpp
   isVerificationFile: true
   path: verify/prime_factorization.test.cpp
   requiredBy: []
-  timestamp: '2020-10-09 18:57:08+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-10-09 19:22:54+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/prime_factorization.test.cpp
 layout: document

@@ -29,7 +29,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: powmod.hpp
     title: powmod.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: prime_factorization.hpp
     title: prime_factorization.hpp
   - icon: ':heavy_check_mark:'
@@ -72,7 +72,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: verify/powmod.test.cpp
     title: verify/powmod.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify/prime_factorization.test.cpp
     title: verify/prime_factorization.test.cpp
   - icon: ':heavy_check_mark:'
@@ -85,7 +85,7 @@ data:
     path: verify/union_find.test.cpp
     title: verify/union_find.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -137,7 +137,7 @@ data:
   - segment_tree.hpp
   - popcount.hpp
   timestamp: '2020-10-09 18:57:08+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/binary_indexed_tree.test.cpp
   - verify/cumulative_sum.test.cpp

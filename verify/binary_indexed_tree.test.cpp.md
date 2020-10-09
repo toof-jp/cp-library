@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: binary_indexed_tree.hpp
     title: binary_indexed_tree.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy: []

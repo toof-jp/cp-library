@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: segment_tree.hpp
     title: segment_tree.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy: []
