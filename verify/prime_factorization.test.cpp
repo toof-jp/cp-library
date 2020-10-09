@@ -10,10 +10,11 @@ int main() {
   auto m = prime_factorization(n);
 
   cout << n << ": ";
+  vl ans;
   for (auto&& i : m) {
     rep(j, i.second) {
-      cout << i.first << " ";
+      ans.push_back(i.first);
     }
   }
-  cout << el;
+  cout << ans << el;
 }
