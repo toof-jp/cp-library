@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy: []
@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\nusing ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n\
@@ -25,13 +24,13 @@ data:
     \ &os, const pair<T, U> &p) { os << p.first << \" \" << p.second; return os; }\n\
     template<class T, class U> istream &operator>>(istream &is, pair<T, U> &p) { is\
     \ >> p.first >> p.second; return is; }\ntemplate<class T> ostream &operator<<(ostream\
-    \ &os, const vector<T> &v) { rep(i, v.size()) os << v[i] << (i+1 != v.size() ?\
-    \ \" \" : \"\"); return os; }\ntemplate<class T> istream &operator>>(istream &is,\
-    \ vector<T> &v) { for(T &i : v) is >> i; return is; }\nstruct IoSetup {\n  IoSetup()\
-    \ { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed << setprecision(15);\
-    \ cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3 \"div_round_up.hpp\"\
-    \n\n// return ceil(n/m)\ninline ll div_round_up(ll n, ll m) {\n  return (n+m-1)\
-    \ / m;\n}\n"
+    \ &os, const vector<T> &v) { rep(i, v.size()) os << v[i] << (i+1 != (ll)v.size()\
+    \ ? \" \" : \"\"); return os; }\ntemplate<class T> istream &operator>>(istream\
+    \ &is, vector<T> &v) { for(T &i : v) is >> i; return is; }\nstruct IoSetup {\n\
+    \  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed <<\
+    \ setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3\
+    \ \"div_round_up.hpp\"\n\n// return ceil(n/m)\ninline ll div_round_up(ll n, ll\
+    \ m) {\n  return (n+m-1) / m;\n}\n"
   code: "#pragma once\n#include \"template.hpp\"\n\n// return ceil(n/m)\ninline ll\
     \ div_round_up(ll n, ll m) {\n  return (n+m-1) / m;\n}\n"
   dependsOn:
@@ -39,7 +38,7 @@ data:
   isVerificationFile: false
   path: div_round_up.hpp
   requiredBy: []
-  timestamp: '2020-04-27 01:07:21+09:00'
+  timestamp: '2020-10-09 18:57:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/div_round_up.test.cpp

@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: template.hpp
-    title: template.hpp
-  - icon: ':heavy_check_mark:'
     path: dijkstra.hpp
     title: dijkstra.hpp
+  - icon: ':question:'
+    path: template.hpp
+    title: template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
@@ -28,22 +28,22 @@ data:
     \ &os, const pair<T, U> &p) { os << p.first << \" \" << p.second; return os; }\n\
     template<class T, class U> istream &operator>>(istream &is, pair<T, U> &p) { is\
     \ >> p.first >> p.second; return is; }\ntemplate<class T> ostream &operator<<(ostream\
-    \ &os, const vector<T> &v) { rep(i, v.size()) os << v[i] << (i+1 != v.size() ?\
-    \ \" \" : \"\"); return os; }\ntemplate<class T> istream &operator>>(istream &is,\
-    \ vector<T> &v) { for(T &i : v) is >> i; return is; }\nstruct IoSetup {\n  IoSetup()\
-    \ { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed << setprecision(15);\
-    \ cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3 \"dijkstra.hpp\"\n\
-    \nll INF = 1LL<<60;\n\nvl dijkstra(ll n, ll s, vector<vector<pl>> G) {\n  priority_queue<pl,\
-    \ vector<pl>, greater<pl>> que;\n  vl d(n, INF);\n  d[s] = 0;\n  que.push(pl(0,\
-    \ s));\n\n  while(!que.empty()) {\n    pl p = que.top();\n    que.pop();\n   \
-    \ ll v = p.second;\n    if (d[v] < p.first) continue;\n    for (auto&& e : G[v])\
-    \ {\n      if (d[e.first] > d[v] + e.second) {\n        d[e.first] = d[v] + e.second;\n\
-    \        que.push(pl(d[e.first], e.first));\n      }\n    }\n  }\n  return d;\n\
-    }\n#line 5 \"verify/dijkstra.test.cpp\"\n\nint main() {\n  ll v, e, r;\n  cin\
-    \ >> v >> e >> r;\n  vector<vector<pl>> g(v);\n  rep(i, e) {\n    ll s, t, d;\n\
-    \    cin >> s >> t >> d;\n    g[s].emplace_back(t, d);\n  }\n\n  vl vec = dijkstra(v,\
-    \ r, g);\n\n  for (auto&& i : vec) {\n    if (i == INF) cout << \"INF\" << el;\n\
-    \    else cout << i << el;\n  }\n}\n"
+    \ &os, const vector<T> &v) { rep(i, v.size()) os << v[i] << (i+1 != (ll)v.size()\
+    \ ? \" \" : \"\"); return os; }\ntemplate<class T> istream &operator>>(istream\
+    \ &is, vector<T> &v) { for(T &i : v) is >> i; return is; }\nstruct IoSetup {\n\
+    \  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed <<\
+    \ setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3\
+    \ \"dijkstra.hpp\"\n\nll INF = 1LL<<60;\n\nvl dijkstra(ll n, ll s, vector<vector<pl>>\
+    \ G) {\n  priority_queue<pl, vector<pl>, greater<pl>> que;\n  vl d(n, INF);\n\
+    \  d[s] = 0;\n  que.push(pl(0, s));\n\n  while(!que.empty()) {\n    pl p = que.top();\n\
+    \    que.pop();\n    ll v = p.second;\n    if (d[v] < p.first) continue;\n   \
+    \ for (auto&& e : G[v]) {\n      if (d[e.first] > d[v] + e.second) {\n       \
+    \ d[e.first] = d[v] + e.second;\n        que.push(pl(d[e.first], e.first));\n\
+    \      }\n    }\n  }\n  return d;\n}\n#line 5 \"verify/dijkstra.test.cpp\"\n\n\
+    int main() {\n  ll v, e, r;\n  cin >> v >> e >> r;\n  vector<vector<pl>> g(v);\n\
+    \  rep(i, e) {\n    ll s, t, d;\n    cin >> s >> t >> d;\n    g[s].emplace_back(t,\
+    \ d);\n  }\n\n  vl vec = dijkstra(v, r, g);\n\n  for (auto&& i : vec) {\n    if\
+    \ (i == INF) cout << \"INF\" << el;\n    else cout << i << el;\n  }\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
     \n\n#include \"../template.hpp\"\n#include \"../dijkstra.hpp\"\n\nint main() {\n\
     \  ll v, e, r;\n  cin >> v >> e >> r;\n  vector<vector<pl>> g(v);\n  rep(i, e)\
@@ -56,7 +56,7 @@ data:
   isVerificationFile: true
   path: verify/dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2020-04-27 01:07:21+09:00'
+  timestamp: '2020-10-09 18:57:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/dijkstra.test.cpp

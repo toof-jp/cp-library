@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy: []
@@ -12,7 +12,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\nusing ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n\
@@ -25,20 +24,21 @@ data:
     \ &os, const pair<T, U> &p) { os << p.first << \" \" << p.second; return os; }\n\
     template<class T, class U> istream &operator>>(istream &is, pair<T, U> &p) { is\
     \ >> p.first >> p.second; return is; }\ntemplate<class T> ostream &operator<<(ostream\
-    \ &os, const vector<T> &v) { rep(i, v.size()) os << v[i] << (i+1 != v.size() ?\
-    \ \" \" : \"\"); return os; }\ntemplate<class T> istream &operator>>(istream &is,\
-    \ vector<T> &v) { for(T &i : v) is >> i; return is; }\nstruct IoSetup {\n  IoSetup()\
-    \ { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed << setprecision(15);\
-    \ cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3 \"cumulative_sum.hpp\"\
-    \n\ntemplate<class T>\nstruct CumulativeSum {\n  vector<T> v;\n\n  CumulativeSum(size_t\
-    \ n) : v(n+1) {};\n  CumulativeSum(vector<T> v_) {\n    v.resize(v_.size()+1);\n\
-    \    rep(i, v_.size())\n      v[i+1] = v_[i];\n  };\n\n  void add(size_t i, T\
-    \ x) {\n    v[i+1] += x;\n  }\n\n  // O(N)\n  void build() {\n    if (v.size()\
-    \ == 0) return;\n    rep(i, v.size()-1)\n      v[i+1] += v[i];\n  }\n\n  // O(1)\
-    \ sum [l, r]\n  T sum(size_t l, size_t r) const {\n    return l == 0 ? v[r+1]\
-    \ : v[r+1]-v[l];\n  }\n\n  // O(1) sum [0, r]\n  T sum(size_t r) const {\n   \
-    \ return v[r+1];\n  }\n\n  T& operator[](size_t i) {\n    return v[i];\n  }\n\n\
-    \  const T& operator[](size_t i) const {\n    return v[i];\n  }\n};\n"
+    \ &os, const vector<T> &v) { rep(i, v.size()) os << v[i] << (i+1 != (ll)v.size()\
+    \ ? \" \" : \"\"); return os; }\ntemplate<class T> istream &operator>>(istream\
+    \ &is, vector<T> &v) { for(T &i : v) is >> i; return is; }\nstruct IoSetup {\n\
+    \  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed <<\
+    \ setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3\
+    \ \"cumulative_sum.hpp\"\n\ntemplate<class T>\nstruct CumulativeSum {\n  vector<T>\
+    \ v;\n\n  CumulativeSum(size_t n) : v(n+1) {};\n  CumulativeSum(vector<T> v_)\
+    \ {\n    v.resize(v_.size()+1);\n    rep(i, v_.size())\n      v[i+1] = v_[i];\n\
+    \  };\n\n  void add(size_t i, T x) {\n    v[i+1] += x;\n  }\n\n  // O(N)\n  void\
+    \ build() {\n    if (v.size() == 0) return;\n    rep(i, v.size()-1)\n      v[i+1]\
+    \ += v[i];\n  }\n\n  // O(1) sum [l, r]\n  T sum(size_t l, size_t r) const {\n\
+    \    return l == 0 ? v[r+1] : v[r+1]-v[l];\n  }\n\n  // O(1) sum [0, r]\n  T sum(size_t\
+    \ r) const {\n    return v[r+1];\n  }\n\n  T& operator[](size_t i) {\n    return\
+    \ v[i];\n  }\n\n  const T& operator[](size_t i) const {\n    return v[i];\n  }\n\
+    };\n"
   code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<class T>\nstruct CumulativeSum\
     \ {\n  vector<T> v;\n\n  CumulativeSum(size_t n) : v(n+1) {};\n  CumulativeSum(vector<T>\
     \ v_) {\n    v.resize(v_.size()+1);\n    rep(i, v_.size())\n      v[i+1] = v_[i];\n\
@@ -54,7 +54,7 @@ data:
   isVerificationFile: false
   path: cumulative_sum.hpp
   requiredBy: []
-  timestamp: '2020-04-27 01:07:21+09:00'
+  timestamp: '2020-10-09 18:57:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/cumulative_sum.test.cpp

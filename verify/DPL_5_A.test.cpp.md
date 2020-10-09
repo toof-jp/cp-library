@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: template.hpp
-    title: template.hpp
-  - icon: ':heavy_check_mark:'
     path: powmod.hpp
     title: powmod.hpp
+  - icon: ':question:'
+    path: template.hpp
+    title: template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
@@ -28,15 +28,16 @@ data:
     \ &os, const pair<T, U> &p) { os << p.first << \" \" << p.second; return os; }\n\
     template<class T, class U> istream &operator>>(istream &is, pair<T, U> &p) { is\
     \ >> p.first >> p.second; return is; }\ntemplate<class T> ostream &operator<<(ostream\
-    \ &os, const vector<T> &v) { rep(i, v.size()) os << v[i] << (i+1 != v.size() ?\
-    \ \" \" : \"\"); return os; }\ntemplate<class T> istream &operator>>(istream &is,\
-    \ vector<T> &v) { for(T &i : v) is >> i; return is; }\nstruct IoSetup {\n  IoSetup()\
-    \ { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed << setprecision(15);\
-    \ cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3 \"powmod.hpp\"\n\n\
-    ll powmod(ll a, ll n, ll p) {\n  ll res = 1;\n  while (n) {\n    if (n&1) res\
-    \ = res * a % p;\n    a = a * a % p;\n    n >>= 1;\n  }\n  return res;\n}\n#line\
-    \ 5 \"verify/DPL_5_A.test.cpp\"\n\nint main() {\n  ll n, k;\n  cin >> n >> k;\n\
-    \  ll mod = 1e9+7;\n  cout << powmod(k, n, mod) << el;\n}\n"
+    \ &os, const vector<T> &v) { rep(i, v.size()) os << v[i] << (i+1 != (ll)v.size()\
+    \ ? \" \" : \"\"); return os; }\ntemplate<class T> istream &operator>>(istream\
+    \ &is, vector<T> &v) { for(T &i : v) is >> i; return is; }\nstruct IoSetup {\n\
+    \  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false); cout << fixed <<\
+    \ setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3\
+    \ \"powmod.hpp\"\n\nll powmod(ll a, ll n, ll p) {\n  ll res = 1;\n  while (n)\
+    \ {\n    if (n&1) res = res * a % p;\n    a = a * a % p;\n    n >>= 1;\n  }\n\
+    \  return res;\n}\n#line 5 \"verify/DPL_5_A.test.cpp\"\n\nint main() {\n  ll n,\
+    \ k;\n  cin >> n >> k;\n  ll mod = 1e9+7;\n  cout << powmod(k, n, mod) << el;\n\
+    }\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A\"\
     \n\n#include \"../template.hpp\"\n#include \"../powmod.hpp\"\n\nint main() {\n\
     \  ll n, k;\n  cin >> n >> k;\n  ll mod = 1e9+7;\n  cout << powmod(k, n, mod)\
@@ -47,7 +48,7 @@ data:
   isVerificationFile: true
   path: verify/DPL_5_A.test.cpp
   requiredBy: []
-  timestamp: '2020-04-27 01:07:21+09:00'
+  timestamp: '2020-10-09 18:57:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/DPL_5_A.test.cpp

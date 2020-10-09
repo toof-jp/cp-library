@@ -30,13 +30,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: powmod.hpp
       title: powmod.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: prime_factorization.hpp
       title: prime_factorization.hpp
     - icon: ':heavy_check_mark:'
       path: segment_tree.hpp
       title: segment_tree.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template.hpp
       title: template.hpp
     - icon: ':heavy_check_mark:'
@@ -78,7 +78,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: verify/powmod.test.cpp
       title: verify/powmod.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: verify/prime_factorization.test.cpp
       title: verify/prime_factorization.test.cpp
     - icon: ':heavy_check_mark:'
