@@ -9,7 +9,7 @@ struct BinaryIndexedTree {
   vector<T> tree;
   const ComumutativeMonoid ope;
 
-  BinaryIndexedTree(ll n) : n(n), ope(ComumutativeMonoid()) {
+  BinaryIndexedTree(ll n_) : n(n_), ope(ComumutativeMonoid()) {
     tree.assign(n+1, ope.ide);
   }
 
