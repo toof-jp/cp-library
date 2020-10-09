@@ -31,18 +31,18 @@ data:
     \ setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3\
     \ \"segment_tree.hpp\"\n\ntemplate<class Monoid>\nstruct SegmentTree {\n  using\
     \ T = typename Monoid::value_type;\n\n  ll n;\n  vector<T> tree;\n  const Monoid\
-    \ ope;\n\n  SegmentTree(ll n) : n(n) {\n    tree.assign(2*n, ope.ide);\n  }\n\n\
-    \  void build(const vector<T>& v) {\n    rep(i, v.size())\n      tree[i+n] = v[i];\n\
-    \    per(i, n)\n      tree[i] = ope(tree[i*2], tree[i*2+1]);\n  }\n\n  void change(ll\
-    \ p, const T& x) {\n    p += n;\n    tree[p] = x;\n    while (p >>= 1)\n     \
-    \ tree[p] = ope(tree[p*2], tree[p*2+1]);\n  }\n\n  T query(ll l, ll r) const {\n\
-    \    T l_res{};\n    T r_res{};\n    for (l += n, r+= n; l < r; l >>= 1, r >>=\
-    \ 1) {\n      if (l&1) l_res = ope(l_res, tree[l++]);\n      if (r&1) r_res =\
-    \ ope(tree[--r], r_res);\n    }\n    return ope(l_res, r_res);\n  }\n\n  T operator[](ll\
-    \ i) {\n    return tree[i+n];\n  }\n};\n"
+    \ ope;\n\n  SegmentTree(ll n_) : n(n_) {\n    tree.assign(2*n, ope.ide);\n  }\n\
+    \n  void build(const vector<T>& v) {\n    rep(i, v.size())\n      tree[i+n] =\
+    \ v[i];\n    per(i, n)\n      tree[i] = ope(tree[i*2], tree[i*2+1]);\n  }\n\n\
+    \  void change(ll p, const T& x) {\n    p += n;\n    tree[p] = x;\n    while (p\
+    \ >>= 1)\n      tree[p] = ope(tree[p*2], tree[p*2+1]);\n  }\n\n  T query(ll l,\
+    \ ll r) const {\n    T l_res{};\n    T r_res{};\n    for (l += n, r+= n; l < r;\
+    \ l >>= 1, r >>= 1) {\n      if (l&1) l_res = ope(l_res, tree[l++]);\n      if\
+    \ (r&1) r_res = ope(tree[--r], r_res);\n    }\n    return ope(l_res, r_res);\n\
+    \  }\n\n  T operator[](ll i) {\n    return tree[i+n];\n  }\n};\n"
   code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<class Monoid>\nstruct\
     \ SegmentTree {\n  using T = typename Monoid::value_type;\n\n  ll n;\n  vector<T>\
-    \ tree;\n  const Monoid ope;\n\n  SegmentTree(ll n) : n(n) {\n    tree.assign(2*n,\
+    \ tree;\n  const Monoid ope;\n\n  SegmentTree(ll n_) : n(n_) {\n    tree.assign(2*n,\
     \ ope.ide);\n  }\n\n  void build(const vector<T>& v) {\n    rep(i, v.size())\n\
     \      tree[i+n] = v[i];\n    per(i, n)\n      tree[i] = ope(tree[i*2], tree[i*2+1]);\n\
     \  }\n\n  void change(ll p, const T& x) {\n    p += n;\n    tree[p] = x;\n   \
@@ -56,7 +56,7 @@ data:
   isVerificationFile: false
   path: segment_tree.hpp
   requiredBy: []
-  timestamp: '2020-10-09 18:57:08+09:00'
+  timestamp: '2020-10-09 19:31:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/segment_tree.test.cpp

@@ -36,7 +36,7 @@ data:
     \ cerr << fixed << setprecision(15); }\n} io_setup;\n#line 3 \"binary_indexed_tree.hpp\"\
     \n\ntemplate<typename ComumutativeMonoid>\nstruct BinaryIndexedTree {\n  using\
     \ T = typename ComumutativeMonoid::value_type;\n  // 1-indexed\n  ll n;\n  vector<T>\
-    \ tree;\n  const ComumutativeMonoid ope;\n\n  BinaryIndexedTree(ll n) : n(n),\
+    \ tree;\n  const ComumutativeMonoid ope;\n\n  BinaryIndexedTree(ll n_) : n(n_),\
     \ ope(ComumutativeMonoid()) {\n    tree.assign(n+1, ope.ide);\n  }\n\n  void add(ll\
     \ p, T a) {\n    for (ll x = p+1; x <= n; x += x&-x) {\n      tree[x] = ope(tree[x],\
     \ a);\n    }\n  }\n\n  // sum [0, r)\n  T sum(ll r) const {\n    T sum = ope.ide;\n\
@@ -68,7 +68,7 @@ data:
   isVerificationFile: true
   path: verify/binary_indexed_tree.test.cpp
   requiredBy: []
-  timestamp: '2020-10-09 18:57:08+09:00'
+  timestamp: '2020-10-09 19:31:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/binary_indexed_tree.test.cpp
