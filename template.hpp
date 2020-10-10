@@ -9,6 +9,7 @@ using vl = vector<ll>;
 #define per(i, n) for(ll i = (ll)n-1; i >= 0; i--)
 #define per3(i, l, r) for(ll i = (ll)r-1; i >= (ll)l; i--)
 #define all(v) begin(v), end(v)
+#define rall(v) rbegin(v), rend(v)
 template<class T, class U> inline void cmax(T &a, U b) { if (a < b) a = b; }
 template<class T, class U> inline void cmin(T &a, U b) { if (a > b) a = b; }
 constexpr char el = '\n';
