@@ -1,12 +1,12 @@
 #pragma once
 #include "template.hpp"
 
-ll powmod(ll a, ll n, ll p) {
+ll powmod(ll base, ll exp, ll mod) {
   ll res = 1;
-  while (n) {
-    if (n&1) res = res * a % p;
-    a = a * a % p;
-    n >>= 1;
+  while (exp) {
+    if (exp&1) res = res * base % mod;
+    base = base * base % mod;
+    exp >>= 1;
   }
   return res;
 }
