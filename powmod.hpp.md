@@ -32,22 +32,22 @@ data:
     \ T> istream &operator>>(istream &is, vector<T> &v) { for(T &i : v) is >> i; return\
     \ is; }\nstruct IoSetup {\n  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false);\
     \ cout << fixed << setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n\
-    #line 3 \"powmod.hpp\"\n\nll powmod(ll a, ll n, ll p) {\n  ll res = 1;\n  while\
-    \ (n) {\n    if (n&1) res = res * a % p;\n    a = a * a % p;\n    n >>= 1;\n \
-    \ }\n  return res;\n}\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\nll powmod(ll a, ll n, ll p) {\n\
-    \  ll res = 1;\n  while (n) {\n    if (n&1) res = res * a % p;\n    a = a * a\
-    \ % p;\n    n >>= 1;\n  }\n  return res;\n}\n"
+    #line 3 \"powmod.hpp\"\n\nll powmod(ll base, ll exp, ll mod) {\n  ll res = 1;\n\
+    \  while (exp) {\n    if (exp&1) res = res * base % mod;\n    base = base * base\
+    \ % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
+  code: "#pragma once\n#include \"template.hpp\"\n\nll powmod(ll base, ll exp, ll\
+    \ mod) {\n  ll res = 1;\n  while (exp) {\n    if (exp&1) res = res * base % mod;\n\
+    \    base = base * base % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
   dependsOn:
   - template.hpp
   isVerificationFile: false
   path: powmod.hpp
   requiredBy: []
-  timestamp: '2020-10-10 18:22:16+09:00'
+  timestamp: '2020-10-16 19:19:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/DPL_5_A.test.cpp
   - verify/powmod.test.cpp
+  - verify/DPL_5_A.test.cpp
 documentation_of: powmod.hpp
 layout: document
 redirect_from:

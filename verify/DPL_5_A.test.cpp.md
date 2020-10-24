@@ -33,11 +33,11 @@ data:
     \ T> istream &operator>>(istream &is, vector<T> &v) { for(T &i : v) is >> i; return\
     \ is; }\nstruct IoSetup {\n  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false);\
     \ cout << fixed << setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n\
-    #line 3 \"powmod.hpp\"\n\nll powmod(ll a, ll n, ll p) {\n  ll res = 1;\n  while\
-    \ (n) {\n    if (n&1) res = res * a % p;\n    a = a * a % p;\n    n >>= 1;\n \
-    \ }\n  return res;\n}\n#line 5 \"verify/DPL_5_A.test.cpp\"\n\nint main() {\n \
-    \ ll n, k;\n  cin >> n >> k;\n  ll mod = 1e9+7;\n  cout << powmod(k, n, mod) <<\
-    \ el;\n}\n"
+    #line 3 \"powmod.hpp\"\n\nll powmod(ll base, ll exp, ll mod) {\n  ll res = 1;\n\
+    \  while (exp) {\n    if (exp&1) res = res * base % mod;\n    base = base * base\
+    \ % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n#line 5 \"verify/DPL_5_A.test.cpp\"\
+    \n\nint main() {\n  ll n, k;\n  cin >> n >> k;\n  ll mod = 1e9+7;\n  cout << powmod(k,\
+    \ n, mod) << el;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A\"\
     \n\n#include \"../template.hpp\"\n#include \"../powmod.hpp\"\n\nint main() {\n\
     \  ll n, k;\n  cin >> n >> k;\n  ll mod = 1e9+7;\n  cout << powmod(k, n, mod)\
@@ -48,7 +48,7 @@ data:
   isVerificationFile: true
   path: verify/DPL_5_A.test.cpp
   requiredBy: []
-  timestamp: '2020-10-10 18:22:16+09:00'
+  timestamp: '2020-10-16 19:19:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/DPL_5_A.test.cpp

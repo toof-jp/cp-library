@@ -89,8 +89,8 @@ data:
   timestamp: '2020-10-10 18:22:16+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/DPL_5_B.test.cpp
   - verify/segment_tree.test.cpp
+  - verify/DPL_5_B.test.cpp
   - verify/DPL_5_E.test.cpp
   - verify/DPL_5_D.test.cpp
 documentation_of: modint.hpp
