@@ -34,8 +34,8 @@ data:
     \ T> istream &operator>>(istream &is, vector<T> &v) { for(T &i : v) is >> i; return\
     \ is; }\nstruct IoSetup {\n  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false);\
     \ cout << fixed << setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n\
-    #line 3 \"binary_indexed_tree.hpp\"\n\ntemplate<typename ComumutativeMonoid>\n\
-    struct BinaryIndexedTree {\n  using T = typename ComumutativeMonoid::value_type;\n\
+    #line 3 \"binary_indexed_tree.hpp\"\n\ntemplate<class ComumutativeMonoid>\nstruct\
+    \ BinaryIndexedTree {\n  using T = typename ComumutativeMonoid::value_type;\n\
     \  // 1-indexed\n  ll n;\n  vector<T> tree;\n  const ComumutativeMonoid ope;\n\
     \n  BinaryIndexedTree(ll n_) : n(n_), ope(ComumutativeMonoid()) {\n    tree.assign(n+1,\
     \ ope.ide);\n  }\n\n  void add(ll p, T a) {\n    for (ll x = p+1; x <= n; x +=\
@@ -68,7 +68,7 @@ data:
   isVerificationFile: true
   path: verify/binary_indexed_tree.test.cpp
   requiredBy: []
-  timestamp: '2020-10-10 18:22:16+09:00'
+  timestamp: '2020-11-26 22:49:34+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify/binary_indexed_tree.test.cpp

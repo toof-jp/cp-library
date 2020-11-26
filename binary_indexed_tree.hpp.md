@@ -29,8 +29,8 @@ data:
     \ T> istream &operator>>(istream &is, vector<T> &v) { for(T &i : v) is >> i; return\
     \ is; }\nstruct IoSetup {\n  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false);\
     \ cout << fixed << setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n\
-    #line 3 \"binary_indexed_tree.hpp\"\n\ntemplate<typename ComumutativeMonoid>\n\
-    struct BinaryIndexedTree {\n  using T = typename ComumutativeMonoid::value_type;\n\
+    #line 3 \"binary_indexed_tree.hpp\"\n\ntemplate<class ComumutativeMonoid>\nstruct\
+    \ BinaryIndexedTree {\n  using T = typename ComumutativeMonoid::value_type;\n\
     \  // 1-indexed\n  ll n;\n  vector<T> tree;\n  const ComumutativeMonoid ope;\n\
     \n  BinaryIndexedTree(ll n_) : n(n_), ope(ComumutativeMonoid()) {\n    tree.assign(n+1,\
     \ ope.ide);\n  }\n\n  void add(ll p, T a) {\n    for (ll x = p+1; x <= n; x +=\
@@ -42,7 +42,7 @@ data:
     \ (ll k = r; k > 0; k >>= 1){\n      if(x+k <= n && tree[x+k] < w){\n        w\
     \ -= tree[x+k];\n        x += k;\n      }\n    }\n    return x+1;\n  }\n  */\n\
     };\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<typename ComumutativeMonoid>\n\
+  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<class ComumutativeMonoid>\n\
     struct BinaryIndexedTree {\n  using T = typename ComumutativeMonoid::value_type;\n\
     \  // 1-indexed\n  ll n;\n  vector<T> tree;\n  const ComumutativeMonoid ope;\n\
     \n  BinaryIndexedTree(ll n_) : n(n_), ope(ComumutativeMonoid()) {\n    tree.assign(n+1,\
@@ -60,7 +60,7 @@ data:
   isVerificationFile: false
   path: binary_indexed_tree.hpp
   requiredBy: []
-  timestamp: '2020-10-10 18:22:16+09:00'
+  timestamp: '2020-11-26 22:49:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/binary_indexed_tree.test.cpp

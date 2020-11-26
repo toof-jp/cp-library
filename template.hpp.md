@@ -38,6 +38,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: union_find.hpp
     title: union_find.hpp
+  - icon: ':warning:'
+    path: vector.hpp
+    title: vector.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: verify/DPL_5_A.test.cpp
@@ -124,36 +127,37 @@ data:
   isVerificationFile: false
   path: template.hpp
   requiredBy:
-  - prime_factorization.hpp
   - union_find.hpp
-  - popcount.hpp
-  - dijkstra.hpp
   - binary_indexed_tree.hpp
-  - combination.hpp
-  - debug.hpp
-  - cumulative_sum.hpp
+  - div_round_up.hpp
+  - prime_factorization.hpp
+  - powmod.hpp
+  - popcount.hpp
   - segment_tree.hpp
   - modint.hpp
-  - powmod.hpp
-  - div_round_up.hpp
+  - combination.hpp
+  - cumulative_sum.hpp
+  - debug.hpp
+  - dijkstra.hpp
+  - vector.hpp
   timestamp: '2020-10-10 18:22:16+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - verify/div_round_up.test.cpp
-  - verify/popcount.test.cpp
-  - verify/dijkstra.test.cpp
   - verify/segment_tree.test.cpp
-  - verify/prime_factorization.test.cpp
-  - verify/DPL_5_B.test.cpp
-  - verify/binary_indexed_tree.test.cpp
-  - verify/DPL_5_E.test.cpp
+  - verify/div_round_up.test.cpp
   - verify/template.test.cpp
-  - verify/union_find.test.cpp
   - verify/DPL_5_D.test.cpp
-  - verify/powmod.test.cpp
+  - verify/union_find.test.cpp
+  - verify/dijkstra.test.cpp
+  - verify/DPL_5_B.test.cpp
   - verify/cumulative_sum.test.cpp
+  - verify/popcount.test.cpp
+  - verify/prime_factorization.test.cpp
+  - verify/DPL_5_E.test.cpp
+  - verify/binary_indexed_tree.test.cpp
   - verify/debug.test.cpp
   - verify/DPL_5_A.test.cpp
+  - verify/powmod.test.cpp
 documentation_of: template.hpp
 layout: document
 redirect_from:

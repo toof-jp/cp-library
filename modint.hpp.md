@@ -90,9 +90,9 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify/segment_tree.test.cpp
+  - verify/DPL_5_D.test.cpp
   - verify/DPL_5_B.test.cpp
   - verify/DPL_5_E.test.cpp
-  - verify/DPL_5_D.test.cpp
 documentation_of: modint.hpp
 layout: document
 redirect_from:

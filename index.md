@@ -42,6 +42,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: union_find.hpp
       title: union_find.hpp
+    - icon: ':warning:'
+      path: vector.hpp
+      title: vector.hpp
   verificationCategories:
   - name: verify
     pages:

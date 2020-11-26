@@ -5,15 +5,9 @@ data:
     path: template.hpp
     title: template.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: verify/DPL_5_A.test.cpp
-    title: verify/DPL_5_A.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: verify/powmod.test.cpp
-    title: verify/powmod.test.cpp
+  _extendedVerifiedWith: []
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 2 \"template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -32,26 +26,28 @@ data:
     \ T> istream &operator>>(istream &is, vector<T> &v) { for(T &i : v) is >> i; return\
     \ is; }\nstruct IoSetup {\n  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false);\
     \ cout << fixed << setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n\
-    #line 3 \"powmod.hpp\"\n\nll powmod(ll base, ll exp, ll mod) {\n  ll res = 1;\n\
-    \  while (exp) {\n    if (exp&1) res = res * base % mod;\n    base = base * base\
-    \ % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\nll powmod(ll base, ll exp, ll\
-    \ mod) {\n  ll res = 1;\n  while (exp) {\n    if (exp&1) res = res * base % mod;\n\
-    \    base = base * base % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
+    #line 3 \"vector.hpp\"\n\ntemplate<typename T>\nstruct Vector : public std::vector<T>\
+    \ {\n  const ll l, r;\n\n  // [0, r)\n  Vector(ll r_) : vector<T>(r_), l(0), r(r_)\
+    \ {};\n\n  // [l, r)\n  Vector(ll l_, ll r_, const T& value = T())\n    : vector<T>(r_-l_,\
+    \ value), l(l_), r(r_) {};\n\n  T& operator[](ll i) {\n    return vector<T>::operator[](i-l);\n\
+    \  }\n};\n"
+  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<typename T>\nstruct Vector\
+    \ : public std::vector<T> {\n  const ll l, r;\n\n  // [0, r)\n  Vector(ll r_)\
+    \ : vector<T>(r_), l(0), r(r_) {};\n\n  // [l, r)\n  Vector(ll l_, ll r_, const\
+    \ T& value = T())\n    : vector<T>(r_-l_, value), l(l_), r(r_) {};\n\n  T& operator[](ll\
+    \ i) {\n    return vector<T>::operator[](i-l);\n  }\n};\n"
   dependsOn:
   - template.hpp
   isVerificationFile: false
-  path: powmod.hpp
+  path: vector.hpp
   requiredBy: []
-  timestamp: '2020-10-16 19:19:26+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - verify/DPL_5_A.test.cpp
-  - verify/powmod.test.cpp
-documentation_of: powmod.hpp
+  timestamp: '2020-11-26 22:50:21+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: vector.hpp
 layout: document
 redirect_from:
-- /library/powmod.hpp
-- /library/powmod.hpp.html
-title: powmod.hpp
+- /library/vector.hpp
+- /library/vector.hpp.html
+title: vector.hpp
 ---
