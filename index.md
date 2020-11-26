@@ -45,6 +45,50 @@ data:
     - icon: ':warning:'
       path: vector.hpp
       title: vector.hpp
+  - name: src
+    pages:
+    - icon: ':warning:'
+      path: src/binary_indexed_tree.hpp
+      title: src/binary_indexed_tree.hpp
+    - icon: ':warning:'
+      path: src/combination.hpp
+      title: src/combination.hpp
+    - icon: ':warning:'
+      path: src/cumulative_sum.hpp
+      title: src/cumulative_sum.hpp
+    - icon: ':warning:'
+      path: src/debug.hpp
+      title: src/debug.hpp
+    - icon: ':warning:'
+      path: src/dijkstra.hpp
+      title: src/dijkstra.hpp
+    - icon: ':warning:'
+      path: src/div_round_up.hpp
+      title: src/div_round_up.hpp
+    - icon: ':warning:'
+      path: src/modint.hpp
+      title: src/modint.hpp
+    - icon: ':warning:'
+      path: src/popcount.hpp
+      title: src/popcount.hpp
+    - icon: ':warning:'
+      path: src/powmod.hpp
+      title: src/powmod.hpp
+    - icon: ':warning:'
+      path: src/prime_factorization.hpp
+      title: src/prime_factorization.hpp
+    - icon: ':warning:'
+      path: src/segment_tree.hpp
+      title: src/segment_tree.hpp
+    - icon: ':warning:'
+      path: src/template.hpp
+      title: src/template.hpp
+    - icon: ':warning:'
+      path: src/union_find.hpp
+      title: src/union_find.hpp
+    - icon: ':warning:'
+      path: src/vector.hpp
+      title: src/vector.hpp
   verificationCategories:
   - name: verify
     pages:
