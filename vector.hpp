@@ -1,7 +1,7 @@
 #pragma once
 #include "template.hpp"
 
-template<typename T>
+template<class T>
 struct Vector : public std::vector<T> {
   const ll l, r;
 
