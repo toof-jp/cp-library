@@ -26,12 +26,12 @@ data:
     \ T> istream &operator>>(istream &is, vector<T> &v) { for(T &i : v) is >> i; return\
     \ is; }\nstruct IoSetup {\n  IoSetup() { cin.tie(nullptr); ios::sync_with_stdio(false);\
     \ cout << fixed << setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n\
-    #line 3 \"vector.hpp\"\n\ntemplate<typename T>\nstruct Vector : public std::vector<T>\
+    #line 3 \"vector.hpp\"\n\ntemplate<class T>\nstruct Vector : public std::vector<T>\
     \ {\n  const ll l, r;\n\n  // [0, r)\n  Vector(ll r_) : vector<T>(r_), l(0), r(r_)\
     \ {};\n\n  // [l, r)\n  Vector(ll l_, ll r_, const T& value = T())\n    : vector<T>(r_-l_,\
     \ value), l(l_), r(r_) {};\n\n  T& operator[](ll i) {\n    return vector<T>::operator[](i-l);\n\
     \  }\n};\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<typename T>\nstruct Vector\
+  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<class T>\nstruct Vector\
     \ : public std::vector<T> {\n  const ll l, r;\n\n  // [0, r)\n  Vector(ll r_)\
     \ : vector<T>(r_), l(0), r(r_) {};\n\n  // [l, r)\n  Vector(ll l_, ll r_, const\
     \ T& value = T())\n    : vector<T>(r_-l_, value), l(l_), r(r_) {};\n\n  T& operator[](ll\
@@ -41,7 +41,7 @@ data:
   isVerificationFile: false
   path: vector.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:50:21+09:00'
+  timestamp: '2020-11-26 22:51:34+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: vector.hpp
