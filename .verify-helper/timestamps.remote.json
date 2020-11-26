@@ -1,17 +1,1 @@
-{
-"verify/DPL_5_A.test.cpp": "2020-10-16 19:19:26 +0900",
-"verify/DPL_5_B.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/DPL_5_D.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/DPL_5_E.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/binary_indexed_tree.test.cpp": "2020-11-26 22:49:34 +0900",
-"verify/cumulative_sum.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/debug.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/dijkstra.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/div_round_up.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/popcount.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/powmod.test.cpp": "2020-10-16 19:19:26 +0900",
-"verify/prime_factorization.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/segment_tree.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/template.test.cpp": "2020-10-10 18:22:16 +0900",
-"verify/union_find.test.cpp": "2020-10-10 18:22:16 +0900"
-}
+{}
