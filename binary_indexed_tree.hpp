@@ -1,7 +1,7 @@
 #pragma once
 #include "template.hpp"
 
-template<typename ComumutativeMonoid>
+template<class ComumutativeMonoid>
 struct BinaryIndexedTree {
   using T = typename ComumutativeMonoid::value_type;
   // 1-indexed
