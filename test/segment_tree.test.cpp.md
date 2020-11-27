@@ -16,9 +16,10 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: httpsrc//judge.yosupo.src/problsrc/point_set_range_composite
-    links: []
-  bundledCode: "#line 1 \"test/segment_tree.test.cpp\"\n#define PROBLEM \"httpsrc//judge.yosupo.src/problsrc/point_set_range_composite\"\
+    PROBLEM: https://judge.yosupo.src/problsrc/point_set_range_composite
+    links:
+    - https://judge.yosupo.src/problsrc/point_set_range_composite
+  bundledCode: "#line 1 \"test/segment_tree.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.src/problsrc/point_set_range_composite\"\
     \n\n#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\
     using ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n#define\
     \ rep(i, n) for(ll i = 0; i < (ll)n; i++)\n#define rep3(i, l, r) for(ll i = l;\
@@ -77,7 +78,7 @@ data:
     \ a >> b >> c;\n    if (t == 0) {\n      seg.change(a, Func(b, c));\n    } else\
     \ {\n      Func e = seg.query(a, b);\n      cout << e.a*modint(c)+e.b << el;\n\
     \    }\n  }\n}\n"
-  code: "#define PROBLEM \"httpsrc//judge.yosupo.src/problsrc/point_set_range_composite\"\
+  code: "#define PROBLEM \"https://judge.yosupo.src/problsrc/point_set_range_composite\"\
     \n\n#include \"src/template.hpp\"\n#include \"src/segment_tree.hpp\"\n#include\
     \ \"src/modint.hpp\"\n\nusing modint = ModInt<998244353>;\n\nstruct Func{\n  modint\
     \ a, b;\n  Func(ll a = 1, ll b = 0) : a(a), b(b) {};\n  Func(modint a, modint\
@@ -96,7 +97,7 @@ data:
   isVerificationFile: true
   path: test/segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2020-11-27 15:27:19+09:00'
+  timestamp: '2020-11-27 15:34:31+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/segment_tree.test.cpp

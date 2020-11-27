@@ -13,9 +13,10 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: httsrc//judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_A
-    links: []
-  bundledCode: "#line 1 \"test/DPL_5_A.test.cpp\"\n#define PROBLEM \"httsrc//judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_A\"\
+    PROBLEM: http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_A
+    links:
+    - http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_A
+  bundledCode: "#line 1 \"test/DPL_5_A.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_A\"\
     \n\n#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\
     using ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n#define\
     \ rep(i, n) for(ll i = 0; i < (ll)n; i++)\n#define rep3(i, l, r) for(ll i = l;\
@@ -37,7 +38,7 @@ data:
     \ * base % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n#line 5 \"test/DPL_5_A.test.cpp\"\
     \n\nint main() {\n  ll n, k;\n  cin >> n >> k;\n  ll mod = 1e9+7;\n  cout << powmod(k,\
     \ n, mod) << el;\n}\n"
-  code: "#define PROBLEM \"httsrc//judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_A\"\
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_A\"\
     \n\n#include \"src/template.hpp\"\n#include \"src/powmod.hpp\"\n\nint main() {\n\
     \  ll n, k;\n  cin >> n >> k;\n  ll mod = 1e9+7;\n  cout << powmod(k, n, mod)\
     \ << el;\n}\n"
@@ -47,7 +48,7 @@ data:
   isVerificationFile: true
   path: test/DPL_5_A.test.cpp
   requiredBy: []
-  timestamp: '2020-11-27 15:27:19+09:00'
+  timestamp: '2020-11-27 15:34:31+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/DPL_5_A.test.cpp

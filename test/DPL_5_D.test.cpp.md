@@ -16,9 +16,10 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: httsrc//judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_D
-    links: []
-  bundledCode: "#line 1 \"test/DPL_5_D.test.cpp\"\n#define PROBLEM \"httsrc//judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_D\"\
+    PROBLEM: http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_D
+    links:
+    - http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_D
+  bundledCode: "#line 1 \"test/DPL_5_D.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_D\"\
     \n\n#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\
     using ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n#define\
     \ rep(i, n) for(ll i = 0; i < (ll)n; i++)\n#define rep3(i, l, r) for(ll i = l;\
@@ -67,7 +68,7 @@ data:
     \ T(0);\n    if (n == 0 and k == 0) return T(1);\n    return C(n+k-1, n-1);\n\
     \  }\n};\n#line 6 \"test/DPL_5_D.test.cpp\"\n\nint main() {\n  ll n, k;\n  cin\
     \ >> n >> k;\n  Combination<mint> c(n+k);\n  cout << c.H(k, n) << el;\n}\n"
-  code: "#define PROBLEM \"httsrc//judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_D\"\
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=DPL_5_D\"\
     \n\n#include \"src/template.hpp\"\n#include \"src/modint.hpp\"\n#include \"src/combination.hpp\"\
     \n\nint main() {\n  ll n, k;\n  cin >> n >> k;\n  Combination<mint> c(n+k);\n\
     \  cout << c.H(k, n) << el;\n}\n"
@@ -78,7 +79,7 @@ data:
   isVerificationFile: true
   path: test/DPL_5_D.test.cpp
   requiredBy: []
-  timestamp: '2020-11-27 15:27:19+09:00'
+  timestamp: '2020-11-27 15:34:31+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/DPL_5_D.test.cpp

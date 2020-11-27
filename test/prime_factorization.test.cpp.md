@@ -13,10 +13,11 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: httsrc//judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=NTL_1_A
-    links: []
+    PROBLEM: http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=NTL_1_A
+    links:
+    - http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=NTL_1_A
   bundledCode: "#line 1 \"test/prime_factorization.test.cpp\"\n#define PROBLEM \"\
-    httsrc//judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=NTL_1_A\"\n\n#line\
+    http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=NTL_1_A\"\n\n#line\
     \ 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\nusing\
     \ ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n#define rep(i,\
     \ n) for(ll i = 0; i < (ll)n; i++)\n#define rep3(i, l, r) for(ll i = l; i < (ll)r;\
@@ -40,7 +41,7 @@ data:
     \  cin >> n;\n\n  auto m = prime_factorization(n);\n\n  cout << n << \": \";\n\
     \  vl ans;\n  for (auto&& i : m) {\n    rep(j, i.second) {\n      ans.push_back(i.first);\n\
     \    }\n  }\n  cout << ans << el;\n}\n"
-  code: "#define PROBLEM \"httsrc//judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=NTL_1_A\"\
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=NTL_1_A\"\
     \n\n#include \"src/template.hpp\"\n#include \"src/prime_factorization.hpp\"\n\n\
     int main() {\n  ll n;\n  cin >> n;\n\n  auto m = prime_factorization(n);\n\n \
     \ cout << n << \": \";\n  vl ans;\n  for (auto&& i : m) {\n    rep(j, i.second)\
@@ -51,7 +52,7 @@ data:
   isVerificationFile: true
   path: test/prime_factorization.test.cpp
   requiredBy: []
-  timestamp: '2020-11-27 15:27:19+09:00'
+  timestamp: '2020-11-27 15:34:31+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/prime_factorization.test.cpp
