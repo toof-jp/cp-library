@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/dijkstra.test.cpp
     title: test/dijkstra.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -36,7 +36,7 @@ data:
     \ for (auto&& e : G[v]) {\n      if (d[e.first] > d[v] + e.second) {\n       \
     \ d[e.first] = d[v] + e.second;\n        que.push(pl(d[e.first], e.first));\n\
     \      }\n    }\n  }\n  return d;\n}\n"
-  code: "#pragma once\n#include \"src/template.hpp\"\n\nll INF = 1LL<<60;\n\nvl dijkstra(ll\
+  code: "#pragma once\n#include \"template.hpp\"\n\nll INF = 1LL<<60;\n\nvl dijkstra(ll\
     \ n, ll s, vector<vector<pl>> G) {\n  priority_queue<pl, vector<pl>, greater<pl>>\
     \ que;\n  vl d(n, INF);\n  d[s] = 0;\n  que.push(pl(0, s));\n\n  while(!que.empty())\
     \ {\n    pl p = que.top();\n    que.pop();\n    ll v = p.second;\n    if (d[v]\
@@ -48,8 +48,8 @@ data:
   isVerificationFile: false
   path: src/dijkstra.hpp
   requiredBy: []
-  timestamp: '2020-11-27 15:20:38+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2020-11-26 22:58:46+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/dijkstra.test.cpp
 documentation_of: src/dijkstra.hpp

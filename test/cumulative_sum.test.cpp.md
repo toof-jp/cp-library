@@ -1,22 +1,22 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/cumulative_sum.hpp
     title: src/cumulative_sum.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=0516
+    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516
     links:
-    - http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=0516
-  bundledCode: "#line 1 \"test/cumulative_sum.test.cpp\"\n#define  PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=0516\"\
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516
+  bundledCode: "#line 1 \"test/cumulative_sum.test.cpp\"\n#define  PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516\"\
     \n\n#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\
     using ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n#define\
     \ rep(i, n) for(ll i = 0; i < (ll)n; i++)\n#define rep3(i, l, r) for(ll i = l;\
@@ -47,7 +47,7 @@ data:
     \ a(n);\n    rep(i, n) {\n      cin >> a[i];\n    }\n\n    CumulativeSum<ll> cs(a);\n\
     \    cs.build();\n    ll ans = -1e4;\n    for (ll i = 0; i+k-1 < n; i++) {\n \
     \     cmax(ans, cs.sum(i, i+k-1));\n    }\n\n    cout << ans << el;\n  }\n}\n"
-  code: "#define  PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=0516\"\
+  code: "#define  PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516\"\
     \n\n#include \"src/template.hpp\"\n#include \"src/cumulative_sum.hpp\"\n\nint\
     \ main() {\n  while (1) {\n    ll n, k;\n    cin >> n >> k;\n    if (n == 0 and\
     \ k == 0) return 0;\n    vl a(n);\n    rep(i, n) {\n      cin >> a[i];\n    }\n\
@@ -60,8 +60,8 @@ data:
   isVerificationFile: true
   path: test/cumulative_sum.test.cpp
   requiredBy: []
-  timestamp: '2020-11-27 15:34:31+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-11-27 17:14:27+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/cumulative_sum.test.cpp
 layout: document

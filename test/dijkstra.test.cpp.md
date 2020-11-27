@@ -1,22 +1,22 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/dijkstra.hpp
     title: src/dijkstra.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=GRL_1_A
+    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A
     links:
-    - http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=GRL_1_A
-  bundledCode: "#line 1 \"test/dijkstra.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=GRL_1_A\"\
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A
+  bundledCode: "#line 1 \"test/dijkstra.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
     \n\n#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\
     using ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n#define\
     \ rep(i, n) for(ll i = 0; i < (ll)n; i++)\n#define rep3(i, l, r) for(ll i = l;\
@@ -44,7 +44,7 @@ data:
     \  rep(i, e) {\n    ll s, t, d;\n    cin >> s >> t >> d;\n    g[s].emplace_back(t,\
     \ d);\n  }\n\n  vl vec = dijkstra(v, r, g);\n\n  for (auto&& i : vec) {\n    if\
     \ (i == INF) cout << \"INF\" << el;\n    else cout << i << el;\n  }\n}\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=GRL_1_A\"\
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
     \n\n#include \"src/template.hpp\"\n#include \"src/dijkstra.hpp\"\n\nint main()\
     \ {\n  ll v, e, r;\n  cin >> v >> e >> r;\n  vector<vector<pl>> g(v);\n  rep(i,\
     \ e) {\n    ll s, t, d;\n    cin >> s >> t >> d;\n    g[s].emplace_back(t, d);\n\
@@ -56,8 +56,8 @@ data:
   isVerificationFile: true
   path: test/dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2020-11-27 15:34:31+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-11-27 17:14:27+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/dijkstra.test.cpp
 layout: document

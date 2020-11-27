@@ -1,22 +1,22 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/debug.hpp
     title: src/debug.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=ITP1_1_A
+    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
     links:
-    - http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=ITP1_1_A
-  bundledCode: "#line 1 \"test/debug.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=ITP1_1_A\"\
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
+  bundledCode: "#line 1 \"test/debug.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
     \n\n#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\
     using ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n#define\
     \ rep(i, n) for(ll i = 0; i < (ll)n; i++)\n#define rep3(i, l, r) for(ll i = l;\
@@ -54,7 +54,7 @@ data:
     \  bool f = true;\n\n  debug(n, m, f);\n\n  vector<int> a(n);\n  debug(a);\n\n\
     \  vector<vl> b(n, vl(n));\n  debug(b);\n\n  cout << \"Hello World\" << el;\n\
     }\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=ITP1_1_A\"\
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
     \n\n#include \"src/template.hpp\"\n#include \"src/debug.hpp\"\n\nint main() {\n\
     \  ll n = 10;\n  double m = 3.141592;\n  bool f = true;\n\n  debug(n, m, f);\n\
     \n  vector<int> a(n);\n  debug(a);\n\n  vector<vl> b(n, vl(n));\n  debug(b);\n\
@@ -65,8 +65,8 @@ data:
   isVerificationFile: true
   path: test/debug.test.cpp
   requiredBy: []
-  timestamp: '2020-11-27 15:34:31+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-11-27 17:14:27+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/debug.test.cpp
 layout: document

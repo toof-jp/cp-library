@@ -1,19 +1,19 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/DPL_5_A.test.cpp
     title: test/DPL_5_A.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/powmod.test.cpp
     title: test/powmod.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -35,16 +35,16 @@ data:
     #line 3 \"src/powmod.hpp\"\n\nll powmod(ll base, ll exp, ll mod) {\n  ll res =\
     \ 1;\n  while (exp) {\n    if (exp&1) res = res * base % mod;\n    base = base\
     \ * base % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
-  code: "#pragma once\n#include \"src/template.hpp\"\n\nll powmod(ll base, ll exp,\
-    \ ll mod) {\n  ll res = 1;\n  while (exp) {\n    if (exp&1) res = res * base %\
-    \ mod;\n    base = base * base % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
+  code: "#pragma once\n#include \"template.hpp\"\n\nll powmod(ll base, ll exp, ll\
+    \ mod) {\n  ll res = 1;\n  while (exp) {\n    if (exp&1) res = res * base % mod;\n\
+    \    base = base * base % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
   dependsOn:
   - src/template.hpp
   isVerificationFile: false
   path: src/powmod.hpp
   requiredBy: []
-  timestamp: '2020-11-27 15:20:38+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2020-11-26 22:58:46+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/DPL_5_A.test.cpp
   - test/powmod.test.cpp

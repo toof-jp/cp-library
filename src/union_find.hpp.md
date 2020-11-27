@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/union_find.test.cpp
     title: test/union_find.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -39,9 +39,9 @@ data:
     \ < data[y].size) swap(x, y);\n    data[y].parent = x;\n    data[x].size += data[y].size;\n\
     \    num--;\n  }\n\n  bool same(ll x, ll y) {\n    return find(x) == find(y);\n\
     \  }\n\n  ll count() const {\n    return num;\n  }\n};\n"
-  code: "#pragma once\n#include \"src/template.hpp\"\n\nstruct UnionFind {\n  struct\
-    \ Node {\n    ll parent;\n    ll size;\n  };\n  vector<Node> data;\n  ll num;\n\
-    \n  UnionFind(ll size) : data(size) {\n    rep(i, size) {\n      data[i].parent\
+  code: "#pragma once\n#include \"template.hpp\"\n\nstruct UnionFind {\n  struct Node\
+    \ {\n    ll parent;\n    ll size;\n  };\n  vector<Node> data;\n  ll num;\n\n \
+    \ UnionFind(ll size) : data(size) {\n    rep(i, size) {\n      data[i].parent\
     \ = i;\n      data[i].size = 1;\n    }\n    num = size;\n  }\n\n  ll find(ll x)\
     \ {\n    while (data[x].parent != x) {\n      ll p = data[x].parent;\n      data[x].parent\
     \ = data[p].parent;\n      x = p;\n    }\n    return x;\n  }\n\n  void unite(ll\
@@ -55,8 +55,8 @@ data:
   isVerificationFile: false
   path: src/union_find.hpp
   requiredBy: []
-  timestamp: '2020-11-27 15:20:38+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2020-11-26 22:58:46+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/union_find.test.cpp
 documentation_of: src/union_find.hpp

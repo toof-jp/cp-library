@@ -1,22 +1,22 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/DPL_5_B.test.cpp
     title: test/DPL_5_B.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/DPL_5_D.test.cpp
     title: test/DPL_5_D.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/DPL_5_E.test.cpp
     title: test/DPL_5_E.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -45,12 +45,12 @@ data:
     \ T(0);\n    return fact[n] * inv_fact[n-k] * inv_fact[k];\n  }\n\n  T H(ll n,\
     \ ll k) const {\n    if (n < 0 or k < 0) return T(0);\n    if (n == 0 and k ==\
     \ 0) return T(1);\n    return C(n+k-1, n-1);\n  }\n};\n"
-  code: "#pragma once\n#include \"src/template.hpp\"\n\n// T modint\ntemplate<class\
-    \ T>\nstruct Combination {\n  vector<T> fact, inv_fact;\n  Combination(ll n) :\
-    \ fact(n+1), inv_fact(n+1) {\n    fact[0] = T(1);\n    for (ll i = 1; i <= n;\
-    \ i++) fact[i] = fact[i-1] * static_cast<T>(i);\n    inv_fact[n] = fact[n].inv();\n\
-    \    for (ll i = n; i > 0; i--) inv_fact[i-1] = inv_fact[i] * static_cast<T>(i);\n\
-    \  }\n\n  T P(ll n, ll k) const {\n    if (n < k or k < 0) return T(0);\n    return\
+  code: "#pragma once\n#include \"template.hpp\"\n\n// T modint\ntemplate<class T>\n\
+    struct Combination {\n  vector<T> fact, inv_fact;\n  Combination(ll n) : fact(n+1),\
+    \ inv_fact(n+1) {\n    fact[0] = T(1);\n    for (ll i = 1; i <= n; i++) fact[i]\
+    \ = fact[i-1] * static_cast<T>(i);\n    inv_fact[n] = fact[n].inv();\n    for\
+    \ (ll i = n; i > 0; i--) inv_fact[i-1] = inv_fact[i] * static_cast<T>(i);\n  }\n\
+    \n  T P(ll n, ll k) const {\n    if (n < k or k < 0) return T(0);\n    return\
     \ fact[n] * inv_fact[n-k];\n  }\n\n  T C(ll n, ll k) const {\n    if (n < k or\
     \ k < 0) return T(0);\n    return fact[n] * inv_fact[n-k] * inv_fact[k];\n  }\n\
     \n  T H(ll n, ll k) const {\n    if (n < 0 or k < 0) return T(0);\n    if (n ==\
@@ -60,8 +60,8 @@ data:
   isVerificationFile: false
   path: src/combination.hpp
   requiredBy: []
-  timestamp: '2020-11-27 15:20:38+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2020-11-26 22:58:46+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/DPL_5_D.test.cpp
   - test/DPL_5_B.test.cpp

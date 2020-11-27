@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/binary_indexed_tree.test.cpp
     title: test/binary_indexed_tree.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -42,7 +42,7 @@ data:
     \ (ll k = r; k > 0; k >>= 1){\n      if(x+k <= n && tree[x+k] < w){\n        w\
     \ -= tree[x+k];\n        x += k;\n      }\n    }\n    return x+1;\n  }\n  */\n\
     };\n"
-  code: "#pragma once\n#include \"src/template.hpp\"\n\ntemplate<class ComumutativeMonoid>\n\
+  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<class ComumutativeMonoid>\n\
     struct BinaryIndexedTree {\n  using T = typename ComumutativeMonoid::value_type;\n\
     \  // 1-indexed\n  ll n;\n  vector<T> tree;\n  const ComumutativeMonoid ope;\n\
     \n  BinaryIndexedTree(ll n_) : n(n_), ope(ComumutativeMonoid()) {\n    tree.assign(n+1,\
@@ -60,8 +60,8 @@ data:
   isVerificationFile: false
   path: src/binary_indexed_tree.hpp
   requiredBy: []
-  timestamp: '2020-11-27 15:20:38+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2020-11-26 22:58:46+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/binary_indexed_tree.test.cpp
 documentation_of: src/binary_indexed_tree.hpp

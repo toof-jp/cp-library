@@ -1,19 +1,19 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=ITP1_1_A
+    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
     links:
-    - http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=ITP1_1_A
-  bundledCode: "#line 1 \"test/template.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=ITP1_1_A\"\
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
+  bundledCode: "#line 1 \"test/template.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
     \n\n#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\
     using ll = long long;\nusing pl = pair<ll, ll>;\nusing vl = vector<ll>;\n#define\
     \ rep(i, n) for(ll i = 0; i < (ll)n; i++)\n#define rep3(i, l, r) for(ll i = l;\
@@ -39,7 +39,7 @@ data:
     \  assert(vec_per3 == vl({2, 9, 5, 1, 4}));\n\n  ll maxi = 0;\n  ll mini = 1LL<<60;\n\
     \  rep(i, n) {\n    cmax(maxi, vec[i]);\n    cmin(mini, vec[i]);\n  }\n  assert(maxi\
     \ == 9);\n  assert(mini == 1);\n\n  cout << \"Hello World\" << el;\n}\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.src/onlinejudsrc/description.jsp?id=ITP1_1_A\"\
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
     \n\n#include \"src/template.hpp\"\n\nint main() {\n  ll n = 10;\n  vl vec = {3,\
     \ 1, 4, 1, 5, 9, 2, 6, 5, 3};\n  vl vec_rep, vec_rep3, vec_per, vec_per3;\n\n\
     \  rep(i, n) vec_rep.push_back(vec[i]);\n  per(i, n) vec_per.push_back(vec[i]);\n\
@@ -54,8 +54,8 @@ data:
   isVerificationFile: true
   path: test/template.test.cpp
   requiredBy: []
-  timestamp: '2020-11-27 15:34:31+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-11-27 17:14:27+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/template.test.cpp
 layout: document
