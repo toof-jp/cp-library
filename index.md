@@ -46,52 +46,52 @@ data:
       path: src/vector.hpp
       title: src/vector.hpp
   verificationCategories:
-  - name: verify
+  - name: test
     pages:
     - icon: ':x:'
-      path: verify/DPL_5_A.test.cpp
-      title: verify/DPL_5_A.test.cpp
+      path: test/DPL_5_A.test.cpp
+      title: test/DPL_5_A.test.cpp
     - icon: ':x:'
-      path: verify/DPL_5_B.test.cpp
-      title: verify/DPL_5_B.test.cpp
+      path: test/DPL_5_B.test.cpp
+      title: test/DPL_5_B.test.cpp
     - icon: ':x:'
-      path: verify/DPL_5_D.test.cpp
-      title: verify/DPL_5_D.test.cpp
+      path: test/DPL_5_D.test.cpp
+      title: test/DPL_5_D.test.cpp
     - icon: ':x:'
-      path: verify/DPL_5_E.test.cpp
-      title: verify/DPL_5_E.test.cpp
+      path: test/DPL_5_E.test.cpp
+      title: test/DPL_5_E.test.cpp
     - icon: ':x:'
-      path: verify/binary_indexed_tree.test.cpp
-      title: verify/binary_indexed_tree.test.cpp
+      path: test/binary_indexed_tree.test.cpp
+      title: test/binary_indexed_tree.test.cpp
     - icon: ':x:'
-      path: verify/cumulative_sum.test.cpp
-      title: verify/cumulative_sum.test.cpp
+      path: test/cumulative_sum.test.cpp
+      title: test/cumulative_sum.test.cpp
     - icon: ':x:'
-      path: verify/debug.test.cpp
-      title: verify/debug.test.cpp
+      path: test/debug.test.cpp
+      title: test/debug.test.cpp
     - icon: ':x:'
-      path: verify/dijkstra.test.cpp
-      title: verify/dijkstra.test.cpp
+      path: test/dijkstra.test.cpp
+      title: test/dijkstra.test.cpp
     - icon: ':x:'
-      path: verify/div_round_up.test.cpp
-      title: verify/div_round_up.test.cpp
+      path: test/div_round_up.test.cpp
+      title: test/div_round_up.test.cpp
     - icon: ':x:'
-      path: verify/popcount.test.cpp
-      title: verify/popcount.test.cpp
+      path: test/popcount.test.cpp
+      title: test/popcount.test.cpp
     - icon: ':x:'
-      path: verify/powmod.test.cpp
-      title: verify/powmod.test.cpp
+      path: test/powmod.test.cpp
+      title: test/powmod.test.cpp
     - icon: ':x:'
-      path: verify/prime_factorization.test.cpp
-      title: verify/prime_factorization.test.cpp
+      path: test/prime_factorization.test.cpp
+      title: test/prime_factorization.test.cpp
     - icon: ':x:'
-      path: verify/segment_tree.test.cpp
-      title: verify/segment_tree.test.cpp
+      path: test/segment_tree.test.cpp
+      title: test/segment_tree.test.cpp
     - icon: ':x:'
-      path: verify/template.test.cpp
-      title: verify/template.test.cpp
+      path: test/template.test.cpp
+      title: test/template.test.cpp
     - icon: ':x:'
-      path: verify/union_find.test.cpp
-      title: verify/union_find.test.cpp
+      path: test/union_find.test.cpp
+      title: test/union_find.test.cpp
 layout: toppage
 ---

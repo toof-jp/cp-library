@@ -21,15 +21,15 @@ data:
     \  assert(div_round_up(31, 7) == 5);\n\n  cout << \"Hello World\" << el;\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/div_round_up.test.cpp
+  path: test/div_round_up.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/div_round_up.test.cpp
+documentation_of: test/div_round_up.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/div_round_up.test.cpp
-- /verify/verify/div_round_up.test.cpp.html
-title: verify/div_round_up.test.cpp
+- /verify/test/div_round_up.test.cpp
+- /verify/test/div_round_up.test.cpp.html
+title: test/div_round_up.test.cpp
 ---

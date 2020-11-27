@@ -15,20 +15,22 @@ data:
     , line 258, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../template.hpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
-    \n\n#include \"../template.hpp\"\n#include \"../powmod.hpp\"\n\nint main() {\n\
-    \  int m, n;\n  cin >> m >> n;\n  cout << powmod(m, n, 1e9+7) << el;\n}\n"
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A\"\
+    \n\n#include \"../template.hpp\"\n#include \"../prime_factorization.hpp\"\n\n\
+    int main() {\n  ll n;\n  cin >> n;\n\n  auto m = prime_factorization(n);\n\n \
+    \ cout << n << \": \";\n  vl ans;\n  for (auto&& i : m) {\n    rep(j, i.second)\
+    \ {\n      ans.push_back(i.first);\n    }\n  }\n  cout << ans << el;\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/powmod.test.cpp
+  path: test/prime_factorization.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/powmod.test.cpp
+documentation_of: test/prime_factorization.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/powmod.test.cpp
-- /verify/verify/powmod.test.cpp.html
-title: verify/powmod.test.cpp
+- /verify/test/prime_factorization.test.cpp
+- /verify/test/prime_factorization.test.cpp.html
+title: test/prime_factorization.test.cpp
 ---

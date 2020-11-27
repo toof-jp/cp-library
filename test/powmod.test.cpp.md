@@ -15,21 +15,20 @@ data:
     , line 258, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../template.hpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E\"\
-    \n\n#include \"../template.hpp\"\n#include \"../modint.hpp\"\n#include \"../combination.hpp\"\
-    \n\nint main() {\n  ll n, k;\n  cin >> n >> k;\n  Combination<mint> c(n+k);\n\
-    \  cout << c.C(k, n) << el;\n}\n"
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
+    \n\n#include \"../template.hpp\"\n#include \"../powmod.hpp\"\n\nint main() {\n\
+    \  int m, n;\n  cin >> m >> n;\n  cout << powmod(m, n, 1e9+7) << el;\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/DPL_5_E.test.cpp
+  path: test/powmod.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/DPL_5_E.test.cpp
+documentation_of: test/powmod.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/DPL_5_E.test.cpp
-- /verify/verify/DPL_5_E.test.cpp.html
-title: verify/DPL_5_E.test.cpp
+- /verify/test/powmod.test.cpp
+- /verify/test/powmod.test.cpp.html
+title: test/powmod.test.cpp
 ---

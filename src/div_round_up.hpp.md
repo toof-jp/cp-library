@@ -28,14 +28,14 @@ data:
     \ cout << fixed << setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n\
     #line 3 \"src/div_round_up.hpp\"\n\n// return ceil(n/m)\ninline ll div_round_up(ll\
     \ n, ll m) {\n  return (n+m-1) / m;\n}\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\n// return ceil(n/m)\ninline ll\
-    \ div_round_up(ll n, ll m) {\n  return (n+m-1) / m;\n}\n"
+  code: "#pragma once\n#include \"src/template.hpp\"\n\n// return ceil(n/m)\ninline\
+    \ ll div_round_up(ll n, ll m) {\n  return (n+m-1) / m;\n}\n"
   dependsOn:
   - src/template.hpp
   isVerificationFile: false
   path: src/div_round_up.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/div_round_up.hpp

@@ -36,22 +36,22 @@ data:
     \ r) const {\n    return v[r+1];\n  }\n\n  T& operator[](size_t i) {\n    return\
     \ v[i];\n  }\n\n  const T& operator[](size_t i) const {\n    return v[i];\n  }\n\
     };\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<class T>\nstruct CumulativeSum\
-    \ {\n  vector<T> v;\n\n  CumulativeSum(size_t n) : v(n+1) {};\n  CumulativeSum(vector<T>\
-    \ v_) {\n    v.resize(v_.size()+1);\n    rep(i, v_.size())\n      v[i+1] = v_[i];\n\
-    \  };\n\n  void add(size_t i, T x) {\n    v[i+1] += x;\n  }\n\n  // O(N)\n  void\
-    \ build() {\n    if (v.size() == 0) return;\n    rep(i, v.size()-1)\n      v[i+1]\
-    \ += v[i];\n  }\n\n  // O(1) sum [l, r]\n  T sum(size_t l, size_t r) const {\n\
-    \    return l == 0 ? v[r+1] : v[r+1]-v[l];\n  }\n\n  // O(1) sum [0, r]\n  T sum(size_t\
-    \ r) const {\n    return v[r+1];\n  }\n\n  T& operator[](size_t i) {\n    return\
-    \ v[i];\n  }\n\n  const T& operator[](size_t i) const {\n    return v[i];\n  }\n\
-    };\n"
+  code: "#pragma once\n#include \"src/template.hpp\"\n\ntemplate<class T>\nstruct\
+    \ CumulativeSum {\n  vector<T> v;\n\n  CumulativeSum(size_t n) : v(n+1) {};\n\
+    \  CumulativeSum(vector<T> v_) {\n    v.resize(v_.size()+1);\n    rep(i, v_.size())\n\
+    \      v[i+1] = v_[i];\n  };\n\n  void add(size_t i, T x) {\n    v[i+1] += x;\n\
+    \  }\n\n  // O(N)\n  void build() {\n    if (v.size() == 0) return;\n    rep(i,\
+    \ v.size()-1)\n      v[i+1] += v[i];\n  }\n\n  // O(1) sum [l, r]\n  T sum(size_t\
+    \ l, size_t r) const {\n    return l == 0 ? v[r+1] : v[r+1]-v[l];\n  }\n\n  //\
+    \ O(1) sum [0, r]\n  T sum(size_t r) const {\n    return v[r+1];\n  }\n\n  T&\
+    \ operator[](size_t i) {\n    return v[i];\n  }\n\n  const T& operator[](size_t\
+    \ i) const {\n    return v[i];\n  }\n};\n"
   dependsOn:
   - src/template.hpp
   isVerificationFile: false
   path: src/cumulative_sum.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/cumulative_sum.hpp

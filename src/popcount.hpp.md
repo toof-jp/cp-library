@@ -28,7 +28,7 @@ data:
     \ cout << fixed << setprecision(15); cerr << fixed << setprecision(15); }\n} io_setup;\n\
     #line 3 \"src/popcount.hpp\"\n\nint popcount(int n) {\n  return __builtin_popcount(n);\n\
     }\n\nll popcount(ll n) {\n  return __builtin_popcountll(n);\n}\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\nint popcount(int n) {\n  return\
+  code: "#pragma once\n#include \"src/template.hpp\"\n\nint popcount(int n) {\n  return\
     \ __builtin_popcount(n);\n}\n\nll popcount(ll n) {\n  return __builtin_popcountll(n);\n\
     }\n"
   dependsOn:
@@ -36,7 +36,7 @@ data:
   isVerificationFile: false
   path: src/popcount.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/popcount.hpp

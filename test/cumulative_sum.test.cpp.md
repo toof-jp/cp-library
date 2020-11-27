@@ -15,23 +15,24 @@ data:
     , line 258, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../template.hpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
-    \n\n#include \"../template.hpp\"\n#include \"../dijkstra.hpp\"\n\nint main() {\n\
-    \  ll v, e, r;\n  cin >> v >> e >> r;\n  vector<vector<pl>> g(v);\n  rep(i, e)\
-    \ {\n    ll s, t, d;\n    cin >> s >> t >> d;\n    g[s].emplace_back(t, d);\n\
-    \  }\n\n  vl vec = dijkstra(v, r, g);\n\n  for (auto&& i : vec) {\n    if (i ==\
-    \ INF) cout << \"INF\" << el;\n    else cout << i << el;\n  }\n}\n"
+  code: "#define  PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516\"\
+    \n\n#include \"../template.hpp\"\n#include \"../cumulative_sum.hpp\"\n\nint main()\
+    \ {\n  while (1) {\n    ll n, k;\n    cin >> n >> k;\n    if (n == 0 and k ==\
+    \ 0) return 0;\n    vl a(n);\n    rep(i, n) {\n      cin >> a[i];\n    }\n\n \
+    \   CumulativeSum<ll> cs(a);\n    cs.build();\n    ll ans = -1e4;\n    for (ll\
+    \ i = 0; i+k-1 < n; i++) {\n      cmax(ans, cs.sum(i, i+k-1));\n    }\n\n    cout\
+    \ << ans << el;\n  }\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/dijkstra.test.cpp
+  path: test/cumulative_sum.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/dijkstra.test.cpp
+documentation_of: test/cumulative_sum.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/dijkstra.test.cpp
-- /verify/verify/dijkstra.test.cpp.html
-title: verify/dijkstra.test.cpp
+- /verify/test/cumulative_sum.test.cpp
+- /verify/test/cumulative_sum.test.cpp.html
+title: test/cumulative_sum.test.cpp
 ---

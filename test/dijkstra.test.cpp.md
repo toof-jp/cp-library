@@ -15,21 +15,23 @@ data:
     , line 258, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../template.hpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
-    \n\n#include \"../template.hpp\"\n#include \"../popcount.hpp\"\n\nint main() {\n\
-    \  assert(popcount(0b10010101) == 4);\n  assert(popcount(0b11010111) == 6);\n\
-    \  assert(popcount(0b00000000) == 0);\n\n  cout << \"Hello World\" << el;\n}\n"
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
+    \n\n#include \"../template.hpp\"\n#include \"../dijkstra.hpp\"\n\nint main() {\n\
+    \  ll v, e, r;\n  cin >> v >> e >> r;\n  vector<vector<pl>> g(v);\n  rep(i, e)\
+    \ {\n    ll s, t, d;\n    cin >> s >> t >> d;\n    g[s].emplace_back(t, d);\n\
+    \  }\n\n  vl vec = dijkstra(v, r, g);\n\n  for (auto&& i : vec) {\n    if (i ==\
+    \ INF) cout << \"INF\" << el;\n    else cout << i << el;\n  }\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/popcount.test.cpp
+  path: test/dijkstra.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/popcount.test.cpp
+documentation_of: test/dijkstra.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/popcount.test.cpp
-- /verify/verify/popcount.test.cpp.html
-title: verify/popcount.test.cpp
+- /verify/test/dijkstra.test.cpp
+- /verify/test/dijkstra.test.cpp.html
+title: test/dijkstra.test.cpp
 ---

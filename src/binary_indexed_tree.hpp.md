@@ -39,7 +39,7 @@ data:
     \ (ll k = r; k > 0; k >>= 1){\n      if(x+k <= n && tree[x+k] < w){\n        w\
     \ -= tree[x+k];\n        x += k;\n      }\n    }\n    return x+1;\n  }\n  */\n\
     };\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<class ComumutativeMonoid>\n\
+  code: "#pragma once\n#include \"src/template.hpp\"\n\ntemplate<class ComumutativeMonoid>\n\
     struct BinaryIndexedTree {\n  using T = typename ComumutativeMonoid::value_type;\n\
     \  // 1-indexed\n  ll n;\n  vector<T> tree;\n  const ComumutativeMonoid ope;\n\
     \n  BinaryIndexedTree(ll n_) : n(n_), ope(ComumutativeMonoid()) {\n    tree.assign(n+1,\
@@ -57,7 +57,7 @@ data:
   isVerificationFile: false
   path: src/binary_indexed_tree.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/binary_indexed_tree.hpp

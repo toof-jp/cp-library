@@ -31,17 +31,17 @@ data:
     \ {};\n\n  // [l, r)\n  Vector(ll l_, ll r_, const T& value = T())\n    : vector<T>(r_-l_,\
     \ value), l(l_), r(r_) {};\n\n  T& operator[](ll i) {\n    return vector<T>::operator[](i-l);\n\
     \  }\n};\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<class T>\nstruct Vector\
-    \ : public std::vector<T> {\n  const ll l, r;\n\n  // [0, r)\n  Vector(ll r_)\
-    \ : vector<T>(r_), l(0), r(r_) {};\n\n  // [l, r)\n  Vector(ll l_, ll r_, const\
-    \ T& value = T())\n    : vector<T>(r_-l_, value), l(l_), r(r_) {};\n\n  T& operator[](ll\
-    \ i) {\n    return vector<T>::operator[](i-l);\n  }\n};\n"
+  code: "#pragma once\n#include \"src/template.hpp\"\n\ntemplate<class T>\nstruct\
+    \ Vector : public std::vector<T> {\n  const ll l, r;\n\n  // [0, r)\n  Vector(ll\
+    \ r_) : vector<T>(r_), l(0), r(r_) {};\n\n  // [l, r)\n  Vector(ll l_, ll r_,\
+    \ const T& value = T())\n    : vector<T>(r_-l_, value), l(l_), r(r_) {};\n\n \
+    \ T& operator[](ll i) {\n    return vector<T>::operator[](i-l);\n  }\n};\n"
   dependsOn:
   - src/template.hpp
   isVerificationFile: false
   path: src/vector.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/vector.hpp

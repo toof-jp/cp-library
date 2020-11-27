@@ -15,22 +15,21 @@ data:
     , line 258, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../template.hpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A\"\
-    \n\n#include \"../template.hpp\"\n#include \"../prime_factorization.hpp\"\n\n\
-    int main() {\n  ll n;\n  cin >> n;\n\n  auto m = prime_factorization(n);\n\n \
-    \ cout << n << \": \";\n  vl ans;\n  for (auto&& i : m) {\n    rep(j, i.second)\
-    \ {\n      ans.push_back(i.first);\n    }\n  }\n  cout << ans << el;\n}\n"
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_B\"\
+    \n\n#include \"../template.hpp\"\n#include \"../modint.hpp\"\n#include \"../combination.hpp\"\
+    \n\nint main() {\n  ll n, k;\n  cin >> n >> k;\n  Combination<mint> c(max(n, k));\n\
+    \  cout << c.P(k, n) << el;\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/prime_factorization.test.cpp
+  path: test/DPL_5_B.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/prime_factorization.test.cpp
+documentation_of: test/DPL_5_B.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/prime_factorization.test.cpp
-- /verify/verify/prime_factorization.test.cpp.html
-title: verify/prime_factorization.test.cpp
+- /verify/test/DPL_5_B.test.cpp
+- /verify/test/DPL_5_B.test.cpp.html
+title: test/DPL_5_B.test.cpp
 ---

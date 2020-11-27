@@ -15,22 +15,21 @@ data:
     , line 258, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../template.hpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
-    \n\n#include \"../template.hpp\"\n#include \"../debug.hpp\"\n\nint main() {\n\
-    \  ll n = 10;\n  double m = 3.141592;\n  bool f = true;\n\n  debug(n, m, f);\n\
-    \n  vector<int> a(n);\n  debug(a);\n\n  vector<vl> b(n, vl(n));\n  debug(b);\n\
-    \n  cout << \"Hello World\" << el;\n}\n"
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D\"\
+    \n\n#include \"../template.hpp\"\n#include \"../modint.hpp\"\n#include \"../combination.hpp\"\
+    \n\nint main() {\n  ll n, k;\n  cin >> n >> k;\n  Combination<mint> c(n+k);\n\
+    \  cout << c.H(k, n) << el;\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/debug.test.cpp
+  path: test/DPL_5_D.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/debug.test.cpp
+documentation_of: test/DPL_5_D.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/debug.test.cpp
-- /verify/verify/debug.test.cpp.html
-title: verify/debug.test.cpp
+- /verify/test/DPL_5_D.test.cpp
+- /verify/test/DPL_5_D.test.cpp.html
+title: test/DPL_5_D.test.cpp
 ---

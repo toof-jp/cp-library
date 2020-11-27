@@ -29,15 +29,15 @@ data:
     #line 3 \"src/powmod.hpp\"\n\nll powmod(ll base, ll exp, ll mod) {\n  ll res =\
     \ 1;\n  while (exp) {\n    if (exp&1) res = res * base % mod;\n    base = base\
     \ * base % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\nll powmod(ll base, ll exp, ll\
-    \ mod) {\n  ll res = 1;\n  while (exp) {\n    if (exp&1) res = res * base % mod;\n\
-    \    base = base * base % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
+  code: "#pragma once\n#include \"src/template.hpp\"\n\nll powmod(ll base, ll exp,\
+    \ ll mod) {\n  ll res = 1;\n  while (exp) {\n    if (exp&1) res = res * base %\
+    \ mod;\n    base = base * base % mod;\n    exp >>= 1;\n  }\n  return res;\n}\n"
   dependsOn:
   - src/template.hpp
   isVerificationFile: false
   path: src/powmod.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/powmod.hpp

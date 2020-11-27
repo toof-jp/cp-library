@@ -15,21 +15,21 @@ data:
     , line 258, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../template.hpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_D\"\
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E\"\
     \n\n#include \"../template.hpp\"\n#include \"../modint.hpp\"\n#include \"../combination.hpp\"\
     \n\nint main() {\n  ll n, k;\n  cin >> n >> k;\n  Combination<mint> c(n+k);\n\
-    \  cout << c.H(k, n) << el;\n}\n"
+    \  cout << c.C(k, n) << el;\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/DPL_5_D.test.cpp
+  path: test/DPL_5_E.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/DPL_5_D.test.cpp
+documentation_of: test/DPL_5_E.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/DPL_5_D.test.cpp
-- /verify/verify/DPL_5_D.test.cpp.html
-title: verify/DPL_5_D.test.cpp
+- /verify/test/DPL_5_E.test.cpp
+- /verify/test/DPL_5_E.test.cpp.html
+title: test/DPL_5_E.test.cpp
 ---

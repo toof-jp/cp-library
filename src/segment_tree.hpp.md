@@ -37,7 +37,7 @@ data:
     \ l >>= 1, r >>= 1) {\n      if (l&1) l_res = ope(l_res, tree[l++]);\n      if\
     \ (r&1) r_res = ope(tree[--r], r_res);\n    }\n    return ope(l_res, r_res);\n\
     \  }\n\n  T operator[](ll i) {\n    return tree[i+n];\n  }\n};\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\ntemplate<class Monoid>\nstruct\
+  code: "#pragma once\n#include \"src/template.hpp\"\n\ntemplate<class Monoid>\nstruct\
     \ SegmentTree {\n  using T = typename Monoid::value_type;\n\n  ll n;\n  vector<T>\
     \ tree;\n  const Monoid ope;\n\n  SegmentTree(ll n_) : n(n_) {\n    tree.assign(2*n,\
     \ ope.ide);\n  }\n\n  void build(const vector<T>& v) {\n    rep(i, v.size())\n\
@@ -53,7 +53,7 @@ data:
   isVerificationFile: false
   path: src/segment_tree.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/segment_tree.hpp

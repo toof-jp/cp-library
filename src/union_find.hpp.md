@@ -36,9 +36,9 @@ data:
     \ < data[y].size) swap(x, y);\n    data[y].parent = x;\n    data[x].size += data[y].size;\n\
     \    num--;\n  }\n\n  bool same(ll x, ll y) {\n    return find(x) == find(y);\n\
     \  }\n\n  ll count() const {\n    return num;\n  }\n};\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\nstruct UnionFind {\n  struct Node\
-    \ {\n    ll parent;\n    ll size;\n  };\n  vector<Node> data;\n  ll num;\n\n \
-    \ UnionFind(ll size) : data(size) {\n    rep(i, size) {\n      data[i].parent\
+  code: "#pragma once\n#include \"src/template.hpp\"\n\nstruct UnionFind {\n  struct\
+    \ Node {\n    ll parent;\n    ll size;\n  };\n  vector<Node> data;\n  ll num;\n\
+    \n  UnionFind(ll size) : data(size) {\n    rep(i, size) {\n      data[i].parent\
     \ = i;\n      data[i].size = 1;\n    }\n    num = size;\n  }\n\n  ll find(ll x)\
     \ {\n    while (data[x].parent != x) {\n      ll p = data[x].parent;\n      data[x].parent\
     \ = data[p].parent;\n      x = p;\n    }\n    return x;\n  }\n\n  void unite(ll\
@@ -52,7 +52,7 @@ data:
   isVerificationFile: false
   path: src/union_find.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/union_find.hpp

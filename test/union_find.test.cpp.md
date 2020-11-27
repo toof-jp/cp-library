@@ -15,26 +15,22 @@ data:
     , line 258, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../template.hpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
-    \n#include \"../template.hpp\"\n#include \"../binary_indexed_tree.hpp\"\n\ntemplate\
-    \ <class T>\nstruct Plus {\n  using value_type = T;\n\n  T operator()(const T&\
-    \ l, const T& r) const {\n    return l + r;\n  }\n  const T ide{};\n};\n\nint\
-    \ main() {\n  ll n, q;\n  cin >> n >> q;\n\n  BinaryIndexedTree<Plus<ll>> bit(n);\n\
-    \n  rep(i, n) {\n    ll a;\n    cin >> a;\n    bit.add(i, a);\n  }\n\n  rep(i,\
-    \ q) {\n    ll t, a, b;\n    cin >> t >> a >> b;\n    if (t == 0) {\n      bit.add(a,\
-    \ b);\n    } else {\n      cout << bit.sum(b) - bit.sum(a) << el;\n    }\n  }\n\
-    }\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include\
+    \ \"../template.hpp\"\n#include \"../union_find.hpp\"\n\nint main() {\n  ll n,\
+    \ q;\n  cin >> n >> q;\n\n  UnionFind uf(n);\n  rep(i, q) {\n    ll t, u, v;\n\
+    \    cin >> t >> u >> v;\n    if (t == 0) {\n      uf.unite(u, v);\n    } else\
+    \ {\n      cout << uf.same(u, v) << el;\n    }\n  }\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/binary_indexed_tree.test.cpp
+  path: test/union_find.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/binary_indexed_tree.test.cpp
+documentation_of: test/union_find.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/binary_indexed_tree.test.cpp
-- /verify/verify/binary_indexed_tree.test.cpp.html
-title: verify/binary_indexed_tree.test.cpp
+- /verify/test/union_find.test.cpp
+- /verify/test/union_find.test.cpp.html
+title: test/union_find.test.cpp
 ---

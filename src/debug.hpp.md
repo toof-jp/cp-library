@@ -44,7 +44,7 @@ data:
     void debug_print_(T t, V... v) {debug_print(t); if (sizeof...(v)) cerr << \",\
     \ \"; debug_print_(v...);}\n\n#ifdef LOCAL\n  #define debug(x...) cerr << \"[\"\
     \ << #x << \"] = [\"; debug_print_(x)\n#else\n  #define debug(x...)\n#endif\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\n// https://codeforces.com/blog/entry/68809\n\
+  code: "#pragma once\n#include \"src/template.hpp\"\n\n// https://codeforces.com/blog/entry/68809\n\
     void debug_print(int x) {cerr << x;}\nvoid debug_print(long x) {cerr << x;}\n\
     void debug_print(long long x) {cerr << x;}\nvoid debug_print(unsigned x) {cerr\
     \ << x;}\nvoid debug_print(unsigned long x) {cerr << x;}\nvoid debug_print(unsigned\
@@ -66,7 +66,7 @@ data:
   isVerificationFile: false
   path: src/debug.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/debug.hpp

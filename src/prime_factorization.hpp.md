@@ -30,7 +30,7 @@ data:
     \ n) {\n  map<ll, ll> m;\n  for (ll i = 2; i*i <= n; i++) {\n    while (n%i ==\
     \ 0) {\n      m[i]++;\n      n /= i;\n    }\n  }\n  if (n != 1) m[n]++;\n  return\
     \ m;\n}\n"
-  code: "#pragma once\n#include \"template.hpp\"\n\nmap<ll, ll> prime_factorization(ll\
+  code: "#pragma once\n#include \"src/template.hpp\"\n\nmap<ll, ll> prime_factorization(ll\
     \ n) {\n  map<ll, ll> m;\n  for (ll i = 2; i*i <= n; i++) {\n    while (n%i ==\
     \ 0) {\n      m[i]++;\n      n /= i;\n    }\n  }\n  if (n != 1) m[n]++;\n  return\
     \ m;\n}\n"
@@ -39,7 +39,7 @@ data:
   isVerificationFile: false
   path: src/prime_factorization.hpp
   requiredBy: []
-  timestamp: '2020-11-26 22:58:46+09:00'
+  timestamp: '2020-11-27 15:20:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: src/prime_factorization.hpp

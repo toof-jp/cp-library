@@ -15,24 +15,22 @@ data:
     , line 258, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../template.hpp:\
     \ line -1: no such header\n"
-  code: "#define  PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0516\"\
-    \n\n#include \"../template.hpp\"\n#include \"../cumulative_sum.hpp\"\n\nint main()\
-    \ {\n  while (1) {\n    ll n, k;\n    cin >> n >> k;\n    if (n == 0 and k ==\
-    \ 0) return 0;\n    vl a(n);\n    rep(i, n) {\n      cin >> a[i];\n    }\n\n \
-    \   CumulativeSum<ll> cs(a);\n    cs.build();\n    ll ans = -1e4;\n    for (ll\
-    \ i = 0; i+k-1 < n; i++) {\n      cmax(ans, cs.sum(i, i+k-1));\n    }\n\n    cout\
-    \ << ans << el;\n  }\n}\n"
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
+    \n\n#include \"../template.hpp\"\n#include \"../debug.hpp\"\n\nint main() {\n\
+    \  ll n = 10;\n  double m = 3.141592;\n  bool f = true;\n\n  debug(n, m, f);\n\
+    \n  vector<int> a(n);\n  debug(a);\n\n  vector<vl> b(n, vl(n));\n  debug(b);\n\
+    \n  cout << \"Hello World\" << el;\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: verify/cumulative_sum.test.cpp
+  path: test/debug.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: verify/cumulative_sum.test.cpp
+documentation_of: test/debug.test.cpp
 layout: document
 redirect_from:
-- /verify/verify/cumulative_sum.test.cpp
-- /verify/verify/cumulative_sum.test.cpp.html
-title: verify/cumulative_sum.test.cpp
+- /verify/test/debug.test.cpp
+- /verify/test/debug.test.cpp.html
+title: test/debug.test.cpp
 ---
