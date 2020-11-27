@@ -3,43 +3,43 @@ data:
   libraryCategories:
   - name: src
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/binary_indexed_tree.hpp
       title: src/binary_indexed_tree.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/combination.hpp
       title: src/combination.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/cumulative_sum.hpp
       title: src/cumulative_sum.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/debug.hpp
       title: src/debug.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/dijkstra.hpp
       title: src/dijkstra.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/div_round_up.hpp
       title: src/div_round_up.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/modint.hpp
       title: src/modint.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/popcount.hpp
       title: src/popcount.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/powmod.hpp
       title: src/powmod.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/prime_factorization.hpp
       title: src/prime_factorization.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/segment_tree.hpp
       title: src/segment_tree.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/template.hpp
       title: src/template.hpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: src/union_find.hpp
       title: src/union_find.hpp
     - icon: ':warning:'

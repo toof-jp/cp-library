@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/template.hpp
     title: src/template.hpp
   _extendedRequiredBy: []

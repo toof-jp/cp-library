@@ -2,48 +2,93 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/binary_indexed_tree.hpp
     title: src/binary_indexed_tree.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/combination.hpp
     title: src/combination.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/cumulative_sum.hpp
     title: src/cumulative_sum.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/debug.hpp
     title: src/debug.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/dijkstra.hpp
     title: src/dijkstra.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/div_round_up.hpp
     title: src/div_round_up.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/modint.hpp
     title: src/modint.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/popcount.hpp
     title: src/popcount.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/powmod.hpp
     title: src/powmod.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/prime_factorization.hpp
     title: src/prime_factorization.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/segment_tree.hpp
     title: src/segment_tree.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: src/union_find.hpp
     title: src/union_find.hpp
   - icon: ':warning:'
     path: src/vector.hpp
     title: src/vector.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/DPL_5_A.test.cpp
+    title: test/DPL_5_A.test.cpp
+  - icon: ':x:'
+    path: test/DPL_5_B.test.cpp
+    title: test/DPL_5_B.test.cpp
+  - icon: ':x:'
+    path: test/DPL_5_D.test.cpp
+    title: test/DPL_5_D.test.cpp
+  - icon: ':x:'
+    path: test/DPL_5_E.test.cpp
+    title: test/DPL_5_E.test.cpp
+  - icon: ':x:'
+    path: test/binary_indexed_tree.test.cpp
+    title: test/binary_indexed_tree.test.cpp
+  - icon: ':x:'
+    path: test/cumulative_sum.test.cpp
+    title: test/cumulative_sum.test.cpp
+  - icon: ':x:'
+    path: test/debug.test.cpp
+    title: test/debug.test.cpp
+  - icon: ':x:'
+    path: test/dijkstra.test.cpp
+    title: test/dijkstra.test.cpp
+  - icon: ':x:'
+    path: test/div_round_up.test.cpp
+    title: test/div_round_up.test.cpp
+  - icon: ':x:'
+    path: test/popcount.test.cpp
+    title: test/popcount.test.cpp
+  - icon: ':x:'
+    path: test/powmod.test.cpp
+    title: test/powmod.test.cpp
+  - icon: ':x:'
+    path: test/prime_factorization.test.cpp
+    title: test/prime_factorization.test.cpp
+  - icon: ':x:'
+    path: test/segment_tree.test.cpp
+    title: test/segment_tree.test.cpp
+  - icon: ':x:'
+    path: test/template.test.cpp
+    title: test/template.test.cpp
+  - icon: ':x:'
+    path: test/union_find.test.cpp
+    title: test/union_find.test.cpp
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/template.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -96,8 +141,23 @@ data:
   - src/dijkstra.hpp
   - src/vector.hpp
   timestamp: '2020-11-26 22:58:46+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/segment_tree.test.cpp
+  - test/div_round_up.test.cpp
+  - test/template.test.cpp
+  - test/DPL_5_D.test.cpp
+  - test/union_find.test.cpp
+  - test/dijkstra.test.cpp
+  - test/DPL_5_B.test.cpp
+  - test/cumulative_sum.test.cpp
+  - test/popcount.test.cpp
+  - test/prime_factorization.test.cpp
+  - test/DPL_5_E.test.cpp
+  - test/binary_indexed_tree.test.cpp
+  - test/debug.test.cpp
+  - test/DPL_5_A.test.cpp
+  - test/powmod.test.cpp
 documentation_of: src/template.hpp
 layout: document
 redirect_from:
