@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A"
 
-#include "../template.hpp"
-#include "../dijkstra.hpp"
+#include "src/template.hpp"
+#include "src/dijkstra.hpp"
 
 int main() {
   ll v, e, r;

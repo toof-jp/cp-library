@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
 
 #include "src/template.hpp"
-#include "../binary_indexed_tree.hpp"
+#include "src/binary_indexed_tree.hpp"
 
 template <class T>
 struct Plus {

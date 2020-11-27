@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A"
 
-#include "../template.hpp"
-#include "../powmod.hpp"
+#include "src/template.hpp"
+#include "src/powmod.hpp"
 
 int main() {
   ll n, k;

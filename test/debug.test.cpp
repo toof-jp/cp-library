@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
-#include "../template.hpp"
-#include "../debug.hpp"
+#include "src/template.hpp"
+#include "src/debug.hpp"
 
 int main() {
   ll n = 10;

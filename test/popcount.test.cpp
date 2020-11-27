@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
-#include "../template.hpp"
-#include "../popcount.hpp"
+#include "src/template.hpp"
+#include "src/popcount.hpp"
 
 int main() {
   assert(popcount(0b10010101) == 4);

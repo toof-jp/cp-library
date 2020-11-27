@@ -1,6 +1,6 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 
-#include "../template.hpp"
+#include "src/template.hpp"
 
 int main() {
   ll n = 10;

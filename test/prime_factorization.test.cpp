@@ -1,7 +1,7 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A"
 
-#include "../template.hpp"
-#include "../prime_factorization.hpp"
+#include "src/template.hpp"
+#include "src/prime_factorization.hpp"
 
 int main() {
   ll n;

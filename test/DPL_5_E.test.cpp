@@ -1,8 +1,8 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_E"
 
-#include "../template.hpp"
-#include "../modint.hpp"
-#include "../combination.hpp"
+#include "src/template.hpp"
+#include "src/modint.hpp"
+#include "src/combination.hpp"
 
 int main() {
   ll n, k;
