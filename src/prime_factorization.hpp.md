@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/prime_factorization.test.cpp
     title: test/prime_factorization.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

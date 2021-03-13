@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/debug.test.cpp
     title: test/debug.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/div_round_up.test.cpp
     title: test/div_round_up.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

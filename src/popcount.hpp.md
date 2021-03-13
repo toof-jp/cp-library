@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/popcount.test.cpp
     title: test/popcount.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

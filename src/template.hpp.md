@@ -87,6 +87,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/union_find.test.cpp
     title: test/union_find.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -127,37 +128,37 @@ data:
   isVerificationFile: false
   path: src/template.hpp
   requiredBy:
+  - src/cumulative_sum.hpp
+  - src/div_round_up.hpp
   - src/union_find.hpp
   - src/binary_indexed_tree.hpp
-  - src/div_round_up.hpp
   - src/prime_factorization.hpp
-  - src/powmod.hpp
-  - src/popcount.hpp
-  - src/segment_tree.hpp
   - src/modint.hpp
-  - src/combination.hpp
-  - src/cumulative_sum.hpp
-  - src/debug.hpp
+  - src/powmod.hpp
   - src/dijkstra.hpp
+  - src/popcount.hpp
+  - src/combination.hpp
+  - src/segment_tree.hpp
   - src/vector.hpp
+  - src/debug.hpp
   timestamp: '2020-11-26 22:58:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/segment_tree.test.cpp
-  - test/div_round_up.test.cpp
-  - test/template.test.cpp
-  - test/DPL_5_D.test.cpp
-  - test/union_find.test.cpp
   - test/dijkstra.test.cpp
-  - test/DPL_5_B.test.cpp
+  - test/segment_tree.test.cpp
   - test/cumulative_sum.test.cpp
-  - test/popcount.test.cpp
+  - test/DPL_5_D.test.cpp
   - test/prime_factorization.test.cpp
-  - test/DPL_5_E.test.cpp
-  - test/binary_indexed_tree.test.cpp
-  - test/debug.test.cpp
-  - test/DPL_5_A.test.cpp
+  - test/div_round_up.test.cpp
+  - test/DPL_5_B.test.cpp
   - test/powmod.test.cpp
+  - test/popcount.test.cpp
+  - test/DPL_5_A.test.cpp
+  - test/union_find.test.cpp
+  - test/debug.test.cpp
+  - test/binary_indexed_tree.test.cpp
+  - test/template.test.cpp
+  - test/DPL_5_E.test.cpp
 documentation_of: src/template.hpp
 layout: document
 redirect_from:

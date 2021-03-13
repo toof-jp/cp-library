@@ -12,6 +12,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/powmod.test.cpp
     title: test/powmod.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -46,8 +47,8 @@ data:
   timestamp: '2020-11-26 22:58:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/DPL_5_A.test.cpp
   - test/powmod.test.cpp
+  - test/DPL_5_A.test.cpp
 documentation_of: src/powmod.hpp
 layout: document
 redirect_from:

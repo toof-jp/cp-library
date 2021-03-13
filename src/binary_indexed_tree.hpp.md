@@ -9,6 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/binary_indexed_tree.test.cpp
     title: test/binary_indexed_tree.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
