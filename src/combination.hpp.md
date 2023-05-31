@@ -65,8 +65,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/DPL_5_D.test.cpp
-  - test/DPL_5_B.test.cpp
   - test/DPL_5_E.test.cpp
+  - test/DPL_5_B.test.cpp
 documentation_of: src/combination.hpp
 layout: document
 redirect_from:

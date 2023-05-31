@@ -20,6 +20,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: src/div_round_up.hpp
     title: src/div_round_up.hpp
+  - icon: ':warning:'
+    path: src/lazy_segment_tree.hpp
+    title: src/lazy_segment_tree.hpp
   - icon: ':heavy_check_mark:'
     path: src/modint.hpp
     title: src/modint.hpp
@@ -38,9 +41,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: src/union_find.hpp
     title: src/union_find.hpp
-  - icon: ':warning:'
-    path: src/vector.hpp
-    title: src/vector.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/DPL_5_A.test.cpp
@@ -128,37 +128,37 @@ data:
   isVerificationFile: false
   path: src/template.hpp
   requiredBy:
-  - src/cumulative_sum.hpp
-  - src/div_round_up.hpp
-  - src/union_find.hpp
-  - src/binary_indexed_tree.hpp
-  - src/prime_factorization.hpp
-  - src/modint.hpp
   - src/powmod.hpp
-  - src/dijkstra.hpp
+  - src/cumulative_sum.hpp
   - src/popcount.hpp
-  - src/combination.hpp
-  - src/segment_tree.hpp
-  - src/vector.hpp
   - src/debug.hpp
+  - src/prime_factorization.hpp
+  - src/combination.hpp
+  - src/lazy_segment_tree.hpp
+  - src/div_round_up.hpp
+  - src/dijkstra.hpp
+  - src/binary_indexed_tree.hpp
+  - src/union_find.hpp
+  - src/segment_tree.hpp
+  - src/modint.hpp
   timestamp: '2020-11-26 22:58:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/dijkstra.test.cpp
-  - test/segment_tree.test.cpp
-  - test/cumulative_sum.test.cpp
+  - test/powmod.test.cpp
   - test/DPL_5_D.test.cpp
+  - test/union_find.test.cpp
+  - test/DPL_5_E.test.cpp
   - test/prime_factorization.test.cpp
   - test/div_round_up.test.cpp
-  - test/DPL_5_B.test.cpp
-  - test/powmod.test.cpp
-  - test/popcount.test.cpp
-  - test/DPL_5_A.test.cpp
-  - test/union_find.test.cpp
-  - test/debug.test.cpp
   - test/binary_indexed_tree.test.cpp
+  - test/DPL_5_A.test.cpp
+  - test/segment_tree.test.cpp
+  - test/cumulative_sum.test.cpp
+  - test/dijkstra.test.cpp
+  - test/debug.test.cpp
+  - test/DPL_5_B.test.cpp
+  - test/popcount.test.cpp
   - test/template.test.cpp
-  - test/DPL_5_E.test.cpp
 documentation_of: src/template.hpp
 layout: document
 redirect_from:

@@ -21,6 +21,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: src/div_round_up.hpp
       title: src/div_round_up.hpp
+    - icon: ':warning:'
+      path: src/lazy_segment_tree.hpp
+      title: src/lazy_segment_tree.hpp
     - icon: ':heavy_check_mark:'
       path: src/modint.hpp
       title: src/modint.hpp
@@ -42,9 +45,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: src/union_find.hpp
       title: src/union_find.hpp
-    - icon: ':warning:'
-      path: src/vector.hpp
-      title: src/vector.hpp
   verificationCategories:
   - name: test
     pages:

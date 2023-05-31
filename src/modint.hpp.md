@@ -90,10 +90,10 @@ data:
   timestamp: '2020-11-26 22:58:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/segment_tree.test.cpp
   - test/DPL_5_D.test.cpp
-  - test/DPL_5_B.test.cpp
   - test/DPL_5_E.test.cpp
+  - test/segment_tree.test.cpp
+  - test/DPL_5_B.test.cpp
 documentation_of: src/modint.hpp
 layout: document
 redirect_from:
